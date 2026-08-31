@@ -1,0 +1,440 @@
+/* ==========================================================================
+   CELWORKS: Global Stylesheet & Design System
+   Primary: #B028E6 | Secondary: #8F74FB | Black: #020202 | Grey: #D0D0D0
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600;1,9..144,900&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* --------------------------------------------------------------------------
+   1. Design Tokens & Color Palette
+   -------------------------------------------------------------------------- */
+:root {
+  /* User-Defined Palette Tokens */
+  --primary: #B028E6;
+  --primary-hover: #981fc9;
+  --primary-glow: rgba(176, 40, 230, 0.25);
+  
+  --secondary-purple: #8F74FB;
+  --secondary-purple-hover: #7b5ef5;
+  
+  --black: #020202;
+  --white: #FFFFFF;
+  --grey-light: #D0D0D0;
+  --grey-bg: #F4F4F6;
+  --grey-card: #EFEFEF;
+  --grey-border: #E2E2E6;
+
+  /* Theme-Dependent Tokens (Default: Light Mode) */
+  --outer-bg: #EAE6F8; /* Soft lilac outer frame canvas for boxed design */
+  --canvas-bg: #FFFFFF; /* Inner boxed site background */
+  --header-bg: #020202; /* Top bar black #020202 */
+  --text-primary: #020202;
+  --text-secondary: #555861;
+  --text-muted: #8E929E;
+  --text-inverse: #FFFFFF;
+  --card-bg: #F7F7F9;
+  --card-border: #E8E8EC;
+  --nav-shadow: 0 8px 32px rgba(2, 2, 2, 0.08);
+  --modal-overlay: rgba(2, 2, 2, 0.85);
+
+  /* Typography */
+  --font-display: 'Plus Jakarta Sans', 'Fraunces', sans-serif;
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-serif: 'Fraunces', serif;
+  --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Boxed Layout & Spacing */
+  --site-max-width: 1400px;
+  --container-max: 1240px;
+  --side-padding: 48px;
+  --section-rhythm: 96px;
+  --radius-boxed: 24px;
+  --radius-card: 24px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Dark Theme Overrides */
+[data-theme="dark"] {
+  --outer-bg: #08070D;
+  --canvas-bg: #111015;
+  --header-bg: #020202;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A6A4B2;
+  --text-muted: #6E6C7A;
+  --text-inverse: #020202;
+  --card-bg: #191820;
+  --card-border: #252430;
+  --grey-card: #201F29;
+  --grey-bg: #14131A;
+  --nav-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --modal-overlay: rgba(0, 0, 0, 0.92);
+}
+
+/* --------------------------------------------------------------------------
+   2. Reset & Base Setup
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  background-color: var(--outer-bg);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--outer-bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-size: 16px;
+  font-weight: 400;
+  overflow-x: hidden;
+  padding: 16px 20px;
+  transition: background-color var(--transition-smooth), color var(--transition-smooth);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+}
+
+/* Boxed Main Outer Wrapper - Sharp Top Corners & Black Side Borders */
+.site-boxed-wrapper {
+  max-width: var(--site-max-width);
+  margin: 0 auto;
+  background-color: var(--black);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: var(--radius-boxed);
+  border-bottom-right-radius: var(--radius-boxed);
+  border-left: 5px solid var(--black);
+  border-right: 5px solid var(--black);
+  border-bottom: 5px solid var(--black);
+  position: relative;
+  transition: background-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+@media (max-width: 768px) {
+  .site-boxed-wrapper {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  font-size: clamp(2.6rem, 5.2vw, 4.4rem);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: clamp(2rem, 3.6vw, 2.85rem);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  font-weight: 700;
+}
+
+p {
+  max-width: 72ch;
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Container */
+.container {
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--side-padding);
+  padding-right: var(--side-padding);
+  width: 100%;
+}
+
+.section-spacer {
+  padding-top: var(--section-rhythm);
+  padding-bottom: var(--section-rhythm);
+}
+
+.section-header {
+  margin-bottom: 48px;
+}
+
+.section-header .section-title {
+  margin-bottom: 12px;
+}
+
+.section-header .section-subhead {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 64ch;
+}
+
+/* --------------------------------------------------------------------------
+   3. Buttons & Badges
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform 0.15s ease, box-shadow var(--transition-fast);
+  min-height: 48px;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+  box-shadow: 0 4px 16px var(--primary-glow);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--primary-glow);
+}
+
+.btn-black {
+  background-color: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+.btn-black:hover {
+  background-color: #222222;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(2, 2, 2, 0.2);
+}
+
+.btn-secondary-purple {
+  background-color: var(--secondary-purple);
+  color: var(--white);
+  border-color: var(--secondary-purple);
+}
+
+.btn-secondary-purple:hover {
+  background-color: var(--secondary-purple-hover);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-primary);
+  border-color: var(--card-border);
+}
+
+.btn-outline:hover {
+  border-color: var(--text-primary);
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.btn-white {
+  background-color: var(--white);
+  color: var(--black);
+  border-color: var(--white);
+}
+
+.btn-white:hover {
+  background-color: #F4F4F6;
+  transform: translateY(-2px);
+}
+
+/* Circular Arrow Icon Button */
+.btn-circle-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  color: var(--black);
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.btn-circle-arrow:hover {
+  transform: scale(1.08) rotate(45deg);
+}
+
+.btn-circle-arrow-black {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.btn-circle-arrow-black:hover {
+  background-color: #222222;
+  transform: scale(1.08) rotate(45deg);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.02em;
+}
+
+.badge-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.badge-purple {
+  background-color: var(--secondary-purple);
+  color: var(--white);
+}
+
+.badge-outline {
+  border: 1px solid var(--card-border);
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   4. Video Reel Modal
+   -------------------------------------------------------------------------- */
+.video-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: var(--modal-overlay);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.video-modal.open {
+  display: flex;
+}
+
+.modal-content-wrapper {
+  background-color: var(--black);
+  border: 1px solid #222222;
+  border-radius: var(--radius-card);
+  max-width: 960px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: var(--white);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-fast);
+  z-index: 10;
+}
+
+.modal-close-btn:hover {
+  background-color: var(--primary);
+}
+
+.modal-video-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  border: none;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --side-padding: 32px;
+    --section-rhythm: 72px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --side-padding: 20px;
+    --section-rhythm: 56px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

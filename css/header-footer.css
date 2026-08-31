@@ -1,0 +1,460 @@
+/* ==========================================================================
+   CELWORKS: Header, Navigation & Footer Styles
+   Precision Arc-Tab Cutout Header with Top Black Bar Strip (Matching Reference)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Precision Arc-Tab Header (Sticky on Scroll)
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--black);
+  color: var(--white);
+  z-index: 1000;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 0 16px 0 0;
+  height: 80px;
+  overflow: visible;
+  transition: background-color 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Scrolled Sticky State: Ultra-Clean Floating Dark Navbar */
+.site-header.scrolled {
+  background-color: rgba(2, 2, 2, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+/* Left Brand Tab Unit */
+.brand-tab-unit {
+  display: flex;
+  align-items: stretch;
+  height: 66px;
+  margin-top: 14px;
+  align-self: flex-end;
+  position: relative;
+  z-index: 2;
+}
+
+.brand-tab-body {
+  background-color: var(--canvas-bg);
+  color: var(--text-primary);
+  height: 100%;
+  padding: 0 48px 0 36px;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 20px;
+  transition: background-color 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  white-space: nowrap;
+  transition: color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand-aperture-dot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--primary-glow);
+  flex-shrink: 0;
+}
+
+/* Precision Chamfer-Fillet Arc Slope */
+.brand-tab-slope {
+  width: 80px;
+  height: 66px;
+  color: var(--canvas-bg);
+  flex-shrink: 0;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand-tab-slope svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Scrolled Rules */
+.site-header.scrolled .brand-tab-body {
+  background-color: transparent;
+}
+
+.site-header.scrolled .brand-logo {
+  color: var(--white);
+}
+
+.site-header.scrolled .brand-tab-slope {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Center Navigation Links (100% Equal Top & Bottom Spacing) */
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-left: 20px;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  position: relative;
+  padding: 6px 0;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--white);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--secondary-purple);
+  transition: width var(--transition-fast);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Header Right Actions (100% Equal Top & Bottom Spacing) */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
+  position: relative;
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--secondary-purple);
+  background-color: rgba(255, 255, 255, 0.16);
+  transform: scale(1.05);
+}
+
+.theme-icon-sun,
+.theme-icon-moon {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.theme-icon-sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+.theme-icon-moon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+[data-theme="dark"] .theme-icon-sun {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+[data-theme="dark"] .theme-icon-moon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* Header CTA Pill */
+.btn-header-cta {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.btn-header-cta:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+  box-shadow: 0 4px 16px var(--primary-glow);
+}
+
+/* Hamburger Mobile Button */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger-line {
+  width: 18px;
+  height: 2px;
+  background-color: var(--white);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.hamburger-btn.active .hamburger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-btn.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.active .hamburger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile Nav Drawer */
+.mobile-nav-drawer {
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 72px);
+  background-color: var(--canvas-bg);
+  border-top: 1px solid var(--card-border);
+  padding: 40px var(--side-padding);
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 999;
+  overflow-y: auto;
+  box-shadow: var(--nav-shadow);
+}
+
+.mobile-nav-drawer.open {
+  display: flex;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.mobile-nav-footer {
+  padding-top: 32px;
+  border-top: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Main Canvas Upper Edge
+   -------------------------------------------------------------------------- */
+.main-content-canvas {
+  background-color: var(--canvas-bg);
+  border-top-right-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: background-color var(--transition-smooth);
+}
+
+/* --------------------------------------------------------------------------
+   3. Site Footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: var(--card-bg);
+  border-top: 1px solid var(--card-border);
+  padding: 80px 0 40px;
+  color: var(--text-secondary);
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 48px;
+  margin-bottom: 64px;
+}
+
+.footer-brand-col .brand-logo {
+  margin-bottom: 16px;
+}
+
+.footer-blurb {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 38ch;
+}
+
+.footer-col-title {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.footer-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-nav-link {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.footer-nav-link:hover {
+  color: var(--primary);
+}
+
+.footer-contact-item {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.footer-whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--secondary-purple);
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.footer-whatsapp-link:hover {
+  color: var(--primary);
+}
+
+.footer-bottom-bar {
+  padding-top: 32px;
+  border-top: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.social-icon-link {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--card-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: border-color var(--transition-fast), color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.social-icon-link:hover {
+  border-color: var(--primary);
+  color: var(--white);
+  background-color: var(--primary);
+}
+
+@media (max-width: 1024px) {
+  .nav-desktop {
+    gap: 20px;
+  }
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .nav-desktop {
+    display: none;
+  }
+  .hamburger-btn {
+    display: flex;
+  }
+  .brand-tab-body {
+    padding: 0 10px 0 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    border-radius: 0;
+  }
+  .site-footer {
+    border-radius: 0;
+  }
+  .main-content-canvas {
+    border-top-right-radius: 0;
+  }
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .footer-bottom-bar {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+}

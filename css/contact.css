@@ -1,0 +1,149 @@
+/* ==========================================================================
+   CELWORKS: Contact Page Specific Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Split Layout & Project Form
+   -------------------------------------------------------------------------- */
+.contact-split-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.contact-form-box {
+  background-color: var(--bg-card);
+  border: 1px solid var(--hairline);
+  padding: 48px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--hairline);
+  color: var(--text-primary);
+  border-radius: var(--radius-sharp);
+  transition: border-color var(--transition-fast);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--amber);
+  outline: none;
+}
+
+.form-textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* --------------------------------------------------------------------------
+   2. Direct Studio Info Card
+   -------------------------------------------------------------------------- */
+.direct-info-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--hairline);
+  padding: 40px;
+  margin-bottom: 32px;
+}
+
+.response-time-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--bg-secondary);
+  padding: 8px 16px;
+  border-left: 3px solid var(--teal);
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  margin-top: 24px;
+}
+
+/* --------------------------------------------------------------------------
+   3. FAQ Accordion
+   -------------------------------------------------------------------------- */
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  border: 1px solid var(--hairline);
+  background-color: var(--bg-card);
+}
+
+.faq-header-btn {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.faq-chevron {
+  width: 20px;
+  height: 20px;
+  color: var(--teal);
+  transition: transform var(--transition-fast);
+}
+
+.faq-item.open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  display: none;
+  padding: 0 24px 24px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.faq-item.open .faq-content {
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   4. Contact Page Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .contact-split-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form-box {
+    padding: 32px 20px;
+  }
+  
+  .direct-info-card {
+    padding: 28px 20px;
+  }
+}
