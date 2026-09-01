@@ -3,26 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | CELWORKS Animation &amp; Film Studio</title>
-  <meta name="description" content="We started CELWORKS because most brand videos get watched once, out of politeness. We make the kind that get watched twice, on purpose.">
+  <title>About Us | BRIGHTFORGE Web Agency</title>
+  <meta name="description" content="BRIGHTFORGE is a small, senior team of designers, developers, and marketers who'd rather do fewer projects well than take on everything.">
   
   <!-- Modular Stylesheets -->
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/header-footer.css">
   <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
   <!-- Main Boxed Outer Wrapper -->
   <div class="site-boxed-wrapper">
 
-    <!-- Header / Navigation (Precision Arc-Tab Design) -->
+    <!-- Header / Navigation -->
     <header class="site-header" id="top">
       <div class="header-top-bar">
         <div class="brand-tab-unit">
           <div class="brand-tab-body">
-            <a href="index.html" class="brand-logo" aria-label="CELWORKS Home">
-              <span class="brand-aperture-dot" aria-hidden="true"></span>CELWORKS
+            <a href="index.html" class="brand-logo" aria-label="BRIGHTFORGE Home">
+              <span class="brand-aperture-dot" aria-hidden="true"></span>BRIGHTFORGE
             </a>
           </div>
           <div class="brand-tab-slope" aria-hidden="true">
@@ -34,8 +35,15 @@
 
         <nav class="nav-desktop" aria-label="Main Navigation">
           <a href="index.html" class="nav-link">Home</a>
-          <a href="index.html#services" class="nav-link">Services</a>
-          <a href="index.html#work" class="nav-link">Portfolio</a>
+          <div class="nav-item-dropdown">
+            <a href="services.html" class="nav-link">Services <svg class="nav-dropdown-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="nav-dropdown-menu">
+              <a href="service-web-development.html" class="nav-dropdown-item">Web Development</a>
+              <a href="service-google-ads.html" class="nav-dropdown-item">Google Ads</a>
+              <a href="service-seo.html" class="nav-dropdown-item">Search Engine Optimization (SEO)</a>
+            </div>
+          </div>
+          <a href="portfolio.html" class="nav-link">Portfolio</a>
           <a href="about.html" class="nav-link active">About</a>
           <a href="blog.html" class="nav-link">Blog</a>
           <a href="contact.html" class="nav-link">Contact</a>
@@ -59,7 +67,7 @@
             </svg>
           </button>
 
-          <a href="contact.html" class="btn-header-cta">Start a project</a>
+          <a href="contact.html" class="btn-header-cta">Get Started Now</a>
 
           <button class="hamburger-btn" aria-label="Toggle Mobile Menu">
             <span class="hamburger-line"></span>
@@ -74,241 +82,603 @@
     <div class="mobile-nav-drawer" aria-label="Mobile Navigation">
       <div class="mobile-nav-links">
         <a href="index.html" class="mobile-nav-link">Home</a>
-        <a href="index.html#services" class="mobile-nav-link">Services</a>
-        <a href="index.html#work" class="mobile-nav-link">Portfolio</a>
+        <div class="mobile-nav-group">
+          <a href="services.html" class="mobile-nav-link">Services</a>
+          <div class="mobile-sub-links">
+            <a href="service-web-development.html" class="mobile-sub-link">Web Development</a>
+            <a href="service-google-ads.html" class="mobile-sub-link">Google Ads</a>
+            <a href="service-seo.html" class="mobile-sub-link">Search Engine Optimization</a>
+          </div>
+        </div>
+        <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
         <a href="about.html" class="mobile-nav-link">About</a>
         <a href="blog.html" class="mobile-nav-link">Blog</a>
         <a href="contact.html" class="mobile-nav-link">Contact</a>
       </div>
       <div class="mobile-nav-footer">
-        <a href="contact.html" class="btn btn-primary" style="width:100%;">Start a project</a>
+        <a href="contact.html" class="btn btn-primary" style="width:100%;">Get Started Now</a>
       </div>
     </div>
 
     <main class="main-content-canvas">
-      <!-- Manifesto Hero -->
-      <section class="about-manifesto-hero" style="background-color: var(--black); color: var(--white); padding: 96px 24px; text-align: center;">
+      <!-- Hero -->
+      <section class="section-spacer" style="padding-bottom: 32px;">
         <div class="container">
-          <blockquote class="manifesto-quote" style="font-family: var(--font-serif); font-style: italic; font-size: clamp(1.6rem, 3.2vw, 2.3rem); font-weight: 600; line-height: 1.4; max-width: 44ch; margin: 0 auto; color: var(--white);">
-            "We started CELWORKS because most brand videos get watched once, out of politeness. We wanted to make the kind that get watched twice, on purpose."
-          </blockquote>
+          <h1 class="section-title">The team behind the work</h1>
+          <p class="section-subhead">BRIGHTFORGE is a small, senior team of designers, developers, and marketers who'd rather do fewer projects well than take on everything.</p>
         </div>
       </section>
 
-      <!-- Studio Story -->
-      <section class="section-spacer">
-        <div class="container">
-          <div class="section-header">
-            <h1 class="section-title">The craft behind the cut.</h1>
-            <p class="section-subhead">A working animation and film studio built by artists who treat every timeline like a shot list.</p>
-          </div>
-
-          <div class="studio-story-grid">
-            <div>
-              <p class="story-lead-p" style="margin-bottom: 24px; font-size: 1.15rem; font-weight: 600; color: var(--text-primary);">
-                Founded in 2018, CELWORKS grew out of a simple frustration: corporate videos had become generic templates. Agencies were prioritizing volume and rushing timelines, leaving films that looked polished on the surface but lacked point of view.
-              </p>
-              <p style="margin-bottom: 20px;">
-                We took our name from the traditional animation cel, the clear acetate sheet where individual frames were drawn and painted by hand. That discipline demanded total intention: every frame took hours, so no frame was wasted.
-              </p>
-            </div>
-            <div>
-              <p style="margin-bottom: 20px;">
-                Today, our studio brings together directors, 2D and 3D animators, motion designers, and sound engineers under one roof. We work directly with founders, creative leaders, and product teams to translate complex ideas into cinematic visual stories.
-              </p>
-              <p>
-                We do not pitch buzzwords or outsource your key sequences. Senior artists write the scripts, sketch the storyboards, animate the characters, and color grade every final export.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- How We Work (Values) -->
-      <section class="section-spacer" style="background-color: var(--grey-bg);">
+      <!-- About Body / Story -->
+      <section class="section-spacer" style="padding-top: 0;">
         <div class="container">
           <div class="section-header">
-            <h2 class="section-title">How we work.</h2>
-            <p class="section-subhead">Four operating principles that protect the craft on every production.</p>
+            <h2 class="section-title">Built by people who've done this before</h2>
+            <p class="section-subhead">We started BRIGHTFORGE because too many businesses were getting slow websites, vague ad reporting, and SEO 'strategies' with no real plan behind them. We handle web development, Google Ads, and SEO under one roof, so nothing gets lost between teams, and every project has one point of contact from start to finish.</p>
           </div>
 
-          <div class="values-grid">
-            <div class="value-card" style="background: var(--card-bg); padding: 36px; border-radius: var(--radius-card); border: 1px solid var(--card-border);">
-              <span class="badge badge-primary" style="margin-bottom: 16px;">PRINCIPLE 01</span>
-              <h3 class="value-title" style="font-size: 1.35rem; margin-bottom: 12px;">Craft over speed</h3>
-              <p>We work at the speed of good decision making. We lock scripts and storyboards early so production time is spent refining craft, not fixing foundation.</p>
+          <!-- Checklist -->
+          <div class="services-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 36px;">
+            <div class="service-card">
+              <div class="service-card-body">
+                <h3 class="service-card-title">Senior Team, No Outsourcing</h3>
+              </div>
             </div>
+            <div class="service-card">
+              <div class="service-card-body">
+                <h3 class="service-card-title">One Point of Contact Per Project</h3>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-card-body">
+                <h3 class="service-card-title">Transparent Reporting, No Jargon</h3>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-card-body">
+                <h3 class="service-card-title">Fixed Pricing, No Surprise Invoices</h3>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-card-body">
+                <h3 class="service-card-title">Support That Continues After Launch</h3>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-card-body">
+                <h3 class="service-card-title">Work Across Web, Ads, and SEO</h3>
+              </div>
+            </div>
+          </div>
 
-            <div class="value-card" style="background: var(--card-bg); padding: 36px; border-radius: var(--radius-card); border: 1px solid var(--card-border);">
-              <span class="badge badge-purple" style="margin-bottom: 16px;">PRINCIPLE 02</span>
-              <h3 class="value-title" style="font-size: 1.35rem; margin-bottom: 12px;">Collaboration over hand-offs</h3>
-              <p>You speak directly with the artists making your film. No account layers translating feedback, no creative intent lost in email chains.</p>
-            </div>
-
-            <div class="value-card" style="background: var(--card-bg); padding: 36px; border-radius: var(--radius-card); border: 1px solid var(--card-border);">
-              <span class="badge badge-primary" style="margin-bottom: 16px;">PRINCIPLE 03</span>
-              <h3 class="value-title" style="font-size: 1.35rem; margin-bottom: 12px;">Curiosity over formula</h3>
-              <p>Every story has an authentic rhythm. We never force a brand into a pre-baked style or recycle visual tropes from previous client reels.</p>
-            </div>
-
-            <div class="value-card" style="background: var(--card-bg); padding: 36px; border-radius: var(--radius-card); border: 1px solid var(--card-border);">
-              <span class="badge badge-purple" style="margin-bottom: 16px;">PRINCIPLE 04</span>
-              <h3 class="value-title" style="font-size: 1.35rem; margin-bottom: 12px;">Precision over guesswork</h3>
-              <p>From frame counts to sound mix balance and final color management, we measure twice so every export holds up on any screen.</p>
-            </div>
+          <div style="text-align: center; margin-bottom: 64px;">
+            <a href="contact.html" class="btn btn-primary">Get In Touch</a>
           </div>
         </div>
       </section>
 
-      <!-- Cast List Team Grid -->
-      <section class="section-spacer">
+      <!-- Our Story / Vision / Mission -->
+      <section class="section-spacer" style="background-color: var(--grey-bg, #f5f5f5);">
         <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">The cast &amp; crew.</h2>
-            <p class="section-subhead">Senior filmmakers and animators with hands on the timeline.</p>
-          </div>
-
-          <div class="cast-list-grid">
-            <div class="cast-member-card" style="background: var(--card-bg); border-radius: var(--radius-card); overflow: hidden; border: 1px solid var(--card-border);">
-              <div class="cast-photo-frame" style="width:100%; aspect-ratio: 1/1; background: #14131A;">
-                <svg viewBox="0 0 300 300" style="width:100%; height:100%;">
-                  <circle cx="150" cy="110" r="55" fill="#B028E6" opacity="0.8"/>
-                  <path d="M70 260 C 70 190, 230 190, 230 260 Z" fill="#252430"/>
-                </svg>
-              </div>
-              <div style="padding: 24px;">
-                <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 4px;">Julian Vance</h3>
-                <div style="font-size: 0.85rem; color: var(--primary); font-weight: 700; margin-bottom: 8px;">Creative Director &amp; Founder</div>
-                <div style="font-size: 0.82rem; color: var(--text-muted);">14 years in commercial directing &amp; narrative film.</div>
-              </div>
+          <div class="services-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="service-card" style="padding: 36px;">
+              <span class="service-format-pill" style="margin-bottom: 16px;">OUR ORIGINS</span>
+              <h3 class="service-card-title" style="margin-bottom: 16px;">Our Story</h3>
+              <p class="service-card-desc">BRIGHTFORGE started as a two-person web shop and grew into a full digital team by staying focused on one thing: work that performs, not just work that looks nice in a portfolio.</p>
             </div>
 
-            <div class="cast-member-card" style="background: var(--card-bg); border-radius: var(--radius-card); overflow: hidden; border: 1px solid var(--card-border);">
-              <div class="cast-photo-frame" style="width:100%; aspect-ratio: 1/1; background: #0D0B12;">
-                <svg viewBox="0 0 300 300" style="width:100%; height:100%;">
-                  <circle cx="150" cy="110" r="55" fill="#8F74FB" opacity="0.8"/>
-                  <path d="M70 260 C 70 190, 230 190, 230 260 Z" fill="#252430"/>
-                </svg>
-              </div>
-              <div style="padding: 24px;">
-                <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 4px;">Elena Rostova</h3>
-                <div style="font-size: 0.85rem; color: var(--secondary-purple); font-weight: 700; margin-bottom: 8px;">Lead 2D &amp; Character Animator</div>
-                <div style="font-size: 0.82rem; color: var(--text-muted);">12 years in traditional cel &amp; frame-by-frame animation.</div>
-              </div>
+            <div class="service-card featured-service-card" style="padding: 36px;">
+              <span class="service-featured-badge" style="margin-bottom: 16px;">OUR DIRECTION</span>
+              <h3 class="service-card-title" style="margin-bottom: 16px;">Our Vision</h3>
+              <p class="service-card-desc">To be the team businesses call first when they need a website, ad campaign, or SEO plan that actually delivers, not just another agency pitch.</p>
             </div>
 
-            <div class="cast-member-card" style="background: var(--card-bg); border-radius: var(--radius-card); overflow: hidden; border: 1px solid var(--card-border);">
-              <div class="cast-photo-frame" style="width:100%; aspect-ratio: 1/1; background: #14131A;">
-                <svg viewBox="0 0 300 300" style="width:100%; height:100%;">
-                  <circle cx="150" cy="110" r="55" fill="#B028E6" opacity="0.8"/>
-                  <path d="M70 260 C 70 190, 230 190, 230 260 Z" fill="#252430"/>
-                </svg>
-              </div>
-              <div style="padding: 24px;">
-                <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 4px;">Kofi Mensah</h3>
-                <div style="font-size: 0.85rem; color: var(--primary); font-weight: 700; margin-bottom: 8px;">3D &amp; Technical Director</div>
-                <div style="font-size: 0.82rem; color: var(--text-muted);">Specialist in photoreal lighting and kinetic physics.</div>
-              </div>
-            </div>
-
-            <div class="cast-member-card" style="background: var(--card-bg); border-radius: var(--radius-card); overflow: hidden; border: 1px solid var(--card-border);">
-              <div class="cast-photo-frame" style="width:100%; aspect-ratio: 1/1; background: #0D0B12;">
-                <svg viewBox="0 0 300 300" style="width:100%; height:100%;">
-                  <circle cx="150" cy="110" r="55" fill="#FFFFFF" opacity="0.85"/>
-                  <path d="M70 260 C 70 190, 230 190, 230 260 Z" fill="#252430"/>
-                </svg>
-              </div>
-              <div style="padding: 24px;">
-                <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 4px;">Sora Lin</h3>
-                <div style="font-size: 0.85rem; color: var(--secondary-purple); font-weight: 700; margin-bottom: 8px;">Sound Designer &amp; Colorist</div>
-                <div style="font-size: 0.82rem; color: var(--text-muted);">Crafting custom foley and theatrical DaVinci grades.</div>
-              </div>
+            <div class="service-card" style="padding: 36px;">
+              <span class="service-format-pill" style="margin-bottom: 16px;">OUR PURPOSE</span>
+              <h3 class="service-card-title" style="margin-bottom: 16px;">Our Mission</h3>
+              <p class="service-card-desc">To give every client senior-level web, advertising, and SEO work without the agency markup or the runaround.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- CTA Banner -->
-      <section class="dark-cta-section">
+      <!-- Stats Bar Section -->
+      <section class="stats-bar-section">
         <div class="container">
-          <div class="cta-container">
-            <h2 class="cta-heading">Want to work with us? Let's talk.</h2>
-            <p class="cta-subhead">Whether you have a full script or just a blank page, we are ready to find the frame that fits.</p>
-            <a href="contact.html" class="btn btn-primary">Start a project</a>
+          <div class="stats-header-bar">
+            <div class="stats-title-group">
+              <span class="section-tag-pill"><span class="pill-sparkle">✦</span> THE NUMBERS SO FAR <span class="pill-sparkle">✦</span></span>
+              <h2 class="stats-heading-text">Results that speak for themselves</h2>
+            </div>
+          </div>
+
+          <div class="stats-bento-grid">
+            <div class="stat-bento-item">
+              <div class="stat-item-top">
+                <span class="stat-category-chip">#Experience</span>
+                <span class="stat-icon-micro">&#x25C6;</span>
+              </div>
+              <div class="stat-number-display stat-number-purple">4+</div>
+              <div>
+                <div class="stat-label-title">Years in Business</div>
+                <div class="stat-label-desc">Web, ads, and SEO</div>
+              </div>
+            </div>
+
+            <div class="stat-bento-item">
+              <div class="stat-item-top">
+                <span class="stat-category-chip">#Projects</span>
+                <span class="stat-icon-micro">&#x25C6;</span>
+              </div>
+              <div class="stat-number-display">8,000+</div>
+              <div>
+                <div class="stat-label-title">Projects Delivered</div>
+                <div class="stat-label-desc">Across all services</div>
+              </div>
+            </div>
+
+            <div class="stat-bento-item">
+              <div class="stat-item-top">
+                <span class="stat-category-chip">#Satisfaction</span>
+                <span class="stat-icon-micro">&#x25C6;</span>
+              </div>
+              <div class="stat-number-display stat-number-periwinkle">98%</div>
+              <div>
+                <div class="stat-label-title">Client Satisfaction</div>
+                <div class="stat-label-desc">Verified feedback</div>
+              </div>
+            </div>
+
+            <div class="stat-bento-item">
+              <div class="stat-item-top">
+                <span class="stat-category-chip">#Team</span>
+                <span class="stat-icon-micro">&#x25C6;</span>
+              </div>
+              <div class="stat-number-display">15+</div>
+              <div>
+                <div class="stat-label-title">Team Members</div>
+                <div class="stat-label-desc">Senior professionals</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+      <!-- Testimonials & Client Feedback Section (1-Row Infinite Loop Carousel) -->
+      <section class="testimonials-section section-spacer" id="testimonials">
+        <div class="container">
+          
+          <!-- Section Header -->
+          <div class="section-header section-header-center reveal reveal-up">
+            <span class="section-tag-pill"><span class="pill-sparkle">✦</span> CLIENT STORIES <span class="pill-sparkle">✦</span></span>
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-subhead">Real feedback and verified growth metrics from ambitious businesses scaling with Brightforge.</p>
+          </div>
+
+        </div>
+
+        <!-- 1-Row Smooth Infinite Loop Carousel Slider -->
+        <div class="testimonials-loop-container">
+          <div class="testimonials-loop-track">
+            
+            <!-- Set 1 of 6 Cards -->
+            <!-- Card 1: Rachel Kim -->
+            <div class="testimonial-card">
+              <div class="testimonial-card-top">
+                <div class="testimonial-stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+              <p class="testimonial-quote">
+                "Our new site paid for itself within the first two months. The team didn't just design it, they built it to actually sell."
+              </p>
+              <div class="testimonial-author-row">
+                <div class="testimonial-avatar">
+                  <img src="img/clients/rachel-kim.jpg" alt="Rachel Kim" loading="lazy" class="testimonial-avatar-img">
+                </div>
+                <div class="testimonial-author-meta">
+                  <div class="testimonial-author-name">Rachel Kim <span class="verified-badge" title="Verified Client">✓</span></div>
+                  <div class="testimonial-author-role">Ecommerce Founder</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Daniel Okafor -->
+            <div class="testimonial-card">
+              <div class="testimonial-card-top">
+                <div class="testimonial-stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+              <p class="testimonial-quote">
+                "Working with this team on our Google Ads was the first time an agency actually explained what they were doing and why."
+              </p>
+              <div class="testimonial-author-row">
+                <div class="testimonial-avatar">
+                  <img src="img/clients/daniel-okafor.jpg" alt="Daniel Okafor" loading="lazy" class="testimonial-avatar-img">
+                </div>
+                <div class="testimonial-author-meta">
+                  <div class="testimonial-author-name">Daniel Okafor <span class="verified-badge" title="Verified Client">✓</span></div>
+                  <div class="testimonial-author-role">Marketing Lead</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Priya Sharma -->
+            <div class="testimonial-card">
+              <div class="testimonial-card-top">
+                <div class="testimonial-stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+              <p class="testimonial-quote">
+                "Six months into their SEO plan and we're finally ranking for the keywords that actually bring in high-paying customers."
+              </p>
+              <div class="testimonial-author-row">
+                <div class="testimonial-avatar">
+                  <img src="img/clients/priya-sharma.jpg" alt="Priya Sharma" loading="lazy" class="testimonial-avatar-img">
+                </div>
+                <div class="testimonial-author-meta">
+                  <div class="testimonial-author-name">Priya Sharma <span class="verified-badge" title="Verified Client">✓</span></div>
+                  <div class="testimonial-author-role">Clinic Owner</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4: Marcus Bell -->
+            <div class="testimonial-card">
+              <div class="testimonial-card-top">
+                <div class="testimonial-stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+              <p class="testimonial-quote">
+                "Fast communication, clear pricing, and a site that loads instantly. Everything we hoped for and didn't get from our last agency."
+              </p>
+              <div class="testimonial-author-row">
+                <div class="testimonial-avatar">
+                  <img src="img/clients/marcus-bell.jpg" alt="Marcus Bell" loading="lazy" class="testimonial-avatar-img">
+                </div>
+                <div class="testimonial-author-meta">
+                  <div class="testimonial-author-name">Marcus Bell <span class="verified-badge" title="Verified Client">✓</span></div>
+                  <div class="testimonial-author-role">Operations Lead</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5: Elena Rossi (Featured Hero Card) -->
+            <div class="testimonial-card testimonial-card-featured">
+              <div class="featured-impact-badge">★ MOST IMPACTFUL</div>
+              <div class="testimonial-card-top">
+                <div class="testimonial-stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+              <p class="testimonial-quote">
+                "They rebuilt our site in three weeks and it looks and runs better than the one our last developer took three months on."
+              </p>
+              <div class="testimonial-author-row">
+                <div class="testimonial-avatar">
+                  <img src="img/clients/elena-rossi.jpg" alt="Elena Rossi" loading="lazy" class="testimonial-avatar-img">
+                </div>
+                <div class="testimonial-author-meta">
+                  <div class="testimonial-author-name">Elena Rossi <span class="verified-badge" title="Verified Client">✓</span></div>
+                  <div class="testimonial-author-role">Co Founder</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6: Tariq Hussain -->
+            <div class="testimonial-card">
+              <div class="testimonial-card-top">
+                <div class="testimonial-stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+              <p class="testimonial-quote">
+                "Our support tickets actually get answered in minutes. That proactive communication alone made switching agencies worth it."
+              </p>
+              <div class="testimonial-author-row">
+                <div class="testimonial-avatar">
+                  <img src="img/clients/tariq-hussain.jpg" alt="Tariq Hussain" loading="lazy" class="testimonial-avatar-img">
+                </div>
+                <div class="testimonial-author-meta">
+                  <div class="testimonial-author-name">Tariq Hussain <span class="verified-badge" title="Verified Client">✓</span></div>
+                  <div class="testimonial-author-role">IT Director</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Set 2 (Duplicate for Seamless Continuous Loop) -->
+            <!-- Duplicate Card 1: Rachel Kim -->
+            <div class="testimonial-card" aria-hidden="true">
+              <div class="testimonial-card-top">
+                <div class="testimonial-stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+              <p class="testimonial-quote">
+                "Our new site paid for itself within the first two months. The team didn't just design it, they built it to actually sell."
+              </p>
+              <div class="testimonial-author-row">
+                <div class="testimonial-avatar">
+                  <img src="img/clients/rachel-kim.jpg" alt="Rachel Kim" loading="lazy" class="testimonial-avatar-img">
+                </div>
+                <div class="testimonial-author-meta">
+                  <div class="testimonial-author-name">Rachel Kim <span class="verified-badge">✓</span></div>
+                  <div class="testimonial-author-role">Ecommerce Founder</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Duplicate Card 2: Daniel Okafor -->
+            <div class="testimonial-card" aria-hidden="true">
+              <div class="testimonial-card-top">
+                <div class="testimonial-stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+              <p class="testimonial-quote">
+                "Working with this team on our Google Ads was the first time an agency actually explained what they were doing and why."
+              </p>
+              <div class="testimonial-author-row">
+                <div class="testimonial-avatar">
+                  <img src="img/clients/daniel-okafor.jpg" alt="Daniel Okafor" loading="lazy" class="testimonial-avatar-img">
+                </div>
+                <div class="testimonial-author-meta">
+                  <div class="testimonial-author-name">Daniel Okafor <span class="verified-badge">✓</span></div>
+                  <div class="testimonial-author-role">Marketing Lead</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Duplicate Card 3: Priya Sharma -->
+            <div class="testimonial-card" aria-hidden="true">
+              <div class="testimonial-card-top">
+                <div class="testimonial-stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+              <p class="testimonial-quote">
+                "Six months into their SEO plan and we're finally ranking for the keywords that actually bring in high-paying customers."
+              </p>
+              <div class="testimonial-author-row">
+                <div class="testimonial-avatar">
+                  <img src="img/clients/priya-sharma.jpg" alt="Priya Sharma" loading="lazy" class="testimonial-avatar-img">
+                </div>
+                <div class="testimonial-author-meta">
+                  <div class="testimonial-author-name">Priya Sharma <span class="verified-badge">✓</span></div>
+                  <div class="testimonial-author-role">Clinic Owner</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Duplicate Card 4: Marcus Bell -->
+            <div class="testimonial-card" aria-hidden="true">
+              <div class="testimonial-card-top">
+                <div class="testimonial-stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+              <p class="testimonial-quote">
+                "Fast communication, clear pricing, and a site that loads instantly. Everything we hoped for and didn't get from our last agency."
+              </p>
+              <div class="testimonial-author-row">
+                <div class="testimonial-avatar">
+                  <img src="img/clients/marcus-bell.jpg" alt="Marcus Bell" loading="lazy" class="testimonial-avatar-img">
+                </div>
+                <div class="testimonial-author-meta">
+                  <div class="testimonial-author-name">Marcus Bell <span class="verified-badge">✓</span></div>
+                  <div class="testimonial-author-role">Operations Lead</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Duplicate Card 5: Elena Rossi -->
+            <div class="testimonial-card testimonial-card-featured" aria-hidden="true">
+              <div class="featured-impact-badge">★ MOST IMPACTFUL</div>
+              <div class="testimonial-card-top">
+                <div class="testimonial-stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+              <p class="testimonial-quote">
+                "They rebuilt our site in three weeks and it looks and runs better than the one our last developer took three months on."
+              </p>
+              <div class="testimonial-author-row">
+                <div class="testimonial-avatar">
+                  <img src="img/clients/elena-rossi.jpg" alt="Elena Rossi" loading="lazy" class="testimonial-avatar-img">
+                </div>
+                <div class="testimonial-author-meta">
+                  <div class="testimonial-author-name">Elena Rossi <span class="verified-badge">✓</span></div>
+                  <div class="testimonial-author-role">Co Founder</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Duplicate Card 6: Tariq Hussain -->
+            <div class="testimonial-card" aria-hidden="true">
+              <div class="testimonial-card-top">
+                <div class="testimonial-stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+              <p class="testimonial-quote">
+                "Our support tickets actually get answered in minutes. That proactive communication alone made switching agencies worth it."
+              </p>
+              <div class="testimonial-author-row">
+                <div class="testimonial-avatar">
+                  <img src="img/clients/tariq-hussain.jpg" alt="Tariq Hussain" loading="lazy" class="testimonial-avatar-img">
+                </div>
+                <div class="testimonial-author-meta">
+                  <div class="testimonial-author-name">Tariq Hussain <span class="verified-badge">✓</span></div>
+                  <div class="testimonial-author-role">IT Director</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="container" style="margin-top: 48px;">
+          <!-- Bottom Trust Ticker Strip -->
+          <div class="testimonials-bottom-trust reveal reveal-up">
+            
+            <div class="trust-stat-box">
+              <div class="trust-stat-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <div class="trust-stat-text">
+                <span class="trust-stat-num">100+</span>
+                <span class="trust-stat-label">5-Star Client Reviews</span>
+              </div>
+            </div>
+
+            <div class="trust-stat-divider" aria-hidden="true"></div>
+
+            <div class="trust-stat-box">
+              <div class="trust-stat-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </div>
+              <div class="trust-stat-text">
+                <span class="trust-stat-num">99.2%</span>
+                <span class="trust-stat-label">Client Satisfaction Rate</span>
+              </div>
+            </div>
+
+            <div class="trust-stat-divider" aria-hidden="true"></div>
+
+            <div class="trust-stat-box">
+              <div class="trust-stat-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+              </div>
+              <div class="trust-stat-text">
+                <span class="trust-stat-num">3.8x</span>
+                <span class="trust-stat-label">Average Client ROI</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (Integrated Top CTA Banner + 5-Column Navigation) -->
     <footer class="site-footer">
       <div class="container">
-        <div class="footer-top-grid">
-          <div class="footer-brand-col">
-            <a href="index.html" class="brand-logo" aria-label="CELWORKS Home">
-              <span class="brand-aperture-dot" aria-hidden="true"></span>CELWORKS
+        
+        <!-- Top Integrated CTA Banner (Matching Reference Design) -->
+        <div class="footer-cta-container">
+          <div class="cta-ref-banner-card reveal reveal-up">
+            
+            <!-- Left Side: Content & Actions -->
+            <div class="cta-ref-content-col">
+              <h2 class="cta-ref-title">Let's Build Digital Experiences <span class="highlight-purple-text">That Convert</span></h2>
+              <p class="cta-ref-subhead">We design, build, and grow high-performing websites, Google Ads funnels, and SEO growth engines that scale your brand online.</p>
+              <div class="cta-ref-action-row">
+                <a href="contact.html" class="btn btn-cta-white">
+                  Start Your Project <span class="cta-arrow">&rarr;</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Side: Full-Bleed Mockup + Glowing Purple Arc -->
+            <div class="cta-ref-visual-col">
+              <div class="cta-ref-arc-glow" aria-hidden="true"></div>
+              <img src="img/cta-img.png" alt="BRIGHTFORGE Digital Experiences Dashboard" class="cta-ref-mockup-img" loading="lazy">
+            </div>
+
+          </div>
+        </div>
+        
+        <div class="footer-ref-grid">
+          
+          <!-- Column 1: Brand & Contact Info -->
+          <div class="footer-col-brand">
+            <a href="index.html" class="brand-logo footer-brand-logo" aria-label="BRIGHTFORGE Home">
+              <span class="brand-aperture-dot" aria-hidden="true"></span>
+              BRIGHTFORGE
             </a>
-            <p class="footer-blurb">CELWORKS is an animation and film studio that helps ambitious brands move (literally). Every project starts with a script and ends with something worth sharing.</p>
+            <p class="footer-brand-bio">
+              We are a creative digital agency building modern, fast &amp; responsive websites, ROI-driven Google Ads, and SEO growth engines that help businesses stand out and grow.
+            </p>
+            <div class="footer-contact-details">
+              <div class="footer-contact-row">
+                <svg class="footer-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>123 Innovation Way, Suite 400, New York, NY 10001, USA</span>
+              </div>
+              <div class="footer-contact-row">
+                <svg class="footer-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <a href="tel:+15559876543" class="footer-contact-link">+1 (555) 987-6543</a>
+              </div>
+              <div class="footer-contact-row">
+                <svg class="footer-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <a href="mailto:info@brightforge.com" class="footer-contact-link">info@brightforge.com</a>
+              </div>
+            </div>
           </div>
 
-          <div>
-            <h4 class="footer-col-title">Quick Links</h4>
+          <!-- Column 2: Services -->
+          <div class="footer-col-links">
+            <h4 class="footer-ref-title">
+              <span class="footer-head-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+              </span>
+              Services
+            </h4>
+            <div class="footer-title-divider"></div>
             <ul class="footer-nav-list">
-              <li><a href="index.html" class="footer-nav-link">Home</a></li>
-              <li><a href="index.html#services" class="footer-nav-link">Services</a></li>
-              <li><a href="index.html#work" class="footer-nav-link">Portfolio</a></li>
-              <li><a href="about.html" class="footer-nav-link">About</a></li>
-              <li><a href="blog.html" class="footer-nav-link">Blog</a></li>
-              <li><a href="contact.html" class="footer-nav-link">Contact</a></li>
+              <li><a href="service-web-development.html" class="footer-nav-link">Web Development</a></li>
+              <li><a href="service-google-ads.html" class="footer-nav-link">Google Ads</a></li>
+              <li><a href="service-seo.html" class="footer-nav-link">SEO Optimization</a></li>
+              <li><a href="services.html" class="footer-nav-link">All Services</a></li>
             </ul>
           </div>
 
-          <div>
-            <h4 class="footer-col-title">Services</h4>
+          <!-- Column 3: Company -->
+          <div class="footer-col-links">
+            <h4 class="footer-ref-title">
+              <span class="footer-head-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </span>
+              Company
+            </h4>
+            <div class="footer-title-divider"></div>
             <ul class="footer-nav-list">
-              <li><a href="contact.html?service=whiteboard" class="footer-nav-link">Whiteboard Video</a></li>
-              <li><a href="contact.html?service=explainer" class="footer-nav-link">Explainer Video</a></li>
-              <li><a href="contact.html?service=premium" class="footer-nav-link">Premium Video</a></li>
-              <li><a href="contact.html?service=2d" class="footer-nav-link">2D Animation</a></li>
-              <li><a href="contact.html?service=3d" class="footer-nav-link">3D Animation</a></li>
-              <li><a href="contact.html?service=motion" class="footer-nav-link">Motion Graphics</a></li>
+              <li><a href="about.html" class="footer-nav-link">About Us</a></li>
+              <li><a href="portfolio.html" class="footer-nav-link">Our Portfolio</a></li>
+              <li><a href="contact.html" class="footer-nav-link">Contact Us</a></li>
             </ul>
           </div>
 
-          <div>
-            <h4 class="footer-col-title">Contact</h4>
-            <span class="footer-contact-item">Studio 4B, 180 Canal Street, NY 10013</span>
-            <span class="footer-contact-item">+1 (555) 238-9410</span>
-            <span class="footer-contact-item">hello@celworks.studio</span>
-            <a href="https://wa.me/15552389410" target="_blank" rel="noopener noreferrer" class="footer-whatsapp-link">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-              </svg>
-              Chat on WhatsApp
-            </a>
+          <!-- Column 4: Resources -->
+          <div class="footer-col-links">
+            <h4 class="footer-ref-title">
+              <span class="footer-head-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              </span>
+              Resources
+            </h4>
+            <div class="footer-title-divider"></div>
+            <ul class="footer-nav-list">
+              <li><a href="blog.html" class="footer-nav-link">Blog &amp; Insights</a></li>
+              <li><a href="contact.html" class="footer-nav-link">Support Center</a></li>
+            </ul>
           </div>
+
         </div>
 
-        <div class="footer-bottom-bar">
-          <div>&copy; 2026 CELWORKS Studio. All rights reserved. Directed frame by frame.</div>
-          <div class="footer-social-links">
-            <a href="#" class="social-icon-link" aria-label="Vimeo">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="0" ry="0"></rect></svg>
-            </a>
-            <a href="#" class="social-icon-link" aria-label="Instagram">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            </a>
-            <a href="#" class="social-icon-link" aria-label="LinkedIn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-            </a>
-          </div>
+        <!-- Centered Bottom Copyright -->
+        <div class="footer-ref-bottom">
+          <p>&copy; 2026 BRIGHTFORGE. All rights reserved.</p>
         </div>
+
       </div>
     </footer>
 
-  </div><!-- /site-boxed-wrapper -->
+  </div>
 
   <script src="js/global.js"></script>
-  <script src="js/about.js"></script>
 </body>
 </html>

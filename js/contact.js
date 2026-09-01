@@ -1,5 +1,5 @@
 /**
- * CELWORKS: Contact Page Scripts
+ * BRIGHTFORGE: Contact Page Scripts
  * FAQ Accordion and Project Inquiry Form Submission
  */
 

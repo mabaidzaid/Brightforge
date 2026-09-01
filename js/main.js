@@ -1,5 +1,5 @@
 /**
- * CELWORKS Studio Scripts
+ * BRIGHTFORGE Studio Scripts
  * Interactive Timeline, Theme Switcher, Navigation, FAQ, and Modals
  */
 
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
    -------------------------------------------------------------------------- */
 function initTheme() {
   const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
-  const storedTheme = localStorage.getItem('celworks-theme');
+  const storedTheme = localStorage.getItem('brightforge-theme');
 
   // Default to light theme if not stored
   const initialTheme = storedTheme || 'light';
@@ -30,7 +30,7 @@ function initTheme() {
       const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
       const newTheme = currentTheme === 'light' ? 'dark' : 'light';
       applyTheme(newTheme);
-      localStorage.setItem('celworks-theme', newTheme);
+      localStorage.setItem('brightforge-theme', newTheme);
     });
   });
 }

@@ -1,5 +1,5 @@
 /**
- * CELWORKS: About Page Scripts
+ * BRIGHTFORGE: About Page Scripts
  * Manifesto and Team Interactions
  */
 

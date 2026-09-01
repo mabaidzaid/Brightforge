@@ -1,5 +1,5 @@
 /**
- * CELWORKS: Blog Page Scripts
+ * BRIGHTFORGE: Blog Page Scripts
  * Category Filter and Newsletter Subscription
  */
 
@@ -20,13 +20,19 @@ function initBlogFilter() {
     btn.addEventListener('click', () => {
       const category = btn.getAttribute('data-filter');
 
-      filterBtns.forEach(b => b.classList.remove('active'));
+      filterBtns.forEach(b => {
+        b.classList.remove('active');
+        b.style.background = 'var(--card-bg)';
+        b.style.color = 'var(--text-primary)';
+      });
       btn.classList.add('active');
+      btn.style.background = 'var(--black)';
+      btn.style.color = 'var(--white)';
 
       blogCards.forEach(card => {
         const cardCategory = card.getAttribute('data-category');
         if (category === 'all' || cardCategory === category) {
-          card.style.display = 'flex';
+          card.style.display = '';
         } else {
           card.style.display = 'none';
         }

@@ -1,6 +1,6 @@
 /**
- * CELWORKS: Homepage Interactive Scripts
- * Dynamic Cinematic Animation Canvas, Viewfinder HUD, Layer Switcher, and Waveform Timeline Scrubber
+ * BRIGHTFORGE: Homepage Interactive Scripts
+ * Dynamic Canvas, Viewfinder HUD, Layer Switcher, and Waveform Timeline Scrubber
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroHud();
   initTimelineScrubber();
   initVideoModal();
+  initPortfolioFilter();
 });
 
 /* --------------------------------------------------------------------------
@@ -418,3 +419,37 @@ function initVideoModal() {
     }
   });
 }
+
+/* --------------------------------------------------------------------------
+   5. Portfolio Tab Filtering
+   -------------------------------------------------------------------------- */
+function initPortfolioFilter() {
+  const filterBtns = document.querySelectorAll('.portfolio-section .filter-pill-btn');
+  const tiles = document.querySelectorAll('.portfolio-section .contact-sheet-tile');
+  if (!filterBtns.length || !tiles.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const category = btn.getAttribute('data-filter');
+
+      filterBtns.forEach(b => {
+        b.classList.remove('active');
+        b.style.background = 'var(--card-bg)';
+        b.style.color = 'var(--text-primary)';
+      });
+      btn.classList.add('active');
+      btn.style.background = 'var(--black)';
+      btn.style.color = 'var(--white)';
+
+      tiles.forEach(tile => {
+        const tileCategory = tile.getAttribute('data-category');
+        if (category === 'all' || tileCategory === category) {
+          tile.style.display = '';
+        } else {
+          tile.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
