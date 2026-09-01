@@ -692,20 +692,20 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #4338CA;
+  background: linear-gradient(135deg, #B028E6 0%, #8F74FB 100%);
   color: #FFFFFF !important;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 12px rgba(67, 56, 202, 0.35);
+  box-shadow: 0 4px 14px rgba(176, 40, 230, 0.35);
 }
 
 .footer-social-circle:hover {
-  background: #6366F1;
+  background: linear-gradient(135deg, #981fc9 0%, #7b5ef5 100%);
   transform: translateY(-3px) scale(1.08);
-  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.5);
+  box-shadow: 0 8px 22px rgba(176, 40, 230, 0.55);
   color: #FFFFFF !important;
 }
 
@@ -715,7 +715,7 @@
   fill: currentColor;
 }
 
-/* Footer Contact Details with Colored Icons */
+/* Footer Contact Details with Site Brand Colored Icons */
 .footer-contact-details {
   display: flex;
   flex-direction: column;
@@ -740,13 +740,13 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: #4338CA;
+  background: linear-gradient(135deg, #B028E6 0%, #8F74FB 100%);
   color: #FFFFFF !important;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 3px 10px rgba(67, 56, 202, 0.3);
+  box-shadow: 0 3px 10px rgba(176, 40, 230, 0.3);
 }
 
 .footer-contact-icon-circle svg {
@@ -762,7 +762,7 @@
 }
 
 .footer-contact-link:hover {
-  color: #A855F7;
+  color: #B028E6;
   transform: translateX(2px);
 }
 
@@ -801,23 +801,15 @@
 }
 
 .footer-nav-link:hover {
-  color: #A855F7 !important;
+  color: #B028E6 !important;
   transform: translateX(4px);
 }
 
-/* Floating Action Widgets Stack (Bottom Right) */
-.floating-action-stack {
+/* Floating WhatsApp Button (Bottom Left) */
+.floating-whatsapp-btn {
   position: fixed;
   bottom: 28px;
-  right: 28px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  z-index: 9999;
-}
-
-.floating-whatsapp-btn {
+  left: 28px;
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -830,7 +822,7 @@
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
-  position: relative;
+  z-index: 9999;
 }
 
 .floating-whatsapp-btn:hover {
@@ -845,31 +837,36 @@
   fill: #FFFFFF;
 }
 
+/* Floating Call Button (Bottom Right) */
 .floating-call-btn {
-  width: 50px;
-  height: 50px;
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
-  background: #4F46E5;
+  background: linear-gradient(135deg, #B028E6 0%, #8F74FB 100%);
   color: #FFFFFF !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.45);
+  box-shadow: 0 8px 24px rgba(176, 40, 230, 0.45);
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
+  z-index: 9999;
 }
 
 .floating-call-btn:hover {
   transform: scale(1.1) translateY(-3px);
-  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.65);
-  background: #6366F1;
+  box-shadow: 0 12px 30px rgba(176, 40, 230, 0.65);
+  background: linear-gradient(135deg, #981fc9 0%, #7b5ef5 100%);
 }
 
 .floating-call-btn svg {
   width: 24px;
   height: 24px;
-  fill: currentColor;
+  fill: #FFFFFF;
 }
 
 .whatsapp-badge {
