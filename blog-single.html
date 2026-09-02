@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Modern High-Growth Brands Are Ditching Heavy Frameworks | BRIGHTFORGE Insights</title>
+  <meta name="description" content="A practical engineering dive into eliminating JavaScript bloat, edge asset caching, and building sub-second custom codebases that double conversion rates.">
+  
+  <!-- Modular Stylesheets -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/header-footer.css">
+  <link rel="stylesheet" href="css/blog.css">
+</head>
+<body class="blog-single-page">
+
+  <!-- Main Boxed Outer Wrapper -->
+  <div class="site-boxed-wrapper">
+
+    <!-- Header / Navigation -->
+    <header class="site-header" id="top">
+      <div class="header-top-bar">
+        <div class="brand-tab-unit">
+          <div class="brand-tab-body">
+            <a href="index.html" class="brand-logo" aria-label="BRIGHTFORGE Home">
+              <span class="brand-aperture-dot" aria-hidden="true"></span>BRIGHTFORGE
+            </a>
+          </div>
+          <div class="brand-tab-slope" aria-hidden="true">
+            <svg viewBox="0 0 80 66" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 0,0 L 16,0 Q 32,0 44,14 L 56,38 Q 66,66 80,66 L 0,66 Z" fill="currentColor"/>
+            </svg>
+          </div>
+        </div>
+
+        <nav class="nav-desktop" aria-label="Main Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-item-dropdown">
+            <a href="services.html" class="nav-link">Services <svg class="nav-dropdown-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="nav-dropdown-menu">
+              <a href="service-web-development.html" class="nav-dropdown-item">Web Development</a>
+              <a href="service-google-ads.html" class="nav-dropdown-item">Google Ads</a>
+              <a href="service-seo.html" class="nav-dropdown-item">Search Engine Optimization (SEO)</a>
+            </div>
+          </div>
+          <a href="portfolio.html" class="nav-link">Portfolio</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="blog.html" class="nav-link active">Blog</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle-btn" id="theme-toggle" aria-label="Switch to dark theme" title="Switch to dark mode">
+            <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <a href="contact.html" class="btn-header-cta">Get Started Now</a>
+
+          <button class="hamburger-btn" aria-label="Toggle Mobile Menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" aria-label="Mobile Navigation">
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <div class="mobile-nav-group">
+          <a href="services.html" class="mobile-nav-link">Services</a>
+          <div class="mobile-sub-links">
+            <a href="service-web-development.html" class="mobile-sub-link">Web Development</a>
+            <a href="service-google-ads.html" class="mobile-sub-link">Google Ads</a>
+            <a href="service-seo.html" class="mobile-sub-link">Search Engine Optimization</a>
+          </div>
+        </div>
+        <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="blog.html" class="mobile-nav-link">Blog</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </div>
+      <div class="mobile-nav-footer">
+        <a href="contact.html" class="btn btn-primary" style="width:100%;">Get Started Now</a>
+      </div>
+    </div>
+
+    <!-- Main Canvas -->
+    <main class="main-content-canvas">
+      
+      <!-- Article Hero Header -->
+      <section class="single-article-hero">
+        <div class="container">
+          
+          <!-- Breadcrumb Navigation -->
+          <nav class="single-hero-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="blog.html">Blog</a>
+            <span>/</span>
+            <span style="color: var(--text-primary);">Web Development</span>
+          </nav>
+
+          <span class="single-article-category">✦ WEB DEVELOPMENT &amp; ARCHITECTURE</span>
+          
+          <h1 class="single-article-title">Why Modern High-Growth Brands Are Ditching Heavy Frameworks for Sub-0.7s Clean Architecture</h1>
+          
+          <p class="single-article-lead">
+            A practical engineering dive into eliminating JavaScript bloat, edge asset caching, and building sub-second custom codebases that double conversion rates.
+          </p>
+
+          <!-- Meta Row: Author, Date, Reading Time, Share Buttons -->
+          <div class="single-article-meta-bar">
+            <div class="single-author-profile">
+              <img src="img/avatar_1.jpg" alt="Hamza Malik" class="single-author-img">
+              <div class="single-author-info">
+                <span class="single-author-name">Hamza Malik</span>
+                <span class="single-article-date-read">Head of Engineering • Sep 02, 2026 • 6 min read</span>
+              </div>
+            </div>
+
+            <div class="single-share-group">
+              <span class="single-share-label">Share:</span>
+              <button class="share-btn" id="shareCopyBtn" title="Copy Link" aria-label="Copy article link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+              </button>
+              <a href="https://twitter.com/intent/tweet?text=Why%20Modern%20Brands%20Are%20Ditching%20Heavy%20Frameworks" target="_blank" rel="noopener noreferrer" class="share-btn" title="Share on X / Twitter" aria-label="Share on X">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" rel="noopener noreferrer" class="share-btn" title="Share on LinkedIn" aria-label="Share on LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Featured Cover Image -->
+          <div class="single-featured-image-box">
+            <img src="img/about_culture_dev.jpg" alt="Performance Engineering Code Architecture" loading="eager">
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 2-Column Article Layout -->
+      <section class="single-article-content-section">
+        <div class="container">
+          <div class="single-article-layout">
+            
+            <!-- Left: Main Article Body -->
+            <article class="article-prose">
+              
+              <p>
+                In the modern digital landscape, user attention is measured in milliseconds. While large enterprises frequently default to monolithic frameworks, high-growth brands are uncovering an inconvenient truth: <strong>framework bloat is silently destroying their bottom line.</strong>
+              </p>
+
+              <h2 id="revenue-cost">1. The Hidden Revenue Cost of Framework Bloat</h2>
+              
+              <p>
+                According to verified Google Core Web Vitals telemetry, <strong>every 100ms delay in page load time reduces conversion rates by up to 1.1%</strong>. When a website loads 3MB of unused JavaScript dependencies, main-thread CPU execution locks up mobile devices, causing high bounce rates before visitors even see your headline.
+              </p>
+
+              <!-- Executive Callout Box -->
+              <div class="article-callout-box">
+                <div class="callout-title">
+                  <span>💡</span> Key Architectural Principle
+                </div>
+                <p>
+                  "Ship only the bytes the user's viewport requires right now. Everything else is deferrable or eliminable. True performance is subtraction, not addition."
+                </p>
+              </div>
+
+              <p>
+                When we rebuild web properties at Brightforge, our primary goal is stripping away third-party bloat, pre-compiling assets, and shipping clean semantic HTML5, high-efficiency CSS, and lightweight vanilla JavaScript.
+              </p>
+
+              <!-- Data Comparison Table -->
+              <div class="article-table-wrapper">
+                <table class="article-comparison-table">
+                  <thead>
+                    <tr>
+                      <th>Benchmark Metric</th>
+                      <th>Generic Template Stack</th>
+                      <th>Brightforge Custom Architecture</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Global Load Speed</strong></td>
+                      <td>3.8s - 5.2s</td>
+                      <td class="table-highlight">&lt; 0.7s (Instantaneous)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Lighthouse Speed Score</strong></td>
+                      <td>42 - 68 / 100</td>
+                      <td class="table-highlight">98 - 100 / 100</td>
+                    </tr>
+                    <tr>
+                      <td><strong>JavaScript Bundle Size</strong></td>
+                      <td>2.8 MB (Uncompressed)</td>
+                      <td class="table-highlight">&lt; 120 KB (Edge-Cached)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Average Mobile Conversion</strong></td>
+                      <td>1.4%</td>
+                      <td class="table-highlight">3.6% (+157% Surge)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h2 id="code-architecture">2. Zero-Bloat Edge Asset Optimization</h2>
+              
+              <p>
+                How do we achieve consistent sub-second speeds globally? By pairing lightweight client code with edge-distributed static caching. Here is a simplified pattern from our production core:
+              </p>
+
+              <!-- Code Snippet Window -->
+              <div class="article-code-window">
+                <div class="code-window-header">
+                  <div class="code-dots">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                  </div>
+                  <span class="code-filename">engine/performance-loader.js</span>
+                </div>
+                <pre><code><span class="token-comment">// Dynamic Edge Performance Loader</span>
+<span class="token-keyword">export async function</span> <span class="token-func">initPerformanceEngine</span>(config) {
+  <span class="token-keyword">const</span> observer = <span class="token-keyword">new</span> IntersectionObserver((entries) => {
+    entries.<span class="token-func">forEach</span>((entry) => {
+      <span class="token-keyword">if</span> (entry.isIntersecting) {
+        <span class="token-func">hydrateModule</span>(entry.target, config.latencyCap);
+      }
+    });
+  }, { rootMargin: <span class="token-string">'50px'</span> });
+
+  document.<span class="token-func">querySelectorAll</span>(<span class="token-string">'[data-defer]'</span>).<span class="token-func">forEach</span>(el => observer.<span class="token-func">observe</span>(el));
+}</code></pre>
+              </div>
+
+              <!-- Pull Quote -->
+              <blockquote class="article-pullquote">
+                "Performance is not an afterthought or an optimization pass—it is the foundational design architecture of high-converting businesses."
+              </blockquote>
+
+              <h2 id="tactical-rules">3. Three Rules for Sustainable Growth in 2026</h2>
+              
+              <p>
+                Before launching your next digital initiative, enforce these three non-negotiable engineering standards across your development pipeline:
+              </p>
+
+              <ol>
+                <li>
+                  <strong>Enforce a 150KB Initial Bundle Cap:</strong> Never allow initial render payload to exceed 150KB of compressed assets.
+                </li>
+                <li>
+                  <strong>Adopt Zero-Layout-Shift Design Tokens:</strong> Reserve exact aspect-ratio containers for all media, typography fonts, and asynchronous UI modules.
+                </li>
+                <li>
+                  <strong>Verify Real User Monitoring (RUM):</strong> Optimize for 75th percentile mobile traffic on cellular connections, not just desktop fiber optics.
+                </li>
+              </ol>
+
+              <!-- Post Tags -->
+              <div class="article-tags-row">
+                <span class="article-tag-pill">#WebDevelopment</span>
+                <span class="article-tag-pill">#CoreWebVitals</span>
+                <span class="article-tag-pill">#EdgeOptimization</span>
+                <span class="article-tag-pill">#SpeedEngineering</span>
+              </div>
+
+            </article>
+
+            <!-- Right: Sticky Intelligence Sidebar -->
+            <aside class="article-sticky-sidebar">
+              
+              <!-- Table of Contents Widget -->
+              <div class="sidebar-widget-card">
+                <h3 class="sidebar-widget-title">Table of Contents</h3>
+                <nav class="toc-nav-list" id="tocNav">
+                  <a href="#revenue-cost" class="toc-link active">1. Hidden Cost of Bloat</a>
+                  <a href="#code-architecture" class="toc-link">2. Zero-Bloat Edge Delivery</a>
+                  <a href="#tactical-rules" class="toc-link">3. Three Rules for 2026</a>
+                </nav>
+              </div>
+
+              <!-- Author Profile Box -->
+              <div class="sidebar-widget-card">
+                <h3 class="sidebar-widget-title">Written by</h3>
+                <div style="display: flex; gap: 14px; align-items: center; margin-bottom: 14px;">
+                  <img src="img/avatar_1.jpg" alt="Hamza Malik" style="width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary);">
+                  <div>
+                    <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px;">Hamza Malik</h4>
+                    <span style="font-size: 0.78rem; color: var(--text-muted);">Head of Engineering @ BRIGHTFORGE</span>
+                  </div>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+                  Architecting high-frequency web systems and conversion engines for venture-backed startups and established market leaders.
+                </p>
+              </div>
+
+              <!-- Direct Conversion CTA -->
+              <div class="sidebar-cta-box">
+                <h3 class="sidebar-cta-title">Need a High-Speed Custom Website?</h3>
+                <p class="sidebar-cta-desc">
+                  Let's audit your current stack and architect a custom, sub-second web experience designed for maximum conversion ROI.
+                </p>
+                <a href="contact.html" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                  Build With Brightforge &rarr;
+                </a>
+              </div>
+
+            </aside>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Articles Section (Showing Other 2 Flagship Blogs) -->
+      <section class="related-articles-section">
+        <div class="container">
+          <div class="section-header reveal reveal-up">
+            <span class="section-tag-pill"><span class="pill-sparkle">✦</span> KEEP READING <span class="pill-sparkle">✦</span></span>
+            <h2 class="section-title">Related Engineering &amp; Growth Insights</h2>
+          </div>
+
+          <div class="blog-grid-three" style="margin-bottom: 0;">
+            
+            <!-- Article 2: Google Ads -->
+            <article class="blog-article-card reveal reveal-up">
+              <a href="blog-single.html?post=google-ads" class="blog-card-link-wrapper">
+                <div class="blog-card-media-box">
+                  <img src="img/about_culture_discussion.jpg" alt="Google Ads Performance Funnel" class="blog-card-img" loading="lazy">
+                  <div class="blog-card-category-overlay">
+                    <span class="blog-cat-badge">#GOOGLE ADS</span>
+                  </div>
+                </div>
+                
+                <div class="blog-card-content">
+                  <div class="blog-card-meta-top">
+                    <span class="blog-meta-date">Aug 28, 2026</span>
+                    <span class="blog-meta-dot">•</span>
+                    <span class="blog-meta-read">5 min read</span>
+                  </div>
+                  <h3 class="blog-card-title">The Anatomy of a 5.2x ROAS Google Ads Funnel for Modern E-Commerce</h3>
+                  <p class="blog-card-excerpt">
+                    How we restructure Performance Max asset groups, audit negative keyword waste, and build custom landing pages that lower acquisition costs by 42%.
+                  </p>
+                  <div class="blog-card-footer">
+                    <div class="blog-author-info">
+                      <img src="img/avatar_2.jpg" alt="Zaid Khan" class="blog-author-avatar">
+                      <div class="blog-author-text">
+                        <span class="author-name">Zaid Khan</span>
+                        <span class="author-role">Performance Marketing Lead</span>
+                      </div>
+                    </div>
+                    <span class="blog-read-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Article 3: Technical SEO -->
+            <article class="blog-article-card reveal reveal-up">
+              <a href="blog-single.html?post=seo" class="blog-card-link-wrapper">
+                <div class="blog-card-media-box">
+                  <img src="img/about_culture_studio.jpg" alt="Algorithmic SEO Strategy" class="blog-card-img" loading="lazy">
+                  <div class="blog-card-category-overlay">
+                    <span class="blog-cat-badge">#SEO &amp; GROWTH</span>
+                  </div>
+                </div>
+                
+                <div class="blog-card-content">
+                  <div class="blog-card-meta-top">
+                    <span class="blog-meta-date">Aug 20, 2026</span>
+                    <span class="blog-meta-dot">•</span>
+                    <span class="blog-meta-read">7 min read</span>
+                  </div>
+                  <h3 class="blog-card-title">Algorithmic SEO: How to Capture #1 Commercial Search Rankings in 2026</h3>
+                  <p class="blog-card-excerpt">
+                    A step-by-step technical framework for schema validation, Core Web Vitals optimization, and high-intent keyword clustering that drives verified revenue.
+                  </p>
+                  <div class="blog-card-footer">
+                    <div class="blog-author-info">
+                      <img src="img/avatar_3.jpg" alt="Ayesha Tariq" class="blog-author-avatar">
+                      <div class="blog-author-text">
+                        <span class="author-name">Ayesha Tariq</span>
+                        <span class="author-role">Technical SEO Strategist</span>
+                      </div>
+                    </div>
+                    <span class="blog-read-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer (5-Column Reference Layout with Light & Dark Theme Support) -->
+    <footer class="site-footer">
+      <div class="container">
+        
+        <div class="footer-ref-grid">
+          
+          <!-- Column 1: Brand Logo & Bio + Circular Social Icons -->
+          <div class="footer-col-brand">
+            <a href="index.html" class="brand-logo footer-brand-logo" aria-label="BRIGHTFORGE Home">
+              <span class="brand-aperture-dot" aria-hidden="true"></span>
+              BRIGHTFORGE
+            </a>
+            <p class="footer-brand-bio">
+              Partner with the No.1 Web Design Agency dedicated to driving your success. From stunning websites to powerful digital strategies, we help you grow and outshine the competition globally.
+            </p>
+            <div class="footer-social-row">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-circle" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-circle" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-circle" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="footer-col-nav">
+            <h3 class="footer-nav-title">Quick Links</h3>
+            <ul class="footer-nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="blog.html">Blog &amp; Insights</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Core Services -->
+          <div class="footer-col-nav">
+            <h3 class="footer-nav-title">Core Services</h3>
+            <ul class="footer-nav-list">
+              <li><a href="service-web-development.html">Custom Web Development</a></li>
+              <li><a href="service-google-ads.html">Google Ads Management</a></li>
+              <li><a href="service-seo.html">Technical SEO Audits</a></li>
+              <li><a href="services.html">Conversion Optimization (CRO)</a></li>
+              <li><a href="services.html">Full-Stack Digital Growth</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Contact Info -->
+          <div class="footer-col-nav">
+            <h3 class="footer-nav-title">Get In Touch</h3>
+            <ul class="footer-contact-list">
+              <li>
+                <span class="contact-lbl">Email:</span>
+                <a href="mailto:contact@brightforge.agency" class="contact-val">contact@brightforge.agency</a>
+              </li>
+              <li>
+                <span class="contact-lbl">Phone:</span>
+                <a href="tel:+18005550199" class="contact-val">+1 (800) 555-0199</a>
+              </li>
+              <li>
+                <span class="contact-lbl">Headquarters:</span>
+                <span class="contact-val">San Francisco, CA &bull; Global Remote Delivery</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Global Location Map -->
+          <div class="footer-col-map">
+            <h3 class="footer-nav-title">Our Headquarters</h3>
+            <div class="footer-map-box">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.5076402!3d37.757815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="BRIGHTFORGE Headquarters Map">
+              </iframe>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom Copyright Row -->
+        <div class="footer-bottom-row">
+          <p class="footer-copy-text">&copy; 2026 BRIGHTFORGE Web Agency. All Rights Reserved.</p>
+          <div class="footer-legal-links">
+            <a href="contact.html">Privacy Policy</a>
+            <a href="contact.html">Terms of Service</a>
+            <a href="contact.html">SLA Guarantees</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Global Scripts -->
+  <script src="js/global.js"></script>
+  <script src="js/blog.js"></script>
+</body>
+</html>

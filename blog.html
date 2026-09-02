@@ -164,161 +164,153 @@
         </div>
       </section>
 
-      <!-- Filter Bar & Grid -->
-      <section class="section-spacer" style="padding-top: 0;">
+      <!-- Filter Bar & 3 Premium Blog Articles -->
+      <section class="section-spacer blog-showcase-section" id="posts">
         <div class="container">
-          <!-- Filter Pills -->
-          <div class="blog-filter-bar" style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px;">
-            <button class="filter-pill-btn active" data-filter="all" style="padding: 8px 22px; border-radius: var(--radius-pill); border: 1px solid var(--card-border); background: var(--black); color: var(--white); font-weight: 700; cursor: pointer;">All Posts</button>
-            <button class="filter-pill-btn" data-filter="development" style="padding: 8px 22px; border-radius: var(--radius-pill); border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-weight: 600; cursor: pointer;">Development</button>
-            <button class="filter-pill-btn" data-filter="digital-marketing" style="padding: 8px 22px; border-radius: var(--radius-pill); border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-weight: 600; cursor: pointer;">Digital Marketing</button>
-            <button class="filter-pill-btn" data-filter="seo" style="padding: 8px 22px; border-radius: var(--radius-pill); border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-weight: 600; cursor: pointer;">SEO</button>
+          
+          <!-- Category Filter Pills -->
+          <div class="blog-filter-bar reveal reveal-up">
+            <button class="filter-pill-btn active" data-filter="all">All Articles</button>
+            <button class="filter-pill-btn" data-filter="development">Web Development</button>
+            <button class="filter-pill-btn" data-filter="digital-marketing">Google Ads</button>
+            <button class="filter-pill-btn" data-filter="seo">SEO &amp; Growth</button>
           </div>
 
-          <!-- Featured Note Card: Post 1 -->
-          <article class="featured-blog-card blog-card" data-category="development" style="background: var(--card-bg); border-radius: var(--radius-card); border: 1px solid var(--card-border); overflow: hidden; margin-bottom: 64px; display: grid; grid-template-columns: 1.2fr 1fr;">
-            <div style="background: #0D0B12; min-height: 360px; display: flex; align-items: center; justify-content: center;">
-              <svg viewBox="0 0 600 400" style="width:100%; height:100%;">
-                <circle cx="300" cy="200" r="120" fill="#B028E6" opacity="0.85"/>
-                <line x1="100" y1="320" x2="500" y2="80" stroke="#FFFFFF" stroke-width="4"/>
-                <circle cx="450" cy="110" r="28" fill="#8F74FB"/>
-              </svg>
-            </div>
-            <div style="padding: 48px; display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
-                  <span class="badge badge-primary">DEVELOPMENT</span>
-                  <span style="font-size: 0.85rem; color: var(--text-muted);">5 min read</span>
-                </div>
-                <h2 style="font-size: 1.85rem; line-height: 1.2; margin-bottom: 16px;">What Actually Makes a Website Fast (And Why Most Aren't)</h2>
-                <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6;">
-                  A practical dive into server response times, script optimization, asset delivery, and why typical website templates end up bloated.
-                </p>
-              </div>
-              <div style="margin-top: 24px; font-weight: 700; color: var(--text-primary);">
-                By BRIGHTFORGE Team
-              </div>
-            </div>
-          </article>
-
-          <!-- Grid of Post Cards: Posts 2 through 6 -->
-          <div class="blog-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-bottom: 80px;">
-            <!-- Post 2 -->
-            <article class="blog-card" data-category="digital-marketing" style="background: var(--card-bg); border-radius: var(--radius-card); border: 1px solid var(--card-border); overflow: hidden; display: flex; flex-direction: column;">
-              <div style="aspect-ratio: 16/10; background: #14131A;">
-                <svg viewBox="0 0 400 250" style="width:100%; height:100%;">
-                  <polygon points="80,180 200,60 320,180" fill="#8F74FB" opacity="0.8"/>
-                </svg>
-              </div>
-              <div style="padding: 24px; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
-                <div>
-                  <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">
-                    <span class="badge badge-outline">DIGITAL MARKETING</span>
-                    <span>4 min read</span>
+          <!-- 3-Column Luxury Blog Grid -->
+          <div class="blog-grid-three">
+            
+            <!-- Article 1: Web Development -->
+            <article class="blog-article-card reveal reveal-up reveal-delay-1" data-category="development">
+              <a href="blog-single.html" class="blog-card-link-wrapper" aria-label="Read: Why Modern High-Growth Brands Are Ditching Heavy Frameworks">
+                <div class="blog-card-media-box">
+                  <img src="img/about_culture_dev.jpg" alt="Performance Web Development Code Architecture" class="blog-card-img" loading="lazy">
+                  <div class="blog-card-category-overlay">
+                    <span class="blog-cat-badge">#WEB DEVELOPMENT</span>
                   </div>
-                  <h3 style="font-size: 1.25rem; line-height: 1.3; margin-bottom: 10px;">How to Know If Your Ad Budget Is Actually Working</h3>
-                  <p style="font-size: 0.9rem; color: var(--text-secondary);">Tracking real conversion paths and measuring return on ad spend beyond simple vanity clicks.</p>
                 </div>
-                <div style="margin-top: 20px; font-size: 0.85rem; font-weight: 600; color: var(--text-primary);">BRIGHTFORGE Team</div>
-              </div>
+                
+                <div class="blog-card-content">
+                  <div class="blog-card-meta-top">
+                    <span class="blog-meta-date">Sep 02, 2026</span>
+                    <span class="blog-meta-dot">•</span>
+                    <span class="blog-meta-read">6 min read</span>
+                  </div>
+                  
+                  <h2 class="blog-card-title">Why Modern High-Growth Brands Are Ditching Heavy Frameworks for Sub-0.7s Clean Architecture</h2>
+                  
+                  <p class="blog-card-excerpt">
+                    A practical engineering dive into eliminating JavaScript bloat, edge asset caching, and building sub-second custom codebases that double conversion rates.
+                  </p>
+                  
+                  <div class="blog-card-footer">
+                    <div class="blog-author-info">
+                      <img src="img/avatar_1.jpg" alt="Hamza Malik" class="blog-author-avatar">
+                      <div class="blog-author-text">
+                        <span class="author-name">Hamza Malik</span>
+                        <span class="author-role">Head of Engineering</span>
+                      </div>
+                    </div>
+                    <span class="blog-read-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                </div>
+              </a>
             </article>
 
-            <!-- Post 3 -->
-            <article class="blog-card" data-category="seo" style="background: var(--card-bg); border-radius: var(--radius-card); border: 1px solid var(--card-border); overflow: hidden; display: flex; flex-direction: column;">
-              <div style="aspect-ratio: 16/10; background: #0D0B12;">
-                <svg viewBox="0 0 400 250" style="width:100%; height:100%;">
-                  <circle cx="200" cy="125" r="60" fill="#B028E6" opacity="0.85"/>
-                  <circle cx="200" cy="125" r="90" fill="none" stroke="#8F74FB" stroke-width="3"/>
-                </svg>
-              </div>
-              <div style="padding: 24px; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
-                <div>
-                  <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">
-                    <span class="badge badge-outline">SEO</span>
-                    <span>6 min read</span>
+            <!-- Article 2: Google Ads -->
+            <article class="blog-article-card reveal reveal-up reveal-delay-2" data-category="digital-marketing">
+              <a href="blog-single.html?post=google-ads" class="blog-card-link-wrapper" aria-label="Read: The Anatomy of a 5.2x ROAS Google Ads Funnel">
+                <div class="blog-card-media-box">
+                  <img src="img/about_culture_discussion.jpg" alt="Google Ads Performance Strategy & Funnel Optimization" class="blog-card-img" loading="lazy">
+                  <div class="blog-card-category-overlay">
+                    <span class="blog-cat-badge">#GOOGLE ADS</span>
                   </div>
-                  <h3 style="font-size: 1.25rem; line-height: 1.3; margin-bottom: 10px;">Why Your Rankings Dropped and What to Check First</h3>
-                  <p style="font-size: 0.9rem; color: var(--text-secondary);">A step-by-step diagnostic checklist to diagnose sudden drops in organic traffic and search positions.</p>
                 </div>
-                <div style="margin-top: 20px; font-size: 0.85rem; font-weight: 600; color: var(--text-primary);">BRIGHTFORGE Team</div>
-              </div>
+                
+                <div class="blog-card-content">
+                  <div class="blog-card-meta-top">
+                    <span class="blog-meta-date">Aug 28, 2026</span>
+                    <span class="blog-meta-dot">•</span>
+                    <span class="blog-meta-read">5 min read</span>
+                  </div>
+                  
+                  <h2 class="blog-card-title">The Anatomy of a 5.2x ROAS Google Ads Funnel for Modern E-Commerce</h2>
+                  
+                  <p class="blog-card-excerpt">
+                    How we restructure Performance Max asset groups, audit negative keyword waste, and build custom landing pages that lower acquisition costs by 42%.
+                  </p>
+                  
+                  <div class="blog-card-footer">
+                    <div class="blog-author-info">
+                      <img src="img/avatar_2.jpg" alt="Zaid Khan" class="blog-author-avatar">
+                      <div class="blog-author-text">
+                        <span class="author-name">Zaid Khan</span>
+                        <span class="author-role">Performance Marketing Lead</span>
+                      </div>
+                    </div>
+                    <span class="blog-read-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                </div>
+              </a>
             </article>
 
-            <!-- Post 4 -->
-            <article class="blog-card" data-category="development" style="background: var(--card-bg); border-radius: var(--radius-card); border: 1px solid var(--card-border); overflow: hidden; display: flex; flex-direction: column;">
-              <div style="aspect-ratio: 16/10; background: #14131A;">
-                <svg viewBox="0 0 400 250" style="width:100%; height:100%;">
-                  <line x1="50" y1="50" x2="350" y2="200" stroke="#8F74FB" stroke-width="5"/>
-                  <line x1="50" y1="200" x2="350" y2="50" stroke="#B028E6" stroke-width="5"/>
-                </svg>
-              </div>
-              <div style="padding: 24px; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
-                <div>
-                  <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">
-                    <span class="badge badge-outline">DEVELOPMENT</span>
-                    <span>5 min read</span>
+            <!-- Article 3: Technical SEO -->
+            <article class="blog-article-card reveal reveal-up reveal-delay-3" data-category="seo">
+              <a href="blog-single.html?post=seo" class="blog-card-link-wrapper" aria-label="Read: Algorithmic SEO: How to Capture #1 Commercial Search Rankings in 2026">
+                <div class="blog-card-media-box">
+                  <img src="img/about_culture_studio.jpg" alt="Algorithmic Technical SEO & Search Engine Optimization" class="blog-card-img" loading="lazy">
+                  <div class="blog-card-category-overlay">
+                    <span class="blog-cat-badge">#SEO &amp; GROWTH</span>
                   </div>
-                  <h3 style="font-size: 1.25rem; line-height: 1.3; margin-bottom: 10px;">E-Commerce Checklist: What Every Online Store Needs Before Launch</h3>
-                  <p style="font-size: 0.9rem; color: var(--text-secondary);">Crucial security, checkout flow, analytics, and speed considerations for new online storefronts.</p>
                 </div>
-                <div style="margin-top: 20px; font-size: 0.85rem; font-weight: 600; color: var(--text-primary);">BRIGHTFORGE Team</div>
-              </div>
+                
+                <div class="blog-card-content">
+                  <div class="blog-card-meta-top">
+                    <span class="blog-meta-date">Aug 20, 2026</span>
+                    <span class="blog-meta-dot">•</span>
+                    <span class="blog-meta-read">7 min read</span>
+                  </div>
+                  
+                  <h2 class="blog-card-title">Algorithmic SEO: How to Capture #1 Commercial Search Rankings in 2026</h2>
+                  
+                  <p class="blog-card-excerpt">
+                    A step-by-step technical framework for schema validation, Core Web Vitals optimization, and high-intent keyword clustering that drives verified revenue.
+                  </p>
+                  
+                  <div class="blog-card-footer">
+                    <div class="blog-author-info">
+                      <img src="img/avatar_3.jpg" alt="Ayesha Tariq" class="blog-author-avatar">
+                      <div class="blog-author-text">
+                        <span class="author-name">Ayesha Tariq</span>
+                        <span class="author-role">Technical SEO Strategist</span>
+                      </div>
+                    </div>
+                    <span class="blog-read-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                </div>
+              </a>
             </article>
 
-            <!-- Post 5 -->
-            <article class="blog-card" data-category="digital-marketing" style="background: var(--card-bg); border-radius: var(--radius-card); border: 1px solid var(--card-border); overflow: hidden; display: flex; flex-direction: column;">
-              <div style="aspect-ratio: 16/10; background: #0D0B12;">
-                <svg viewBox="0 0 400 250" style="width:100%; height:100%;">
-                  <circle cx="150" cy="100" r="60" fill="#B028E6" opacity="0.7"/>
-                  <circle cx="250" cy="150" r="70" fill="#8F74FB" opacity="0.6"/>
-                </svg>
-              </div>
-              <div style="padding: 24px; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
-                <div>
-                  <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">
-                    <span class="badge badge-outline">DIGITAL MARKETING</span>
-                    <span>5 min read</span>
-                  </div>
-                  <h3 style="font-size: 1.25rem; line-height: 1.3; margin-bottom: 10px;">Google Ads vs. SEO: Which Should You Invest In First?</h3>
-                  <p style="font-size: 0.9rem; color: var(--text-secondary);">How to choose between immediate pay-per-click traffic and long-term organic search momentum.</p>
-                </div>
-                <div style="margin-top: 20px; font-size: 0.85rem; font-weight: 600; color: var(--text-primary);">BRIGHTFORGE Team</div>
-              </div>
-            </article>
-
-            <!-- Post 6 -->
-            <article class="blog-card" data-category="seo" style="background: var(--card-bg); border-radius: var(--radius-card); border: 1px solid var(--card-border); overflow: hidden; display: flex; flex-direction: column;">
-              <div style="aspect-ratio: 16/10; background: #14131A;">
-                <svg viewBox="0 0 400 250" style="width:100%; height:100%;">
-                  <rect x="80" y="40" width="240" height="170" fill="none" stroke="#B028E6" stroke-width="3"/>
-                </svg>
-              </div>
-              <div style="padding: 24px; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
-                <div>
-                  <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">
-                    <span class="badge badge-outline">SEO</span>
-                    <span>6 min read</span>
-                  </div>
-                  <h3 style="font-size: 1.25rem; line-height: 1.3; margin-bottom: 10px;">Local SEO Basics for Small Businesses That Actually Move the Needle</h3>
-                  <p style="font-size: 0.9rem; color: var(--text-secondary);">Setting up local profiles, citations, reviews, and geo-targeted landing pages that convert nearby buyers.</p>
-                </div>
-                <div style="margin-top: 20px; font-size: 0.85rem; font-weight: 600; color: var(--text-primary);">BRIGHTFORGE Team</div>
-              </div>
-            </article>
           </div>
 
-          <!-- Newsletter Strip -->
-          <div class="newsletter-strip" style="background: var(--black); color: var(--white); padding: 56px 48px; border-radius: var(--radius-card); display: flex; align-items: center; justify-content: space-between; gap: 32px;">
-            <div>
-              <h3 style="font-size: 1.6rem; color: var(--white); margin-bottom: 8px;">Get practical web and marketing insights</h3>
-              <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.95rem;">Actionable guides on web development, Google Ads, and SEO sent straight to your inbox.</p>
+          <!-- Frosted Glass Newsletter Subscription Banner -->
+          <div class="blog-newsletter-banner reveal reveal-up">
+            <div class="newsletter-banner-content">
+              <span class="newsletter-badge">✦ WEEKLY EXECUTIVE BRIEFING</span>
+              <h3 class="newsletter-title">Get practical engineering &amp; growth playbooks</h3>
+              <p class="newsletter-desc">Tactical breakdowns on web speed, high-ROAS PPC funnels, and SEO algorithms sent every Thursday. Zero spam.</p>
             </div>
 
-            <form class="newsletter-form" id="newsletter-form" style="display: flex; gap: 12px; max-width: 440px; width: 100%;">
-              <input type="email" class="newsletter-input" placeholder="you@company.com" required aria-label="Email for newsletter" style="flex-grow: 1; padding: 14px 18px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: var(--radius-pill); color: var(--white);">
-              <button type="submit" class="btn btn-primary">Subscribe</button>
+            <form class="newsletter-form-box" id="newsletter-form">
+              <div class="newsletter-input-group">
+                <input type="email" class="newsletter-input-field" placeholder="Enter your business email..." required aria-label="Email address for newsletter">
+                <button type="submit" class="btn btn-primary newsletter-submit-btn">
+                  Subscribe Free <span class="cta-arrow">&rarr;</span>
+                </button>
+              </div>
+              <span class="newsletter-privacy-note">🔒 Strictly confidential. Unsubscribe anytime with 1-click.</span>
             </form>
           </div>
+
         </div>
       </section>
     </main>
