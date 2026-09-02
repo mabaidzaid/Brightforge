@@ -806,11 +806,13 @@
   transform: translateX(4px);
 }
 
-/* Floating WhatsApp Button (Bottom Left - Clamped to Site Width on Zoom Out) */
+/* --------------------------------------------------------------------------
+   Floating Action Buttons (WhatsApp & Phone Call)
+   -------------------------------------------------------------------------- */
 .floating-whatsapp-btn {
   position: fixed;
-  bottom: 28px;
-  left: max(24px, calc((100vw - var(--site-max-width, 1400px)) / 2 + 24px));
+  bottom: 32px;
+  left: 32px;
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -833,16 +835,15 @@
 }
 
 .floating-whatsapp-btn svg {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   fill: #FFFFFF;
 }
 
-/* Floating Call Button (Bottom Right - Clamped to Site Width on Zoom Out) */
 .floating-call-btn {
   position: fixed;
-  bottom: 28px;
-  right: max(24px, calc((100vw - var(--site-max-width, 1400px)) / 2 + 24px));
+  bottom: 32px;
+  right: 32px;
   width: 54px;
   height: 54px;
   border-radius: 50%;
@@ -886,6 +887,29 @@
   justify-content: center;
   border: 2px solid #06020A;
   animation: pulseBadge 2.2s infinite;
+}
+
+@media (max-width: 768px) {
+  .floating-whatsapp-btn {
+    bottom: 24px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  .floating-whatsapp-btn svg {
+    width: 26px;
+    height: 26px;
+  }
+  .floating-call-btn {
+    bottom: 24px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+  }
+  .floating-call-btn svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @keyframes pulseBadge {
