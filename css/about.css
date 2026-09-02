@@ -186,7 +186,7 @@
 .about-hero-center-box {
   position: relative;
   z-index: 2;
-  max-width: 1240px;
+  max-width: 1140px;
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -195,16 +195,15 @@
   width: 100%;
 }
 
-/* Editorial Headline with Embedded Inline Cards (Spacious & Open Matching Reference) */
+/* Editorial Headline with Embedded Inline Cards */
 .about-editorial-headline {
   font-family: var(--font-heading);
-  font-size: clamp(2.8rem, 5.8vw, 76px);
+  font-size: clamp(2.6rem, 5.4vw, 76px);
   font-weight: 800;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-  word-spacing: 10px;
+  line-height: 1.32;
+  letter-spacing: -0.035em;
   color: var(--text-primary);
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   text-align: center;
   width: 100%;
 }
@@ -214,8 +213,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 16px 22px;
-  margin: 8px 0;
+  row-gap: 8px;
 }
 
 /* 3 Embedded Interactive Tilted Visual Cards */
@@ -225,13 +223,13 @@
   justify-content: center;
   vertical-align: middle;
   position: relative;
-  width: clamp(120px, 11vw, 160px);
-  height: clamp(68px, 6.4vw, 94px);
-  margin: 0 16px;
-  border-radius: 20px;
+  width: clamp(115px, 11.5vw, 165px);
+  height: clamp(75px, 7.5vw, 108px);
+  margin: 0 12px;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12), 0 0 20px rgba(176, 40, 230, 0.15);
-  border: 2px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2), 0 0 25px rgba(176, 40, 230, 0.25);
+  border: 2.5px solid rgba(255, 255, 255, 0.85);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
   cursor: pointer;
   flex-shrink: 0;
@@ -240,8 +238,8 @@
 }
 
 [data-theme="dark"] .hero-inline-card {
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.6), 0 0 28px rgba(176, 40, 230, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7), 0 0 35px rgba(176, 40, 230, 0.4);
 }
 
 .hero-inline-card-img {
