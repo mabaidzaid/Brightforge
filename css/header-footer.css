@@ -398,7 +398,7 @@
   border-top-right-radius: 20px;
   overflow: visible;
   position: relative;
-  margin-top: -2px;
+  margin-top: 0;
   padding-bottom: 90px;
   transition: background-color var(--transition-smooth);
 }
