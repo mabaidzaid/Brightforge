@@ -568,46 +568,74 @@
       </section>
 
       <!-- ====================================================================
-           6. Behind-The-Scenes Studio Culture Gallery
+           6. Studio Process & Interactive Showcase (Matching Reference Design)
            ==================================================================== -->
-      <section class="culture-section">
+      <section class="culture-section" id="process">
         <div class="container">
           
-          <div class="section-header section-header-center reveal reveal-up">
-            <span class="section-tag-pill"><span class="pill-sparkle">✦</span> STUDIO CULTURE <span class="pill-sparkle">✦</span></span>
-            <h2 class="section-title">Where craft, curiosity, and speed collide</h2>
-            <p class="section-subhead">A glimpse into our collaborative sprints, daily code reviews, and remote-first engineering culture.</p>
+          <!-- Split Header: Left Title + Right Text & CTA (Matching Reference) -->
+          <div class="culture-split-header reveal reveal-up">
+            <div class="culture-header-left">
+              <div class="culture-pill-badge">
+                <span class="culture-pill-icon" aria-hidden="true">&#128196;</span>
+                <span>Simple &#128269; process</span>
+              </div>
+              <h2 class="culture-main-title">
+                Understand The<br>Business Process.
+              </h2>
+            </div>
+
+            <div class="culture-header-right">
+              <p class="culture-top-subtext">
+                We strive to develop real-world web solutions that are ideal for small to large projects with bespoke project requirements.
+              </p>
+              <a href="portfolio.html" class="btn-culture-explore">
+                <span>More Projects</span>
+                <span class="btn-culture-arrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
           </div>
 
-          <div class="culture-gallery-grid">
-            
-            <!-- Tile 1 (Tall Feature) -->
-            <div class="culture-tile culture-tile-tall reveal reveal-left">
-              <img src="img/about_team_collab.jpg" alt="BRIGHTFORGE High Velocity Strategy Sprint" class="culture-tile-img" loading="lazy">
-              <div class="culture-tile-caption">
-                <span class="culture-caption-tag">STRATEGY SPRINTS</span>
-                <div class="culture-caption-text">Collaborative wireframing &amp; conversion path mapping</div>
+          <!-- Interactive Showcase Carousel (Matching Reference) -->
+          <div class="culture-showcase-container reveal reveal-up">
+            <div class="culture-showcase-track" id="cultureShowcaseTrack">
+              
+              <!-- Left Peek Slide -->
+              <div class="culture-slide culture-slide-prev" id="cultureSlidePrev">
+                <img src="img/about_culture_dev.jpg" alt="Focused software engineering workstation" class="culture-slide-img" id="culturePrevImg" loading="lazy">
               </div>
+
+              <!-- Center Prominent Active Slide -->
+              <div class="culture-slide culture-slide-active" id="cultureSlideActive">
+                <img src="img/about_culture_discussion.jpg" alt="Discussion of the idea and sprint kickoff" class="culture-slide-img" id="cultureActiveImg" loading="lazy">
+                
+                <div class="culture-slide-overlay">
+                  <h3 class="culture-slide-title" id="cultureActiveTitle">Discussion of the idea</h3>
+                </div>
+
+                <!-- Navigation Arrow Buttons on Center Card Boundaries -->
+                <button class="culture-nav-btn culture-nav-prev" id="cultureNavPrev" aria-label="Previous slide" title="Previous Slide">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                
+                <button class="culture-nav-btn culture-nav-next" id="cultureNavNext" aria-label="Next slide" title="Next Slide">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+
+              <!-- Right Peek Slide -->
+              <div class="culture-slide culture-slide-next" id="cultureSlideNext">
+                <img src="img/about_culture_studio.jpg" alt="Modern studio evening workspace view" class="culture-slide-img" id="cultureNextImg" loading="lazy">
+              </div>
+
             </div>
 
-            <!-- Tile 2 -->
-            <div class="culture-tile reveal reveal-up">
-              <img src="img/about_agency_team.jpg" alt="BRIGHTFORGE Team Code Review" class="culture-tile-img" loading="lazy">
-              <div class="culture-tile-caption">
-                <span class="culture-caption-tag">CODE CRAFTSMANSHIP</span>
-                <div class="culture-caption-text">Strict peer review standards &amp; performance benchmarks</div>
-              </div>
+            <!-- Bottom Right Caption Underneath the Active Card -->
+            <div class="culture-bottom-caption-row">
+              <p class="culture-bottom-caption" id="cultureBottomCaption">
+                We strive to develop real-world web solutions that are ideal for small to large projects with bespoke requirements.
+              </p>
             </div>
-
-            <!-- Tile 3 -->
-            <div class="culture-tile reveal reveal-right">
-              <img src="img/cta_devices_showcase.jpg" alt="BRIGHTFORGE Multi-Device Responsive Testing" class="culture-tile-img" loading="lazy">
-              <div class="culture-tile-caption">
-                <span class="culture-caption-tag">DEVICE MASTERY</span>
-                <div class="culture-caption-text">Flawless execution across 20+ viewport resolutions</div>
-              </div>
-            </div>
-
           </div>
 
         </div>

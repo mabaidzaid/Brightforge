@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initParallaxAccents();
   initPortfolioShowcase();
   initApproachAccordion();
+  initCultureSlider();
 });
 
 /* --------------------------------------------------------------------------
@@ -544,3 +545,76 @@ function initApproachAccordion() {
     });
   });
 }
+
+/* --------------------------------------------------------------------------
+   9. Interactive Culture / Process Slider
+   -------------------------------------------------------------------------- */
+function initCultureSlider() {
+  const prevBtn = document.getElementById('cultureNavPrev');
+  const nextBtn = document.getElementById('cultureNavNext');
+  const activeImg = document.getElementById('cultureActiveImg');
+  const prevImg = document.getElementById('culturePrevImg');
+  const nextImg = document.getElementById('cultureNextImg');
+  const activeTitle = document.getElementById('cultureActiveTitle');
+  const bottomCaption = document.getElementById('cultureBottomCaption');
+
+  if (!prevBtn || !nextBtn || !activeImg) return;
+
+  const slides = [
+    {
+      img: 'img/about_culture_discussion.jpg',
+      title: 'Discussion of the idea',
+      caption: 'We strive to develop real-world web solutions that are ideal for small to large projects with bespoke requirements.'
+    },
+    {
+      img: 'img/about_culture_dev.jpg',
+      title: 'Precision code architecture',
+      caption: 'Clean semantic engineering and sub-second performance benchmarks tested across all device viewports.'
+    },
+    {
+      img: 'img/about_culture_studio.jpg',
+      title: 'Full-funnel execution & launch',
+      caption: 'Collaborative strategy sprints and continuous performance iterations to scale your brand online.'
+    }
+  ];
+
+  let currentIndex = 0;
+
+  function updateSlides(index) {
+    currentIndex = (index + slides.length) % slides.length;
+    const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+    const nextIndex = (currentIndex + 1) % slides.length;
+
+    if (activeImg) {
+      activeImg.style.opacity = '0';
+      setTimeout(() => {
+        activeImg.src = slides[currentIndex].img;
+        activeImg.alt = slides[currentIndex].title;
+        activeImg.style.opacity = '1';
+      }, 200);
+    }
+
+    if (prevImg) prevImg.src = slides[prevIndex].img;
+    if (nextImg) nextImg.src = slides[nextIndex].img;
+
+    if (activeTitle) {
+      activeTitle.style.opacity = '0';
+      setTimeout(() => {
+        activeTitle.textContent = slides[currentIndex].title;
+        activeTitle.style.opacity = '1';
+      }, 200);
+    }
+
+    if (bottomCaption) {
+      bottomCaption.style.opacity = '0';
+      setTimeout(() => {
+        bottomCaption.textContent = slides[currentIndex].caption;
+        bottomCaption.style.opacity = '1';
+      }, 200);
+    }
+  }
+
+  prevBtn.addEventListener('click', () => updateSlides(currentIndex - 1));
+  nextBtn.addEventListener('click', () => updateSlides(currentIndex + 1));
+}
+
