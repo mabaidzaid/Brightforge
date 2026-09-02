@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initPortfolioFilter();
   initPortfolioLightbox();
+  initAccordionGallery();
 });
 
 /* --------------------------------------------------------------------------
@@ -204,5 +205,184 @@ function initPortfolioLightbox() {
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowLeft') showProject(currentIndex - 1);
     if (e.key === 'ArrowRight') showProject(currentIndex + 1);
+  });
+}
+
+/* --------------------------------------------------------------------------
+   3. 3D GSAP Accordion Gallery (4-Phase Methodology)
+   -------------------------------------------------------------------------- */
+function initAccordionGallery() {
+  const root = document.getElementById('deliveryAccordionGallery');
+  if (!root) return;
+
+  const panels = Array.from(root.querySelectorAll('.ag-panel'));
+  const count = panels.length;
+  if (!count) return;
+
+  let active = 0; // Default index
+  const expandRatio = 0.52;
+  const tilt = 8;
+  const duration = 0.6;
+  const ease = 'power3.out';
+  const parallax = 0.5;
+  const stagger = 0.06;
+  const gap = 14;
+
+  let mediaSize = 480;
+  let currentTl = null;
+
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function measure() {
+    if (window.innerWidth <= 768) return;
+    const rect = root.getBoundingClientRect();
+    const usable = Math.max(rect.width - gap * (count - 1), 120);
+    mediaSize = Math.max(240, usable * expandRatio * 1.25);
+    root.style.setProperty('--ag-media-size', `${mediaSize}px`);
+  }
+
+  function applyLayout(animate = true) {
+    if (window.innerWidth <= 768) {
+      // Clean up inline styles for mobile stacked view
+      panels.forEach(p => {
+        p.style.flexGrow = '';
+        p.style.transform = '';
+        const m = p.querySelector('.ag-panel__media');
+        if (m) {
+          m.style.transform = '';
+          m.style.setProperty('--ag-gray', '0');
+          m.style.setProperty('--ag-dim', '0.2');
+        }
+      });
+      return;
+    }
+
+    const r = Math.min(Math.max(expandRatio, 0.2), 0.9);
+    const grow = count > 1 ? (r * (count - 1)) / (1 - r) : 1;
+
+    if (currentTl) currentTl.kill();
+    const dur = animate && !prefersReduced && typeof gsap !== 'undefined' ? duration : 0;
+
+    if (typeof gsap !== 'undefined') {
+      const tl = gsap.timeline();
+
+      panels.forEach((panel, i) => {
+        const isActive = (i === active);
+        const media = panel.querySelector('.ag-panel__media');
+        const desc = panel.querySelector('.ag-panel__desc');
+        const pills = panel.querySelector('.ag-panel__pills');
+
+        if (isActive) {
+          panel.classList.add('ag-panel--active');
+          panel.setAttribute('aria-current', 'true');
+        } else {
+          panel.classList.remove('ag-panel--active');
+          panel.removeAttribute('aria-current');
+        }
+
+        const rot = isActive ? 0 : (i < active ? tilt : -tilt);
+
+        tl.to(panel, {
+          flexGrow: isActive ? grow : 1,
+          rotateY: rot,
+          duration: dur,
+          ease: ease
+        }, 0);
+
+        if (media) {
+          const drift = Math.max(-1.5, Math.min(1.5, active - i));
+          const shift = drift * parallax * mediaSize * 0.06;
+          const gray = isActive ? 0 : 1;
+          const dim = isActive ? 0 : 0.45;
+
+          tl.to(media, {
+            xPercent: -50,
+            yPercent: -50,
+            x: isActive ? 0 : shift,
+            '--ag-gray': gray,
+            '--ag-dim': dim,
+            duration: dur,
+            ease: ease
+          }, 0);
+        }
+
+        if (desc && pills) {
+          if (isActive) {
+            tl.to([desc, pills], {
+              opacity: 1,
+              x: 0,
+              duration: dur,
+              ease: ease,
+              stagger: prefersReduced ? 0 : stagger
+            }, 0);
+          } else {
+            tl.to([desc, pills], {
+              opacity: 0,
+              x: -14,
+              duration: dur * 0.5,
+              ease: ease
+            }, 0);
+          }
+        }
+      });
+
+      currentTl = tl;
+    } else {
+      // CSS Fallback
+      panels.forEach((panel, i) => {
+        const isActive = (i === active);
+        panel.style.flexGrow = isActive ? grow : 1;
+        if (isActive) panel.classList.add('ag-panel--active');
+        else panel.classList.remove('ag-panel--active');
+      });
+    }
+  }
+
+  // Event Handlers (Hover, Click, Keyboard)
+  panels.forEach((panel, i) => {
+    panel.addEventListener('mouseenter', () => {
+      if (active !== i) {
+        active = i;
+        applyLayout(true);
+      }
+    });
+
+    panel.addEventListener('click', (e) => {
+      if (active !== i) {
+        e.preventDefault();
+        active = i;
+        applyLayout(true);
+      }
+    });
+
+    panel.addEventListener('focus', () => {
+      if (active !== i) {
+        active = i;
+        applyLayout(true);
+      }
+    });
+
+    panel.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        active = (active + 1) % count;
+        panels[active].focus();
+        applyLayout(true);
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        active = (active - 1 + count) % count;
+        panels[active].focus();
+        applyLayout(true);
+      }
+    });
+  });
+
+  // Measure & Initial Run
+  measure();
+  applyLayout(false);
+
+  window.addEventListener('resize', () => {
+    measure();
+    applyLayout(false);
   });
 }

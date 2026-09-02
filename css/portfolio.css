@@ -533,72 +533,224 @@
   border-bottom: 1px solid var(--card-border);
 }
 
-.delivery-process-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
-  margin-top: 52px;
+/* --------------------------------------------------------------------------
+   5. The 4-Phase Delivery & Ship Framework: 3D Accordion Gallery
+   -------------------------------------------------------------------------- */
+.delivery-process-section {
+  padding: 100px 0;
+  background-color: var(--canvas-bg);
+  position: relative;
 }
 
-.delivery-step-card {
-  background: var(--card-bg);
-  border: 1.5px solid var(--card-border);
-  border-radius: 24px;
-  padding: 36px 28px;
+.accordion-gallery {
+  --ag-accent: #B028E6;
+  --ag-overlay: #0A0713;
+  --ag-text: #FFFFFF;
+  --ag-gap: 14px;
+  --ag-radius: 24px;
+  --ag-media-size: 480px;
+
+  display: flex;
+  flex-direction: row;
+  gap: var(--ag-gap);
+  width: 100%;
+  max-width: 100%;
+  height: 480px;
+  margin-top: 52px;
+  perspective: 1400px;
+  perspective-origin: 50% 50%;
+}
+
+.ag-panel {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: var(--ag-radius);
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  position: relative;
-  overflow: hidden;
-  transition: all var(--transition-smooth);
+  justify-content: flex-end;
+  text-decoration: none;
+  outline: none;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  background: #0A0713;
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 14px 36px -12px rgba(0, 0, 0, 0.6);
+  will-change: flex-grow, transform;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
-.delivery-step-card::before {
-  content: '';
+.ag-panel--active {
+  border-color: rgba(176, 40, 230, 0.65);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 35px rgba(176, 40, 230, 0.3);
+}
+
+.ag-panel:focus-visible {
+  box-shadow: 0 0 0 3px var(--ag-accent), 0 20px 45px rgba(0, 0, 0, 0.6);
+}
+
+.ag-panel__frame {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #B028E6, #8F74FB);
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.ag-panel__media {
+  --ag-gray: 1;
+  --ag-dim: 0.35;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--ag-media-size);
+  height: 100%;
+  transform: translate(-50%, -50%);
+  filter: grayscale(var(--ag-gray));
+  will-change: transform, filter;
+}
+
+.ag-panel__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.ag-panel__overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(10, 7, 19, 0.2) 0%, rgba(10, 7, 19, 0.6) 45%, rgba(10, 7, 19, 0.95) 100%),
+    rgba(10, 7, 19, calc(var(--ag-dim, 0.35) * 1));
+  transition: background 0.4s ease;
+}
+
+.ag-panel__content {
+  position: relative;
+  z-index: 2;
+  padding: 32px 28px;
+  width: 100%;
+  min-width: 280px;
+  max-width: 520px;
+  pointer-events: none;
+}
+
+.ag-panel__badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.ag-panel__bar {
+  flex: 0 0 auto;
+  width: 4px;
+  height: 22px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #B028E6, #8F74FB);
+  box-shadow: 0 0 12px rgba(176, 40, 230, 0.8);
   opacity: 0;
-  transition: opacity var(--transition-fast);
+  transition: opacity 0.4s ease;
 }
 
-.delivery-step-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(176, 40, 230, 0.45);
-  box-shadow: 0 20px 45px rgba(176, 40, 230, 0.12);
-}
-
-.delivery-step-card:hover::before {
+.ag-panel--active .ag-panel__bar {
   opacity: 1;
 }
 
-.delivery-step-num {
+.ag-panel__phase-tag {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 800;
-  color: var(--primary);
-  background: rgba(176, 40, 230, 0.1);
-  padding: 4px 12px;
-  border-radius: var(--radius-pill);
-  align-self: flex-start;
-  margin-bottom: 20px;
+  color: #FFFFFF;
+  background: rgba(176, 40, 230, 0.25);
+  border: 1px solid rgba(176, 40, 230, 0.5);
+  padding: 3px 12px;
+  border-radius: 100px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
 }
 
-.delivery-step-title {
+.ag-panel__title {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 12px;
-  line-height: 1.25;
+  font-size: clamp(1.15rem, 1.6vw, 1.55rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.22;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+  white-space: normal;
 }
 
-.delivery-step-desc {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
+.ag-panel__desc {
+  font-size: 0.92rem;
+  color: #C5BFD6;
   line-height: 1.6;
+  margin-bottom: 16px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+  max-width: 480px;
+}
+
+.ag-panel__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ag-chip {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .accordion-gallery {
+    height: 440px;
+  }
+}
+
+@media (max-width: 768px) {
+  .accordion-gallery {
+    flex-direction: column;
+    perspective: none;
+    height: auto !important;
+    gap: 16px;
+  }
+  .ag-panel {
+    min-height: 220px;
+    transform: none !important;
+    flex: none !important;
+    width: 100% !important;
+  }
+  .ag-panel__media {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(0) !important;
+    transform: translate(-50%, -50%) !important;
+  }
+  .ag-panel__desc,
+  .ag-panel__pills {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .ag-panel__bar {
+    opacity: 1 !important;
+  }
 }
 
 /* --------------------------------------------------------------------------
