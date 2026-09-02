@@ -740,30 +740,34 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #D9F99D;
-  color: #020202;
+  background: linear-gradient(135deg, #8F74FB 0%, #B028E6 100%);
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
   font-weight: 800;
   text-decoration: none;
-  box-shadow: 0 8px 24px rgba(217, 249, 157, 0.4);
+  box-shadow: 0 8px 24px rgba(143, 116, 251, 0.45);
   transition: all var(--transition-fast);
 }
 
 .solutions-featured-card:hover .solutions-featured-btn {
   transform: scale(1.1) rotate(10deg);
-  background: #BEF264;
+  box-shadow: 0 10px 28px rgba(176, 40, 230, 0.6);
 }
 
 .solutions-featured-overlay {
-  position: relative;
-  z-index: 2;
-  margin-top: auto;
-  padding: 24px 20px 8px;
-  background: linear-gradient(180deg, transparent 0%, rgba(2, 2, 2, 0.88) 60%, rgba(2, 2, 2, 0.96) 100%);
-  border-radius: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  padding: 56px 28px 24px;
+  background: linear-gradient(180deg, transparent 0%, rgba(2, 2, 2, 0.7) 25%, rgba(2, 2, 2, 0.94) 65%, #020202 100%);
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  backdrop-filter: blur(2px);
 }
 
 .solutions-featured-title {
@@ -773,14 +777,16 @@
   color: #FFFFFF;
   margin-bottom: 8px;
   line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .solutions-featured-desc {
   font-size: 0.92rem;
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.52;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.54;
   margin: 0;
   max-width: 36ch;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Right 4 Grid Cards (2x2 Layout) */
@@ -804,8 +810,8 @@
 
 .solutions-mini-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(176, 40, 230, 0.4);
-  box-shadow: 0 16px 36px rgba(176, 40, 230, 0.12);
+  border-color: rgba(143, 116, 251, 0.45);
+  box-shadow: 0 16px 36px rgba(143, 116, 251, 0.14);
 }
 
 [data-theme="dark"] .solutions-mini-card {
@@ -817,8 +823,8 @@
   width: 44px;
   height: 44px;
   border-radius: 14px;
-  background: rgba(176, 40, 230, 0.12);
-  color: var(--primary);
+  background: rgba(143, 116, 251, 0.14);
+  color: #8F74FB;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -876,8 +882,8 @@
 }
 
 .solutions-card-link:hover {
-  border-color: var(--primary);
-  color: var(--primary);
+  border-color: var(--secondary-purple);
+  color: var(--secondary-purple);
   transform: translateX(2px);
 }
 
@@ -885,19 +891,19 @@
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: #D9F99D;
-  color: #020202;
+  background: #8F74FB;
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.85rem;
   font-weight: 800;
-  transition: transform var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
 .solutions-card-link:hover .solutions-link-arrow {
   transform: rotate(10deg);
-  background: #BEF264;
+  background: #B028E6;
 }
 
 @media (max-width: 1024px) {
