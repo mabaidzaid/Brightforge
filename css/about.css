@@ -68,7 +68,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Floating Animated Background Vector Elements & Orbs
+   Minimalist Floating Background Vector Accents (Clean & Subtle)
    -------------------------------------------------------------------------- */
 .about-floating-bg {
   position: absolute;
@@ -78,204 +78,86 @@
   overflow: hidden;
 }
 
-/* Sweeping Curved Dotted Trajectory Arc */
-.about-floating-arc {
-  position: absolute;
-  top: -60px;
-  right: -80px;
-  width: 580px;
-  height: 580px;
-  pointer-events: none;
-  animation: aboutArcFloat 14s ease-in-out infinite alternate;
-}
-
-/* General Floating Vector Accents */
 .about-floating-accent {
   position: absolute;
   pointer-events: none;
-  filter: drop-shadow(0 4px 14px rgba(176, 40, 230, 0.25));
   will-change: transform;
 }
 
-/* 1. Orange Chiseled S-Ribbon (Ref Image 3 Left) - Top Left */
-.about-shape-orange-s {
+/* 1. Top-Left: Delicate Sparkle Star (Purple) */
+.about-sparkle-tl {
   top: 52px;
-  left: 5%;
-  width: 30px;
-  height: 56px;
-  filter: drop-shadow(0 4px 16px rgba(255, 138, 0, 0.4));
-  animation: aboutFloatBlade 8.5s ease-in-out infinite;
-}
-
-/* 2. Violet Calligraphic Flame Blade (Ref Image 2) - Top Right */
-.about-shape-violet-blade {
-  top: 48px;
-  right: 6%;
-  width: 32px;
-  height: 60px;
-  filter: drop-shadow(0 4px 18px rgba(143, 116, 251, 0.45));
-  animation: aboutFloatBlade 9.5s ease-in-out infinite reverse;
-}
-
-/* 3. Lime Green Horizontal Chiseled Wave (Ref Image 3 Right) - Bottom Right */
-.about-shape-lime-wave {
-  bottom: 55px;
-  right: 7%;
-  width: 52px;
-  height: 26px;
-  filter: drop-shadow(0 4px 14px rgba(163, 230, 53, 0.35));
-  animation: aboutFloatWave 9s ease-in-out infinite;
-}
-
-/* 4. Pink / Rose 3-Curly Squiggle Stroke (Ref Image 1) - Mid Left */
-.about-shape-pink-curl {
-  top: 48%;
-  left: 3.5%;
-  width: 38px;
-  height: 62px;
-  filter: drop-shadow(0 4px 16px rgba(216, 120, 200, 0.4));
-  animation: aboutFloatCurl 8s ease-in-out infinite;
-}
-
-/* 5. Floating Geometric Halo Ring / Torus - Mid Right */
-.about-shape-halo-ring {
-  top: 42%;
-  right: 4.5%;
-  width: 44px;
-  height: 44px;
-  filter: drop-shadow(0 4px 14px rgba(176, 40, 230, 0.3));
-  animation: aboutRotateRing 12s linear infinite;
-}
-
-/* 6. 8-Point Purple Star Sparkle - Top Center-Left */
-.about-shape-sparkle-purple {
-  top: 38px;
-  left: 20%;
-  width: 24px;
-  height: 24px;
-  animation: aboutSpinGlow 6.5s linear infinite;
-}
-
-/* 7. 4-Point Violet Sparkle - Bottom Left */
-.about-shape-sparkle-violet {
-  bottom: 22%;
-  left: 14%;
-  width: 20px;
-  height: 20px;
-  animation: aboutSpinGlow 8s linear infinite reverse;
-}
-
-/* 8. Diverse Glowing Particle Orbs */
-.about-orb-orange {
-  top: 140px;
-  right: 14%;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #FF8A00;
-  opacity: 0.6;
-  box-shadow: 0 0 12px rgba(255, 138, 0, 0.8);
-  animation: aboutFloatDot 6s ease-in-out infinite alternate;
-}
-
-.about-orb-purple {
-  top: 65%;
   left: 7%;
+  width: 22px;
+  height: 22px;
+  filter: drop-shadow(0 0 10px var(--primary));
+  animation: aboutSpinGlow 7s linear infinite;
+}
+
+/* 2. Top-Right: Smooth Rose Wavy Ribbon */
+.about-ribbon-tr {
+  top: 48px;
+  right: 7%;
+  width: 66px;
+  height: 36px;
+  filter: drop-shadow(0 4px 14px rgba(216, 120, 200, 0.35));
+  animation: aboutFloatRibbon1 8.5s ease-in-out infinite;
+}
+
+/* 3. Mid-Left: Smooth Purple Curly Ribbon */
+.about-curl-ml {
+  top: 46%;
+  left: 4%;
+  width: 42px;
+  height: 68px;
+  filter: drop-shadow(0 4px 16px rgba(176, 40, 230, 0.3));
+  animation: aboutFloatRibbon2 9s ease-in-out infinite;
+}
+
+/* 4. Bottom-Right: Soft Glowing Lilac Dot Orb */
+.about-dot-br {
+  bottom: 65px;
+  right: 8%;
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: var(--primary);
-  opacity: 0.55;
-  box-shadow: 0 0 12px var(--primary);
-  animation: aboutFloatDot 8s ease-in-out infinite alternate-reverse;
-}
-
-.about-orb-lime {
-  bottom: 35px;
-  right: 18%;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #A3E635;
-  opacity: 0.55;
-  box-shadow: 0 0 10px rgba(163, 230, 53, 0.8);
-  animation: aboutFloatDot 7s ease-in-out infinite alternate;
-}
-
-.about-orb-lilac {
-  top: 120px;
-  left: 10%;
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
   background: var(--secondary-purple);
-  opacity: 0.5;
-  box-shadow: 0 0 10px var(--secondary-purple);
-  animation: aboutFloatDot 9s ease-in-out infinite alternate-reverse;
+  opacity: 0.55;
+  box-shadow: 0 0 14px var(--secondary-purple);
+  animation: aboutFloatDot 6.5s ease-in-out infinite alternate;
 }
 
-/* Custom Shape Keyframes */
-@keyframes aboutFloatBlade {
-  0%, 100% {
-    transform: translate(0, 0) rotate(0deg) scale(1);
-  }
-  50% {
-    transform: translate(8px, -18px) rotate(14deg) scale(1.08);
-  }
-}
-
-@keyframes aboutFloatWave {
-  0%, 100% {
-    transform: translate(0, 0) rotate(0deg) scale(1);
-  }
-  50% {
-    transform: translate(-10px, -14px) rotate(-12deg) scale(1.06);
-  }
-}
-
-@keyframes aboutFloatCurl {
-  0%, 100% {
-    transform: translate(0, 0) rotate(0deg) scale(1);
-  }
-  50% {
-    transform: translate(12px, -16px) rotate(16deg) scale(1.07);
-  }
-}
-
-@keyframes aboutRotateRing {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(180deg) scale(1.1);
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-  }
-}
-
-@keyframes aboutArcFloat {
-  0%, 100% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(5deg) scale(1.04);
-  }
-}
-
+/* Minimalist Floating Keyframes */
 @keyframes aboutSpinGlow {
   0% {
     transform: rotate(0deg) scale(0.9);
-    opacity: 0.7;
+    opacity: 0.65;
   }
   50% {
-    transform: rotate(180deg) scale(1.2);
+    transform: rotate(180deg) scale(1.15);
     opacity: 1;
-    filter: drop-shadow(0 0 10px var(--primary));
   }
   100% {
     transform: rotate(360deg) scale(0.9);
-    opacity: 0.7;
+    opacity: 0.65;
+  }
+}
+
+@keyframes aboutFloatRibbon1 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(8px, -15px) rotate(12deg) scale(1.05);
+  }
+}
+
+@keyframes aboutFloatRibbon2 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(-10px, -16px) rotate(-14deg) scale(1.06);
   }
 }
 
@@ -284,10 +166,10 @@
     transform: translate(0, 0) scale(1);
   }
   50% {
-    transform: translate(8px, -15px) scale(1.25);
+    transform: translate(6px, -12px) scale(1.2);
   }
   100% {
-    transform: translate(-6px, 10px) scale(0.9);
+    transform: translate(-4px, 8px) scale(0.95);
   }
 }
 
