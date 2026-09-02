@@ -558,7 +558,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   5. The 5-Step Service Execution Blueprint
+   3. The 4-Step Service Execution Blueprint (Matching Reference Split Layout)
    -------------------------------------------------------------------------- */
 .blueprint-section {
   padding: 100px 0;
@@ -567,59 +567,116 @@
   border-bottom: 1px solid var(--card-border);
 }
 
-.blueprint-grid {
+[data-theme="dark"] .blueprint-section {
+  background-color: #0C0816;
+}
+
+.blueprint-split-header {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-  margin-top: 52px;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 48px;
+  align-items: flex-end;
+  margin-bottom: 54px;
+}
+
+.blueprint-split-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.blueprint-split-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.6vw, 46px);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+
+.blueprint-split-right {
+  display: flex;
+  align-items: flex-end;
+}
+
+.blueprint-split-subhead {
+  font-size: 1.02rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.blueprint-grid-4col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
 }
 
 .blueprint-card {
   background: var(--canvas-bg);
   border: 1.5px solid var(--card-border);
-  border-radius: 22px;
-  padding: 30px 20px;
+  border-radius: 24px;
+  padding: 38px 28px 34px;
   display: flex;
   flex-direction: column;
   position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
   transition: all var(--transition-smooth);
 }
 
-.blueprint-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--primary);
-  box-shadow: 0 16px 36px rgba(176, 40, 230, 0.12);
+[data-theme="dark"] .blueprint-card {
+  background: #140E24;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
-.blueprint-step-num {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--primary);
-  background: rgba(176, 40, 230, 0.1);
-  padding: 4px 10px;
-  border-radius: var(--radius-pill);
-  align-self: flex-start;
-  margin-bottom: 16px;
+.blueprint-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: 0 20px 48px rgba(176, 40, 230, 0.16);
+}
+
+[data-theme="dark"] .blueprint-card:hover {
+  box-shadow: 0 20px 48px rgba(176, 40, 230, 0.25), 0 0 24px rgba(176, 40, 230, 0.12);
+}
+
+.blueprint-step-serif-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #8F74FB;
+  line-height: 1;
+  margin-bottom: 24px;
+  display: block;
+  letter-spacing: -0.02em;
+}
+
+[data-theme="dark"] .blueprint-step-serif-num {
+  color: #C084FC;
+  text-shadow: 0 0 16px rgba(192, 132, 252, 0.35);
 }
 
 .blueprint-step-title {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: var(--text-primary);
-  margin-bottom: 8px;
-  line-height: 1.25;
+  margin-bottom: 12px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
 }
 
 .blueprint-step-desc {
-  font-size: 0.84rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
-  line-height: 1.5;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* --------------------------------------------------------------------------
-   6. Service Commitments & Client FAQs Grid
+   4. Service Commitments & Client FAQs Grid
    -------------------------------------------------------------------------- */
 .services-faq-section {
   padding: 100px 0;
@@ -666,49 +723,34 @@
 }
 
 /* --------------------------------------------------------------------------
-   7. Responsive Layout Breakpoints
+   5. Responsive Layout Breakpoints
    -------------------------------------------------------------------------- */
-@media (max-width: 1150px) {
-  .disciplines-grid {
+@media (max-width: 1024px) {
+  .blueprint-split-header {
     grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
   }
-  .pricing-matrix-grid {
+  .blueprint-grid-4col {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .blueprint-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 960px) {
-  .flywheel-container {
-    grid-template-columns: 1fr;
+    gap: 20px;
   }
   .faq-grid {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 768px) {
-  .pricing-matrix-grid {
-    grid-template-columns: 1fr;
-  }
-  .blueprint-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (max-width: 640px) {
   .services-hero-section,
-  .disciplines-section,
-  .synergy-flywheel-section,
-  .pricing-matrix-section,
   .blueprint-section,
   .services-faq-section {
     padding: 60px 20px;
   }
-  .services-jump-pill {
-    padding: 10px 18px;
-    font-size: 0.85rem;
+  .blueprint-grid-4col {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .blueprint-card {
+    padding: 30px 22px;
   }
 }
