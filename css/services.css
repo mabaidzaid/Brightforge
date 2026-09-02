@@ -1,0 +1,714 @@
+/* ==========================================================================
+   BRIGHTFORGE: Services Overview Page Specific Stylesheet
+   Unique Hero, 3 Deep-Dive Disciplines, Synergy Flywheel, Pricing Matrix & FAQs
+   Primary: #B028E6 | Secondary: #8F74FB | Black: #020202 | Canvas: var(--canvas-bg)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Bespoke Services Hero Section
+   -------------------------------------------------------------------------- */
+.services-hero-section {
+  position: relative;
+  padding: 80px var(--side-padding) 70px;
+  background-color: var(--canvas-bg);
+  overflow: hidden;
+  border-top-right-radius: 20px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.services-hero-glow-1 {
+  position: absolute;
+  top: -100px;
+  left: -80px;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(176, 40, 230, 0.15) 0%, rgba(143, 116, 251, 0.05) 50%, transparent 70%);
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.services-hero-glow-2 {
+  position: absolute;
+  bottom: -80px;
+  right: -50px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(143, 116, 251, 0.16) 0%, rgba(176, 40, 230, 0.05) 50%, transparent 70%);
+  filter: blur(65px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme="dark"] .services-hero-glow-1 {
+  background: radial-gradient(circle, rgba(176, 40, 230, 0.28) 0%, rgba(143, 116, 251, 0.1) 50%, transparent 70%);
+}
+
+[data-theme="dark"] .services-hero-glow-2 {
+  background: radial-gradient(circle, rgba(143, 116, 251, 0.28) 0%, rgba(176, 40, 230, 0.1) 50%, transparent 70%);
+}
+
+.services-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 940px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.services-status-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  position: relative;
+  box-shadow: 0 0 10px var(--primary-glow);
+}
+
+.services-status-pulse::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1.5px solid var(--primary);
+  animation: radarPulse 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.services-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 4.4vw, 58px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.services-title-highlight {
+  background: linear-gradient(135deg, #B028E6 0%, #8F74FB 60%, #C084FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+
+.services-hero-lead {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.68;
+  max-width: 64ch;
+  margin-bottom: 36px;
+}
+
+/* 3-Pillar Jump Switcher Bar */
+.services-jump-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.services-jump-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: var(--radius-pill);
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.services-jump-pill:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(176, 40, 230, 0.18);
+  color: var(--primary);
+}
+
+.services-jump-pill .jump-icon {
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   2. 3 Comprehensive Discipline Deep-Dives
+   -------------------------------------------------------------------------- */
+.disciplines-section {
+  padding: 90px var(--side-padding);
+  background-color: var(--canvas-bg);
+  position: relative;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.disciplines-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  margin-top: 52px;
+}
+
+.discipline-card {
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 28px;
+  padding: 42px 34px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+
+.discipline-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(176, 40, 230, 0.45);
+  box-shadow: 0 24px 55px rgba(176, 40, 230, 0.14);
+}
+
+.discipline-card-featured {
+  background: linear-gradient(145deg, rgba(22, 17, 34, 0.03) 0%, rgba(176, 40, 230, 0.08) 100%);
+  border: 2px solid var(--primary);
+  box-shadow: 0 20px 50px rgba(176, 40, 230, 0.12);
+}
+
+[data-theme="dark"] .discipline-card-featured {
+  background: linear-gradient(145deg, #181128 0%, #120920 100%);
+  border-color: rgba(176, 40, 230, 0.6);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(176, 40, 230, 0.25);
+}
+
+.discipline-featured-badge {
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  background: linear-gradient(135deg, #B028E6 0%, #8F74FB 100%);
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 14px rgba(176, 40, 230, 0.35);
+}
+
+.discipline-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.discipline-num-chip {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: rgba(176, 40, 230, 0.1);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.discipline-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(176, 40, 230, 0.15) 0%, rgba(143, 116, 251, 0.15) 100%);
+  border: 1px solid rgba(176, 40, 230, 0.25);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.discipline-card:hover .discipline-icon-box {
+  background: linear-gradient(135deg, #B028E6 0%, #8F74FB 100%);
+  color: #FFFFFF;
+  transform: scale(1.08) rotate(4deg);
+  box-shadow: 0 8px 20px rgba(176, 40, 230, 0.35);
+}
+
+.discipline-icon-box svg {
+  width: 26px;
+  height: 26px;
+}
+
+.discipline-title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.discipline-lead {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Deliverables Checklist */
+.discipline-deliverables-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+  flex-grow: 1;
+}
+
+.discipline-deliverable-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.45;
+}
+
+.discipline-check-icon {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Tech Tags Row */
+.discipline-tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 16px 0;
+  border-top: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
+  margin-bottom: 24px;
+}
+
+.discipline-tech-chip {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: var(--canvas-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text-muted);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.discipline-pricing-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.discipline-price-tag {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.discipline-price-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  display: block;
+  margin-top: 4px;
+}
+
+.btn-discipline-cta {
+  width: 100%;
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   3. The Full-Funnel Synergy Flywheel (Interactive Ecosystem)
+   -------------------------------------------------------------------------- */
+.synergy-flywheel-section {
+  padding: 100px var(--side-padding);
+  background-color: var(--card-bg);
+  position: relative;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.flywheel-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 56px;
+  position: relative;
+}
+
+.flywheel-card {
+  background: var(--canvas-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 26px;
+  padding: 38px 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+
+.flywheel-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: 0 20px 45px rgba(176, 40, 230, 0.14);
+}
+
+.flywheel-step-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+}
+
+.flywheel-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.flywheel-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.flywheel-output-box {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* --------------------------------------------------------------------------
+   4. Transparent Pricing & Scope Matrix
+   -------------------------------------------------------------------------- */
+.pricing-matrix-section {
+  padding: 100px var(--side-padding);
+  background-color: var(--canvas-bg);
+  position: relative;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.pricing-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 52px;
+}
+
+.pricing-plan-card {
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 24px;
+  padding: 36px 26px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+
+.pricing-plan-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(176, 40, 230, 0.45);
+  box-shadow: 0 16px 40px rgba(176, 40, 230, 0.12);
+}
+
+.pricing-plan-featured {
+  background: linear-gradient(145deg, rgba(22, 17, 34, 0.04) 0%, rgba(176, 40, 230, 0.09) 100%);
+  border: 2px solid var(--primary);
+  box-shadow: 0 20px 50px rgba(176, 40, 230, 0.15);
+}
+
+[data-theme="dark"] .pricing-plan-featured {
+  background: linear-gradient(145deg, #181128 0%, #120920 100%);
+  border-color: rgba(176, 40, 230, 0.6);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(176, 40, 230, 0.25);
+}
+
+.plan-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  align-self: flex-start;
+  margin-bottom: 14px;
+}
+
+.plan-badge-default {
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--text-secondary);
+}
+
+.plan-badge-best {
+  background: linear-gradient(135deg, #B028E6 0%, #8F74FB 100%);
+  color: #FFFFFF;
+  box-shadow: 0 3px 10px rgba(176, 40, 230, 0.35);
+}
+
+.plan-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.plan-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  margin-bottom: 20px;
+  min-height: 38px;
+}
+
+.plan-price-row {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.plan-price-val {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.plan-price-val span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.plan-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 26px;
+  flex-grow: 1;
+}
+
+.plan-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+
+.plan-check {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. The 5-Step Service Execution Blueprint
+   -------------------------------------------------------------------------- */
+.blueprint-section {
+  padding: 100px var(--side-padding);
+  background-color: var(--card-bg);
+  position: relative;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.blueprint-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-top: 52px;
+}
+
+.blueprint-card {
+  background: var(--canvas-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 22px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+
+.blueprint-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: 0 16px 36px rgba(176, 40, 230, 0.12);
+}
+
+.blueprint-step-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--primary);
+  background: rgba(176, 40, 230, 0.1);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  align-self: flex-start;
+  margin-bottom: 16px;
+}
+
+.blueprint-step-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+
+.blueprint-step-desc {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   6. Service Commitments & Client FAQs Grid
+   -------------------------------------------------------------------------- */
+.services-faq-section {
+  padding: 100px var(--side-padding);
+  background-color: var(--canvas-bg);
+  position: relative;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 52px;
+}
+
+.faq-card {
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 24px;
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-smooth);
+}
+
+.faq-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: 0 16px 40px rgba(176, 40, 230, 0.1);
+}
+
+.faq-question {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.faq-answer {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   7. Responsive Layout Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1150px) {
+  .disciplines-grid {
+    grid-template-columns: 1fr;
+  }
+  .pricing-matrix-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .blueprint-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 960px) {
+  .flywheel-container {
+    grid-template-columns: 1fr;
+  }
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-matrix-grid {
+    grid-template-columns: 1fr;
+  }
+  .blueprint-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-hero-section,
+  .disciplines-section,
+  .synergy-flywheel-section,
+  .pricing-matrix-section,
+  .blueprint-section,
+  .services-faq-section {
+    padding: 60px 20px;
+  }
+  .services-jump-pill {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+}
