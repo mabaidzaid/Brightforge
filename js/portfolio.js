@@ -290,8 +290,8 @@ function initAccordionGallery() {
         if (media) {
           const drift = Math.max(-1.5, Math.min(1.5, active - i));
           const shift = drift * parallax * mediaSize * 0.06;
-          const gray = isActive ? 0 : 1;
-          const dim = isActive ? 0 : 0.45;
+          const gray = isActive ? 0 : 0.8;
+          const dim = isActive ? 0 : 0.15;
 
           tl.to(media, {
             xPercent: -50,
