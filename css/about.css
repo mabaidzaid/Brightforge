@@ -107,22 +107,23 @@
   justify-content: center;
   vertical-align: middle;
   position: relative;
-  width: clamp(96px, 10.5vw, 150px);
-  height: clamp(64px, 7vw, 98px);
+  width: clamp(115px, 11.5vw, 165px);
+  height: clamp(75px, 7.5vw, 108px);
   margin: 0 12px;
-  border-radius: 16px;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18), 0 0 25px rgba(176, 40, 230, 0.22);
-  border: 2px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2), 0 0 25px rgba(176, 40, 230, 0.25);
+  border: 2.5px solid rgba(255, 255, 255, 0.85);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
   cursor: pointer;
   flex-shrink: 0;
   background-color: var(--card-bg);
+  transform-style: preserve-3d;
 }
 
 [data-theme="dark"] .hero-inline-card {
-  border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.6), 0 0 30px rgba(176, 40, 230, 0.35);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7), 0 0 35px rgba(176, 40, 230, 0.4);
 }
 
 .hero-inline-card-img {
@@ -130,6 +131,10 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
+  transform: translateZ(0);
+  backface-visibility: hidden;
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -151,11 +156,11 @@
   transform: scale(1.18) rotate(0deg) !important;
   z-index: 10;
   border-color: var(--primary);
-  box-shadow: 0 24px 55px rgba(176, 40, 230, 0.4), 0 0 35px var(--primary-glow);
+  box-shadow: 0 26px 60px rgba(176, 40, 230, 0.45), 0 0 40px var(--primary-glow);
 }
 
 .hero-inline-card:hover .hero-inline-card-img {
-  transform: scale(1.08);
+  transform: scale(1.08) translateZ(0);
 }
 
 .about-hero-sub-text {
