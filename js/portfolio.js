@@ -19,27 +19,42 @@ function initPortfolioFilter() {
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
+      if (btn.classList.contains('active')) return;
+
       const targetCategory = btn.getAttribute('data-filter');
 
       // Update button active state
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      // Filter cards with smooth animation
+      let visibleIdx = 0;
+
+      // Filter cards with instant clean grid re-flow and staggered reveal
       cards.forEach(card => {
         const cardCategory = card.getAttribute('data-category');
-        if (targetCategory === 'all' || cardCategory === targetCategory) {
+        const matches = (targetCategory === 'all' || cardCategory === targetCategory);
+
+        if (matches) {
           card.style.display = 'flex';
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(16px) scale(0.97)';
+          card.style.transition = 'none';
+
+          void card.offsetWidth;
+
+          const delay = visibleIdx * 45;
+          visibleIdx++;
+
           setTimeout(() => {
+            card.style.transition = 'opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1)';
             card.style.opacity = '1';
             card.style.transform = 'translateY(0) scale(1)';
-          }, 10);
+          }, delay);
         } else {
+          card.style.display = 'none';
           card.style.opacity = '0';
-          card.style.transform = 'translateY(20px) scale(0.95)';
-          setTimeout(() => {
-            card.style.display = 'none';
-          }, 250);
+          card.style.transform = 'translateY(16px) scale(0.97)';
+          card.style.transition = 'none';
         }
       });
     });

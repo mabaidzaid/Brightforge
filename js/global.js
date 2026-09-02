@@ -324,28 +324,46 @@ function initPortfolioShowcase() {
   const modal = document.getElementById('portfolioLightboxModal');
   if (!portfolioCards.length) return;
 
-  // 1. Tab Filtering
+  // 1. Tab Filtering - Instant Clean Grid Re-flow & Staggered Reveal
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
+      if (btn.classList.contains('active')) return;
+
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
       const filter = btn.getAttribute('data-filter');
+      let visibleIdx = 0;
 
       portfolioCards.forEach(card => {
         const category = card.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
-          card.style.display = '';
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'scale(1)';
-          }, 10);
-        } else {
+        const matches = (filter === 'all' || category === filter);
+
+        if (matches) {
+          // Immediately show in DOM at the correct grid position
+          card.style.display = 'flex';
           card.style.opacity = '0';
-          card.style.transform = 'scale(0.95)';
+          card.style.transform = 'translateY(16px) scale(0.97)';
+          card.style.transition = 'none';
+
+          // Force reflow
+          void card.offsetWidth;
+
+          // Staggered entrance animation
+          const delay = visibleIdx * 45;
+          visibleIdx++;
+
           setTimeout(() => {
-            card.style.display = 'none';
-          }, 250);
+            card.style.transition = 'opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1)';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0) scale(1)';
+          }, delay);
+        } else {
+          // Instantly remove from layout flow so matching cards populate the grid cleanly
+          card.style.display = 'none';
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(16px) scale(0.97)';
+          card.style.transition = 'none';
         }
       });
     });
