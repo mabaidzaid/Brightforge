@@ -80,6 +80,7 @@ function initPortfolioLightbox() {
   const catEl = document.getElementById('lightboxCategoryTag');
   const metricEl = document.getElementById('lightboxMetricBadge');
   const urlEl = document.getElementById('lightboxUrlText');
+  const breadcrumbEl = document.getElementById('lightboxModalBreadcrumbTitle');
   const counterCurrent = document.getElementById('lightboxCurrentIdx');
   const counterTotal = document.getElementById('lightboxTotalCount');
   const thumbsStrip = document.getElementById('lightboxThumbsStrip');
@@ -126,6 +127,7 @@ function initPortfolioLightbox() {
     const proj = projects[currentIndex];
     if (imgEl) imgEl.src = proj.img;
     if (titleEl) titleEl.textContent = proj.title;
+    if (breadcrumbEl) breadcrumbEl.textContent = proj.title;
     if (descEl) descEl.textContent = proj.desc;
     if (catEl) catEl.textContent = proj.categoryName;
     if (metricEl) metricEl.textContent = proj.metric;

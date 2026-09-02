@@ -999,89 +999,146 @@
       </section>
 
       <!-- ====================================================================
-           7. Next-Gen Portfolio Showcase Lightbox Modal
+           7. Next-Gen Portfolio Showcase Studio Modal (Executive Redesign)
            ==================================================================== -->
       <div id="portfolioLightboxModal" class="portfolio-lightbox-modal" aria-hidden="true" role="dialog" aria-modal="true">
         <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
 
-        <!-- Top Global Bar with Counter & Actions -->
-        <div class="lightbox-top-bar">
-          <div class="lightbox-counter-badge">
-            <span id="lightboxCurrentIdx">1</span> / <span id="lightboxTotalCount">9</span>
-          </div>
+        <div class="lightbox-modal-container">
+          
+          <!-- Top Global Bar with Counter, Breadcrumbs & Quick Controls -->
+          <div class="lightbox-top-bar">
+            <div class="lightbox-top-brand">
+              <span class="lightbox-live-badge"><span class="badge-live-dot"></span> LIVE SHOWCASE</span>
+              <span class="lightbox-top-divider">/</span>
+              <span id="lightboxModalBreadcrumbTitle" class="lightbox-top-title">Project Case Study</span>
+            </div>
 
-          <div class="lightbox-top-actions">
-            <!-- Zoom Toggle -->
-            <button class="lightbox-action-btn" id="lightboxZoomToggleBtn" aria-label="Toggle Zoom" title="Toggle Zoom">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /><line x1="11" y1="8" x2="11" y2="14" /><line x1="8" y1="11" x2="14" y2="11" />
-              </svg>
-            </button>
-            <!-- Fullscreen Toggle -->
-            <button class="lightbox-action-btn" id="lightboxFullscreenBtn" aria-label="Toggle Fullscreen" title="Toggle Fullscreen">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
-              </svg>
-            </button>
-            <!-- Close Button -->
-            <button class="lightbox-action-btn" id="lightboxCloseBtn" aria-label="Close modal" title="Close (Esc)">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- Stage Area with Carousel Arrows & Central Showcase Window -->
-        <div class="lightbox-stage-container">
-          <!-- Prev Arrow Button -->
-          <button class="lightbox-nav-arrow" id="lightboxPrevBtn" aria-label="Previous Project" title="Previous (Left Arrow)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6" /></svg>
-          </button>
-
-          <!-- Central Showcase Window with Browser Chrome Header -->
-          <div class="lightbox-showcase-window" id="lightboxShowcaseWindow">
-            <div class="lightbox-browser-header">
-              <div class="browser-header-dots">
-                <span class="dot-red"></span>
-                <span class="dot-yellow"></span>
-                <span class="dot-green"></span>
-              </div>
-              <div class="browser-url-pill">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="url-lock-icon">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            <div class="lightbox-top-actions">
+              <!-- Zoom Toggle -->
+              <button class="lightbox-action-btn" id="lightboxZoomToggleBtn" aria-label="Toggle Zoom" title="Toggle Zoom">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /><line x1="11" y1="8" x2="11" y2="14" /><line x1="8" y1="11" x2="14" y2="11" />
                 </svg>
-                <span id="lightboxUrlText" class="browser-url-domain">brightforge.agency/case-study</span>
-              </div>
-              <div class="browser-header-status">
-                <span class="live-dot"></span> Verified Deliverable
-              </div>
-            </div>
-
-            <!-- Main Image Viewport -->
-            <div class="lightbox-img-viewport" id="lightboxImgViewport">
-              <img src="" alt="" id="lightboxModalImg" class="lightbox-full-img">
-            </div>
-
-            <!-- Bottom Caption Bar -->
-            <div class="lightbox-caption-area">
-              <div class="lightbox-caption-meta">
-                <span id="lightboxCategoryTag" class="lightbox-category-tag"></span>
-                <span id="lightboxMetricBadge" class="lightbox-metric-badge"></span>
-              </div>
-              <h3 id="lightboxProjectTitle" class="lightbox-project-title"></h3>
-              <p id="lightboxProjectDesc" class="lightbox-project-desc"></p>
+              </button>
+              <!-- Fullscreen Toggle -->
+              <button class="lightbox-action-btn" id="lightboxFullscreenBtn" aria-label="Toggle Fullscreen" title="Toggle Fullscreen">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+                </svg>
+              </button>
+              <!-- Close Button -->
+              <button class="lightbox-action-btn lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close modal" title="Close (Esc)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </button>
             </div>
           </div>
 
-          <!-- Next Arrow Button -->
-          <button class="lightbox-nav-arrow" id="lightboxNextBtn" aria-label="Next Project" title="Next (Right Arrow)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6" /></svg>
-          </button>
-        </div>
+          <!-- Main 2-Panel Showcase Studio -->
+          <div class="lightbox-studio-body">
+            
+            <!-- Left: Device Canvas Viewport -->
+            <div class="lightbox-canvas-area">
+              <button class="lightbox-nav-arrow arrow-left" id="lightboxPrevBtn" aria-label="Previous Project" title="Previous (Left Arrow)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6" /></svg>
+              </button>
 
-        <!-- Bottom Thumbnail Navigation Strip -->
-        <div class="lightbox-thumbs-strip" id="lightboxThumbsStrip"></div>
+              <!-- Central macOS Frame Mockup -->
+              <div class="lightbox-browser-frame" id="lightboxShowcaseWindow">
+                <div class="lightbox-browser-header">
+                  <div class="browser-header-dots">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                  </div>
+                  <div class="browser-url-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="url-lock-icon">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    </svg>
+                    <span id="lightboxUrlText" class="browser-url-domain">brightforge.agency/case-study</span>
+                  </div>
+                  <div class="browser-header-status">
+                    <span class="live-dot"></span> Verified Case
+                  </div>
+                </div>
+
+                <div class="lightbox-scroll-viewport" id="lightboxImgViewport">
+                  <img src="" alt="" id="lightboxModalImg" class="lightbox-full-img" />
+                </div>
+              </div>
+
+              <button class="lightbox-nav-arrow arrow-right" id="lightboxNextBtn" aria-label="Next Project" title="Next (Right Arrow)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6" /></svg>
+              </button>
+            </div>
+
+            <!-- Right: Project Intelligence Inspector Sidebar -->
+            <aside class="lightbox-inspector-sidebar">
+              <div class="inspector-scroll-wrap">
+                
+                <div class="inspector-badge-group">
+                  <span id="lightboxCategoryTag" class="lightbox-category-tag"></span>
+                  <span id="lightboxMetricBadge" class="lightbox-metric-badge"></span>
+                </div>
+
+                <h2 id="lightboxProjectTitle" class="inspector-title"></h2>
+                <p id="lightboxProjectDesc" class="inspector-desc"></p>
+
+                <!-- Key Impact Specifications -->
+                <div class="inspector-spec-box">
+                  <h4 class="inspector-spec-heading">DELIVERABLES &amp; METRICS</h4>
+                  <div class="inspector-spec-items">
+                    <div class="spec-item">
+                      <span class="spec-icon">✦</span>
+                      <div class="spec-text">
+                        <span class="spec-label">Execution Strategy</span>
+                        <span class="spec-val">Custom High-Conversion Build</span>
+                      </div>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-icon">⚡</span>
+                      <div class="spec-text">
+                        <span class="spec-label">Core Performance</span>
+                        <span class="spec-val">Sub-0.7s Global Edge Load</span>
+                      </div>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-icon">🔒</span>
+                      <div class="spec-text">
+                        <span class="spec-label">Client IP Status</span>
+                        <span class="spec-val">100% Full Ownership Transferred</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inspector-cta-area">
+                  <a href="contact.html" class="btn btn-primary btn-block">
+                    Build Something Similar <span class="cta-arrow">&rarr;</span>
+                  </a>
+                </div>
+
+              </div>
+
+              <!-- Inspector Footer Status -->
+              <div class="inspector-footer-bar">
+                <div class="inspector-counter-info">
+                  <span class="counter-label">CASE STUDY</span>
+                  <span class="counter-val"><strong id="lightboxCurrentIdx">1</strong> / <span id="lightboxTotalCount">9</span></span>
+                </div>
+                <div class="inspector-shortcut-hint">
+                  <span>Press <kbd>←</kbd> <kbd>→</kbd> to navigate</span>
+                </div>
+              </div>
+            </aside>
+
+          </div>
+
+          <!-- Bottom Thumbnail Navigation Strip -->
+          <div class="lightbox-thumbs-strip" id="lightboxThumbsStrip"></div>
+        </div>
       </div>
 
     </main>
