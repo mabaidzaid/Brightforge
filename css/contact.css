@@ -131,14 +131,14 @@
 }
 
 /* --------------------------------------------------------------------------
-   2. Direct Studio Info Card
+   2. Direct Studio Info Card & Fast Booking Widget
    -------------------------------------------------------------------------- */
 .direct-info-card {
   background: var(--card-bg);
   border: 1.5px solid var(--card-border);
   border-radius: 28px;
   padding: 38px 32px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
 }
 
@@ -189,6 +189,7 @@
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  margin-bottom: 2px;
 }
 
 .contact-detail-val {
@@ -198,15 +199,28 @@
   line-height: 1.4;
 }
 
+/* Light / Dark Mode Hover Colors for Contact Links */
 .contact-link-highlight {
-  color: var(--primary);
+  color: #8A2BE2;
   text-decoration: none;
   transition: all 0.2s ease;
+  display: inline-block;
 }
 
 .contact-link-highlight:hover {
-  color: #FFFFFF;
-  text-shadow: 0 0 10px var(--primary-glow);
+  color: #581C87 !important;
+  text-decoration: underline;
+  transform: translateX(2px);
+}
+
+[data-theme="dark"] .contact-link-highlight {
+  color: #C084FC;
+}
+
+[data-theme="dark"] .contact-link-highlight:hover {
+  color: #E9D5FF !important;
+  text-shadow: 0 0 12px rgba(176, 40, 230, 0.6);
+  transform: translateX(2px);
 }
 
 .response-time-pill {
@@ -227,13 +241,53 @@
   color: var(--primary);
 }
 
+/* Direct Call Secondary Widget */
+.direct-call-widget {
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 28px;
+  padding: 28px 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="dark"] .direct-call-widget {
+  background: #120E1F;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.direct-call-widget-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.direct-call-widget-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
 /* --------------------------------------------------------------------------
-   3. FAQ Accordion
+   3. Dedicated FAQ Section with Smooth Grid Transitions
    -------------------------------------------------------------------------- */
-.faq-accordion {
+.contact-faq-section {
+  padding: 80px 0 60px;
+}
+
+.faq-section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 48px;
+}
+
+.faq-accordion-list {
+  max-width: 860px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 .faq-item {
@@ -241,7 +295,7 @@
   background-color: var(--card-bg);
   border-radius: 20px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 [data-theme="dark"] .faq-item {
@@ -256,7 +310,7 @@
 
 .faq-header-btn {
   width: 100%;
-  padding: 22px 24px;
+  padding: 22px 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -265,16 +319,17 @@
   cursor: pointer;
   text-align: left;
   font-family: var(--font-heading);
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: 700;
   color: var(--text-primary);
+  gap: 16px;
 }
 
 .faq-chevron {
   width: 20px;
   height: 20px;
   color: var(--primary);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   flex-shrink: 0;
 }
 
@@ -282,16 +337,23 @@
   transform: rotate(180deg);
 }
 
-.faq-content {
-  display: none;
-  padding: 0 24px 22px;
-  font-size: 0.94rem;
-  color: var(--text-secondary);
-  line-height: 1.65;
+/* Smooth Accordion Body Animation using CSS Grid */
+.faq-body-collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.faq-item.open .faq-content {
-  display: block;
+.faq-item.open .faq-body-collapse {
+  grid-template-rows: 1fr;
+}
+
+.faq-content-inner {
+  overflow: hidden;
+  padding: 0 28px 22px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
 }
 
 /* --------------------------------------------------------------------------
@@ -313,7 +375,16 @@
     padding: 32px 20px;
   }
   
-  .direct-info-card {
+  .direct-info-card,
+  .direct-call-widget {
     padding: 28px 20px;
+  }
+
+  .faq-header-btn {
+    padding: 18px 20px;
+  }
+
+  .faq-content-inner {
+    padding: 0 20px 18px;
   }
 }

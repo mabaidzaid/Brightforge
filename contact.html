@@ -235,7 +235,7 @@
               </form>
             </div>
 
-            <!-- Right: Direct Studio Info & FAQ -->
+            <!-- Right: Direct Studio Info & Intro Call Widget -->
             <div>
               <div class="direct-info-card">
                 <h3 class="direct-contact-title">Direct Contact</h3>
@@ -279,55 +279,83 @@
                 </div>
               </div>
 
-              <!-- FAQ Accordion -->
-              <div class="section-header" style="margin-top: 48px; margin-bottom: 24px;">
-                <h2 style="font-size: 1.5rem;">Frequently asked questions</h2>
-              </div>
-
-              <div class="faq-accordion">
-                <!-- FAQ 1 -->
-                <div class="faq-item open">
-                  <button class="faq-header-btn" aria-expanded="true">
-                    <span>What is your typical turnaround time?</span>
-                    <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                  </button>
-                  <div class="faq-content">
-                    Turnaround times depend on the service. Starter web development projects typically take 1 to 2 weeks, while larger builds take 2 to 3 weeks. Google Ads and SEO setup campaigns are launched within 4 to 7 business days.
-                  </div>
-                </div>
-
-                <!-- FAQ 2 -->
-                <div class="faq-item">
-                  <button class="faq-header-btn" aria-expanded="false">
-                    <span>Are your package prices fixed?</span>
-                    <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                  </button>
-                  <div class="faq-content">
-                    Yes. All package prices listed on our site are 100% transparent and fixed. There are no hidden setup fees or surprise invoices at handoff.
-                  </div>
-                </div>
-
-                <!-- FAQ 3 -->
-                <div class="faq-item">
-                  <button class="faq-header-btn" aria-expanded="false">
-                    <span>Do you offer support after project launch?</span>
-                    <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                  </button>
-                  <div class="faq-content">
-                    Yes. Every package includes dedicated post-launch support, from 7 to 14+ days of direct technical help and ongoing monthly management for ad and SEO plans.
-                  </div>
-                </div>
+              <!-- Quick Intro Call Widget -->
+              <div class="direct-call-widget">
+                <h4 class="direct-call-widget-title">Prefer a quick consultation?</h4>
+                <p class="direct-call-widget-desc">Speak directly with our technical director to discuss your roadmap, timeline, and growth goals.</p>
+                <a href="tel:+18005550199" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 0.92rem;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  Call +1 (800) 555-0199
+                </a>
               </div>
             </div>
+
           </div>
         </div>
       </section>
+
+      <!-- Dedicated Smooth FAQ Section (Prevents CTA Jump on Open) -->
+      <section class="contact-faq-section section-spacer">
+        <div class="container">
+          
+          <div class="faq-section-header reveal reveal-up">
+            <span class="section-tag-pill"><span class="pill-sparkle">✦</span> COMMON QUESTIONS <span class="pill-sparkle">✦</span></span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle" style="margin: 12px auto 0; max-width: 580px;">Everything you need to know about our project kickoff, transparent fixed pricing, and dedicated post-launch support.</p>
+          </div>
+
+          <div class="faq-accordion-list">
+            
+            <!-- FAQ 1 -->
+            <div class="faq-item open reveal reveal-up">
+              <button class="faq-header-btn" aria-expanded="true">
+                <span>What is your typical turnaround time?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-body-collapse">
+                <div class="faq-content-inner">
+                  Turnaround times depend on the project scope. Starter web development projects typically take 1 to 2 weeks, while larger full-scale custom builds take 2 to 3 weeks. Google Ads and SEO setup campaigns are launched within 4 to 7 business days.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item reveal reveal-up">
+              <button class="faq-header-btn" aria-expanded="false">
+                <span>Are your package prices fixed?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-body-collapse">
+                <div class="faq-content-inner">
+                  Yes. All package prices listed on our site are 100% transparent and fixed. There are no hidden onboarding fees or surprise invoices at final handoff.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item reveal reveal-up">
+              <button class="faq-header-btn" aria-expanded="false">
+                <span>Do you offer support after project launch?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-body-collapse">
+                <div class="faq-content-inner">
+                  Yes. Every package includes dedicated post-launch support, from 7 to 14+ days of direct technical help and ongoing monthly management for ad and SEO plans.
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
     </main>
 
     <!-- Footer (Integrated Top CTA Banner + 5-Column Navigation) -->
@@ -378,79 +406,72 @@
               </a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-circle" aria-label="Instagram">
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-social-circle" aria-label="X (Twitter)">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
             </div>
           </div>
 
           <!-- Column 2: Quick Links -->
-          <div class="footer-col-nav">
-            <h3 class="footer-nav-title">Quick Links</h3>
+          <div class="footer-col-links">
+            <h4 class="footer-ref-title">Quick Links</h4>
             <ul class="footer-nav-list">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="blog.html">Blog &amp; Insights</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="index.html" class="footer-nav-link">Home</a></li>
+              <li><a href="services.html" class="footer-nav-link">Services</a></li>
+              <li><a href="about.html" class="footer-nav-link">About Us</a></li>
+              <li><a href="portfolio.html" class="footer-nav-link">Portfolio</a></li>
+              <li><a href="blog.html" class="footer-nav-link">Blog</a></li>
+              <li><a href="contact.html" class="footer-nav-link">Contact Us</a></li>
             </ul>
           </div>
 
-          <!-- Column 3: Core Services -->
-          <div class="footer-col-nav">
-            <h3 class="footer-nav-title">Core Services</h3>
+          <!-- Column 3: Services -->
+          <div class="footer-col-links">
+            <h4 class="footer-ref-title">Services</h4>
             <ul class="footer-nav-list">
-              <li><a href="service-web-development.html">Custom Web Development</a></li>
-              <li><a href="service-google-ads.html">Google Ads Management</a></li>
-              <li><a href="service-seo.html">Technical SEO Audits</a></li>
-              <li><a href="services.html">Conversion Optimization (CRO)</a></li>
-              <li><a href="services.html">Full-Stack Digital Growth</a></li>
+              <li><a href="service-web-development.html" class="footer-nav-link">Web Development</a></li>
+              <li><a href="service-google-ads.html" class="footer-nav-link">Google Ads</a></li>
+              <li><a href="service-seo.html" class="footer-nav-link">Search Engine Optimization</a></li>
             </ul>
           </div>
 
-          <!-- Column 4: Contact Info -->
-          <div class="footer-col-nav">
-            <h3 class="footer-nav-title">Get In Touch</h3>
-            <ul class="footer-contact-list">
-              <li>
-                <span class="contact-lbl">Email:</span>
-                <a href="mailto:contact@brightforge.agency" class="contact-val">contact@brightforge.agency</a>
-              </li>
-              <li>
-                <span class="contact-lbl">Phone:</span>
-                <a href="tel:+18005550199" class="contact-val">+1 (800) 555-0199</a>
-              </li>
-              <li>
-                <span class="contact-lbl">Headquarters:</span>
-                <span class="contact-val">San Francisco, CA &bull; Global Remote Delivery</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Column 5: Global Location Map -->
-          <div class="footer-col-map">
-            <h3 class="footer-nav-title">Our Headquarters</h3>
-            <div class="footer-map-box">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.5076402!3d37.757815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-                width="100%" 
-                height="100%" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"
-                title="BRIGHTFORGE Headquarters Map">
-              </iframe>
+          <!-- Column 4: Company / Contact Info -->
+          <div class="footer-col-links footer-col-contact">
+            <h4 class="footer-ref-title">Company</h4>
+            <div class="footer-contact-details">
+              <div class="footer-contact-row">
+                <span class="footer-contact-icon-circle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </span>
+                <span>San Francisco, CA &bull; Global Remote Delivery</span>
+              </div>
+              <div class="footer-contact-row">
+                <span class="footer-contact-icon-circle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 1a9 9 0 0 0-9 9v7c0 2.206 1.794 4 4 4h1a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H5v-3a7 7 0 0 1 14 0v3h-3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h1c2.206 0 4-1.794 4-4v-7a9 9 0 0 0-9-9z"/></svg>
+                </span>
+                <a href="tel:+18005550199" class="footer-contact-link">+1 (800) 555-0199</a>
+              </div>
+              <div class="footer-contact-row">
+                <span class="footer-contact-icon-circle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.064A9.925 9.925 0 0 0 12.012 2zm0 18.304h-.003a8.31 8.31 0 0 1-4.233-1.157l-.304-.18-3.146.745.758-3.066-.198-.315a8.272 8.272 0 0 1-1.267-4.347c.001-4.582 3.731-8.307 8.315-8.307 2.22 0 4.307.865 5.877 2.436a8.27 8.27 0 0 1 2.432 5.874c-.001 4.583-3.732 8.317-8.231 8.317zm4.551-6.216c-.249-.125-1.472-.726-1.7-.809-.228-.083-.394-.125-.56.125-.166.249-.643.809-.788.975-.145.166-.29.187-.539.062-.249-.125-1.052-.388-2.003-1.236-.74-.66-1.24-1.475-1.385-1.724-.145-.249-.015-.384.11-.508.112-.112.249-.29.373-.436.125-.145.166-.249.249-.415.083-.166.042-.311-.021-.436-.062-.125-.56-1.349-.768-1.847-.202-.485-.407-.419-.56-.427l-.477-.008c-.166 0-.436.062-.664.311-.228.249-.871.851-.871 2.075s.892 2.407 1.017 2.573c.125.166 1.756 2.681 4.254 3.759.594.257 1.058.41 1.42.526.597.19 1.14.163 1.57.099.479-.071 1.472-.602 1.68-1.183.207-.581.207-1.079.145-1.183-.062-.104-.228-.166-.477-.291z"/></svg>
+                </span>
+                <a href="https://wa.me/923143110259" target="_blank" rel="noopener noreferrer" class="footer-contact-link">Live WhatsApp Chat</a>
+              </div>
+              <div class="footer-contact-row">
+                <span class="footer-contact-icon-circle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 5.333-8-5.333V6h16zM4 18V9.044l7.445 4.963a1 1 0 0 0 1.11 0L20 9.044 20.002 18H4z"/></svg>
+                </span>
+                <a href="mailto:contact@brightforge.agency" class="footer-contact-link">contact@brightforge.agency</a>
+              </div>
             </div>
           </div>
 
         </div>
 
-        <!-- Bottom Copyright Row -->
-        <div class="footer-bottom-row">
-          <p class="footer-copy-text">&copy; 2026 BRIGHTFORGE Web Agency. All Rights Reserved.</p>
-          <div class="footer-legal-links">
-            <a href="contact.html">Privacy Policy</a>
-            <a href="contact.html">Terms of Service</a>
-            <a href="contact.html">SLA Guarantees</a>
-          </div>
+        <!-- Centered Bottom Copyright -->
+        <div class="footer-ref-bottom">
+          <p>&copy; 2026 BRIGHTFORGE. All rights reserved.</p>
         </div>
 
       </div>
@@ -463,7 +484,7 @@
     </a>
 
     <!-- Floating Call Button (Right) -->
-    <a href="tel:+923143110259" class="floating-call-btn" aria-label="Call Us Now" title="Call Us Now">
+    <a href="tel:+18005550199" class="floating-call-btn" aria-label="Call Us Now" title="Call Us Now">
       <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.24 1.02l-2.21 2.2z"/></svg>
     </a>
 
