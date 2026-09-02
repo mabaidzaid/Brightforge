@@ -835,51 +835,64 @@ button, input, select, textarea {
 }
 
 .btn-cta-white {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 14px 30px;
-  border-radius: var(--radius-pill);
+  gap: 12px;
+  padding: 14px 34px;
+  min-height: 52px;
+  border-radius: 100px;
   background: #FFFFFF !important;
-  color: #0A0713 !important;
-  font-family: var(--font-body);
-  font-size: 0.98rem;
+  color: #020202 !important;
+  font-family: var(--font-heading);
+  font-size: 1rem;
   font-weight: 700;
   text-decoration: none;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  position: relative;
+  border: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+  overflow: hidden;
   z-index: 4;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: border-radius 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+              transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+              color 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+              background 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform, border-radius, box-shadow;
 }
 
 [data-theme="light"] .btn-cta-white {
   background: #FFFFFF !important;
-  color: #0A0713 !important;
+  color: #020202 !important;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 .btn-cta-white:hover {
-  transform: translateY(-3px) scale(1.02);
+  transform: translateY(-2px);
+  border-radius: 14px;
   background: #FFFFFF !important;
-  color: #0A0713 !important;
-  box-shadow: 0 14px 35px rgba(168, 85, 247, 0.45), 0 0 25px rgba(255, 255, 255, 0.5);
+  color: #020202 !important;
+  box-shadow: 0 14px 35px rgba(176, 40, 230, 0.45), 0 0 25px rgba(255, 255, 255, 0.5);
 }
 
 [data-theme="light"] .btn-cta-white:hover {
   background: #FFFFFF !important;
-  color: #0A0713 !important;
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 14px 35px rgba(168, 85, 247, 0.45), 0 0 25px rgba(255, 255, 255, 0.5);
+  color: #020202 !important;
+  transform: translateY(-2px);
+  border-radius: 14px;
+  box-shadow: 0 14px 35px rgba(176, 40, 230, 0.45), 0 0 25px rgba(255, 255, 255, 0.5);
 }
 
 .btn-cta-white .cta-arrow {
   display: inline-block;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
 }
 
 .btn-cta-white:hover .cta-arrow {
-  transform: translateX(4px);
+  transform: translateX(6px);
 }
 
 /* Right Visual Mockup Column with Glowing Arc */

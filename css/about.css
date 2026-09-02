@@ -133,10 +133,12 @@
     transform: rotate(0deg) scale(0.9);
     opacity: 0.65;
   }
+
   50% {
     transform: rotate(180deg) scale(1.15);
     opacity: 1;
   }
+
   100% {
     transform: rotate(360deg) scale(0.9);
     opacity: 0.65;
@@ -144,18 +146,24 @@
 }
 
 @keyframes aboutFloatRibbon1 {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(0, 0) rotate(0deg) scale(1);
   }
+
   50% {
     transform: translate(8px, -15px) rotate(12deg) scale(1.05);
   }
 }
 
 @keyframes aboutFloatRibbon2 {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(0, 0) rotate(0deg) scale(1);
   }
+
   50% {
     transform: translate(-10px, -16px) rotate(-14deg) scale(1.06);
   }
@@ -165,9 +173,11 @@
   0% {
     transform: translate(0, 0) scale(1);
   }
+
   50% {
     transform: translate(6px, -12px) scale(1.2);
   }
+
   100% {
     transform: translate(-4px, 8px) scale(0.95);
   }
@@ -188,11 +198,11 @@
 /* Editorial Headline with Embedded Inline Cards (Spacious & Open Matching Reference) */
 .about-editorial-headline {
   font-family: var(--font-heading);
-  font-size: clamp(2.8rem, 5.8vw, 84px);
-  font-weight: 550;
+  font-size: clamp(2.8rem, 5.8vw, 76px);
+  font-weight: 800;
   line-height: 1.5;
   letter-spacing: -0.01em;
-  word-spacing: 0.12em;
+  word-spacing: 10px;
   color: var(--text-primary);
   margin-bottom: 32px;
   text-align: center;
@@ -524,8 +534,13 @@
 }
 
 @keyframes rotateOrbit {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .diagram-core-badge {
@@ -631,16 +646,20 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
   .diagram-center-hub {
     order: -1;
     margin-bottom: 20px;
   }
+
   .diagram-connector {
     display: none;
   }
+
   .diagram-col {
     gap: 32px;
   }
+
   .diagram-step-desc {
     max-width: 100%;
   }
@@ -652,9 +671,11 @@
     gap: 24px;
     padding: 24px;
   }
+
   .diagram-stat-divider {
     display: none;
   }
+
   .diagram-stat-item {
     justify-content: flex-start;
   }
@@ -665,22 +686,27 @@
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
   .diagram-center-hub {
     width: 260px;
     height: 260px;
   }
+
   .ring-outer {
     width: 260px;
     height: 260px;
   }
+
   .ring-mid {
     width: 190px;
     height: 190px;
   }
+
   .ring-inner {
     width: 130px;
     height: 130px;
   }
+
   .diagram-feature-card {
     flex-direction: column;
     align-items: flex-start;
@@ -937,6 +963,7 @@
     grid-template-columns: 1fr;
     gap: 24px;
   }
+
   .solutions-featured-card {
     min-height: 420px;
   }
@@ -1543,26 +1570,33 @@
     grid-template-columns: 1fr;
     gap: 28px;
   }
+
   .culture-showcase-track {
     grid-template-columns: 1fr;
   }
+
   .culture-slide-prev,
   .culture-slide-next {
     display: none;
   }
+
   .culture-slide-active {
     height: 380px;
   }
+
   .culture-nav-prev {
     left: 14px;
   }
+
   .culture-nav-next {
     right: 14px;
   }
+
   .culture-slide-title {
     max-width: 100%;
     margin-bottom: 70px;
   }
+
   .culture-card-notch {
     max-width: 100%;
     left: 0;
@@ -1570,6 +1604,7 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
+
   .culture-card-notch::before,
   .culture-card-notch::after {
     display: none;
@@ -1898,12 +1933,14 @@
     gap: 22px;
     padding: 28px 24px;
   }
+
   .trust-stat-box {
     justify-content: flex-start;
     max-width: 320px;
     margin: 0 auto;
     width: 100%;
   }
+
   .trust-stat-divider {
     width: 100%;
     height: 1px;
@@ -1918,6 +1955,7 @@
   .pillars-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .guild-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1927,20 +1965,25 @@
   .anti-agency-grid {
     grid-template-columns: 1fr;
   }
+
   .timeline-container::before {
     left: 24px;
   }
+
   .timeline-node-row {
     grid-template-columns: 1fr;
     padding-left: 64px;
     direction: ltr !important;
   }
+
   .timeline-pin {
     left: 24px;
   }
+
   .culture-gallery-grid {
     grid-template-columns: 1fr;
   }
+
   .culture-tile-tall {
     grid-row: span 1;
     min-height: 360px;
@@ -1952,6 +1995,7 @@
     font-size: 2.2rem;
     line-height: 1.4;
   }
+
   .hero-inline-card {
     width: 80px;
     height: 54px;
@@ -1961,6 +2005,7 @@
 }
 
 @media (max-width: 640px) {
+
   .about-hero-section,
   .anti-agency-section,
   .timeline-section,
@@ -1969,9 +2014,11 @@
   .culture-section {
     padding: 64px 20px;
   }
+
   .pillars-grid {
     grid-template-columns: 1fr;
   }
+
   .guild-grid {
     grid-template-columns: 1fr;
   }
