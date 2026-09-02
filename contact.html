@@ -157,7 +157,7 @@
             <!-- Dual Pill Action Buttons -->
             <div class="about-hero-btn-group">
               <a href="#project-inquiry-form" class="btn-pill-outline">Fill Project Form</a>
-              <a href="tel:+1234567890" class="btn btn-primary">Book an Intro Call <span class="cta-arrow">&rarr;</span></a>
+              <a href="tel:+18005550199" class="btn btn-primary">Book an Intro Call <span class="cta-arrow">&rarr;</span></a>
             </div>
 
           </div>
@@ -168,10 +168,14 @@
       <section class="section-spacer" style="padding-top: 24px;">
         <div class="container">
           <div class="contact-split-layout">
-            <!-- Form -->
-            <div class="contact-form-box" style="background: var(--card-bg); border-radius: var(--radius-card); border: 1px solid var(--card-border); padding: 44px 36px;">
-              <h2 style="font-size: 1.75rem; margin-bottom: 24px;">Project Inquiry</h2>
-              <form id="project-inquiry-form">
+            
+            <!-- Left: 2-Column Form Box -->
+            <div class="contact-form-box">
+              <h2 class="contact-form-title">Project Inquiry</h2>
+              
+              <form id="project-inquiry-form" class="contact-form-grid">
+                
+                <!-- Row 1: Full Name & Email -->
                 <div class="form-group">
                   <label for="contact-name" class="form-label">Full Name *</label>
                   <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Jordan Ellis" required>
@@ -182,11 +186,18 @@
                   <input type="email" id="contact-email" name="email" class="form-input" placeholder="jordan@company.com" required>
                 </div>
 
+                <!-- Row 2: Company & Phone -->
                 <div class="form-group">
                   <label for="contact-company" class="form-label">Company / Organization</label>
                   <input type="text" id="contact-company" name="company" class="form-input" placeholder="e.g. Acme Corp">
                 </div>
 
+                <div class="form-group">
+                  <label for="contact-phone" class="form-label">Phone Number</label>
+                  <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="e.g. +1 (555) 000-0000">
+                </div>
+
+                <!-- Row 3: Service & Budget -->
                 <div class="form-group">
                   <label for="contact-service" class="form-label">Service Interested In *</label>
                   <select id="contact-service" name="service" class="form-select" required>
@@ -208,29 +219,63 @@
                   </select>
                 </div>
 
-                <div class="form-group">
+                <!-- Row 4: Full-Width Message -->
+                <div class="form-group form-group-full">
                   <label for="contact-message" class="form-label">Project Details &amp; Objectives *</label>
                   <textarea id="contact-message" name="message" class="form-textarea" placeholder="Tell us about your goals, target audience, key requirements, and ideal timeline." required></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Send message</button>
+                <!-- Row 5: Submit Button -->
+                <div class="form-group form-group-full" style="margin-top: 6px;">
+                  <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    Send Message <span class="cta-arrow">&rarr;</span>
+                  </button>
+                </div>
+
               </form>
             </div>
 
-            <!-- Direct Info -->
+            <!-- Right: Direct Studio Info & FAQ -->
             <div>
-              <div class="direct-info-card" style="background: var(--card-bg); border-radius: var(--radius-card); border: 1px solid var(--card-border); padding: 40px; margin-bottom: 32px;">
-                <h3 style="font-size: 1.35rem; margin-bottom: 20px;">Direct Contact</h3>
-                <p style="margin-bottom: 16px;"><strong>Location:</strong> [Your City, Country]</p>
-                <p style="margin-bottom: 16px;"><strong>Email:</strong> <a href="mailto:[Your Business Email]" style="color: var(--primary); font-weight: 700;">[Your Business Email]</a></p>
-                <p style="margin-bottom: 16px;"><strong>Phone:</strong> [Your Phone Number]</p>
+              <div class="direct-info-card">
+                <h3 class="direct-contact-title">Direct Contact</h3>
+                
+                <div class="contact-detail-item">
+                  <div class="contact-icon-squircle">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div class="contact-detail-text">
+                    <span class="contact-detail-label">Location:</span>
+                    <span class="contact-detail-val">San Francisco, CA &bull; Global Remote Delivery</span>
+                  </div>
+                </div>
 
-                <div class="response-time-pill" style="display: inline-flex; align-items: center; gap: 8px; background: var(--grey-bg); padding: 8px 16px; border-left: 3px solid var(--secondary-purple); border-radius: 4px; font-size: 0.88rem; color: var(--text-primary); margin-top: 24px;">
+                <div class="contact-detail-item">
+                  <div class="contact-icon-squircle">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </div>
+                  <div class="contact-detail-text">
+                    <span class="contact-detail-label">Email:</span>
+                    <a href="mailto:contact@brightforge.agency" class="contact-detail-val contact-link-highlight">contact@brightforge.agency</a>
+                  </div>
+                </div>
+
+                <div class="contact-detail-item">
+                  <div class="contact-icon-squircle">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div class="contact-detail-text">
+                    <span class="contact-detail-label">Phone:</span>
+                    <a href="tel:+18005550199" class="contact-detail-val contact-link-highlight">+1 (800) 555-0199</a>
+                  </div>
+                </div>
+
+                <div class="response-time-pill">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="12" cy="12" r="10"></circle>
                     <polyline points="12 6 12 12 16 14"></polyline>
                   </svg>
-                  <span>We reply within one business day.</span>
+                  <span>We reply within 24 hours guaranteed.</span>
                 </div>
               </div>
 
@@ -239,42 +284,42 @@
                 <h2 style="font-size: 1.5rem;">Frequently asked questions</h2>
               </div>
 
-              <div class="faq-accordion" style="display: flex; flex-direction: column; gap: 16px;">
+              <div class="faq-accordion">
                 <!-- FAQ 1 -->
-                <div class="faq-item open" style="border: 1px solid var(--card-border); background: var(--card-bg); border-radius: var(--radius-card); overflow: hidden;">
-                  <button class="faq-header-btn" aria-expanded="true" style="width: 100%; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; background: transparent; border: none; cursor: pointer; text-align: left; font-size: 1.1rem; font-weight: 700; color: var(--text-primary);">
+                <div class="faq-item open">
+                  <button class="faq-header-btn" aria-expanded="true">
                     <span>What is your typical turnaround time?</span>
-                    <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px; color: var(--primary);">
+                    <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                   </button>
-                  <div class="faq-content" style="padding: 0 24px 20px; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                  <div class="faq-content">
                     Turnaround times depend on the service. Starter web development projects typically take 1 to 2 weeks, while larger builds take 2 to 3 weeks. Google Ads and SEO setup campaigns are launched within 4 to 7 business days.
                   </div>
                 </div>
 
                 <!-- FAQ 2 -->
-                <div class="faq-item" style="border: 1px solid var(--card-border); background: var(--card-bg); border-radius: var(--radius-card); overflow: hidden;">
-                  <button class="faq-header-btn" aria-expanded="false" style="width: 100%; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; background: transparent; border: none; cursor: pointer; text-align: left; font-size: 1.1rem; font-weight: 700; color: var(--text-primary);">
+                <div class="faq-item">
+                  <button class="faq-header-btn" aria-expanded="false">
                     <span>Are your package prices fixed?</span>
-                    <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px; color: var(--primary);">
+                    <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                   </button>
-                  <div class="faq-content" style="display: none; padding: 0 24px 20px; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                  <div class="faq-content">
                     Yes. All package prices listed on our site are 100% transparent and fixed. There are no hidden setup fees or surprise invoices at handoff.
                   </div>
                 </div>
 
                 <!-- FAQ 3 -->
-                <div class="faq-item" style="border: 1px solid var(--card-border); background: var(--card-bg); border-radius: var(--radius-card); overflow: hidden;">
-                  <button class="faq-header-btn" aria-expanded="false" style="width: 100%; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; background: transparent; border: none; cursor: pointer; text-align: left; font-size: 1.1rem; font-weight: 700; color: var(--text-primary);">
+                <div class="faq-item">
+                  <button class="faq-header-btn" aria-expanded="false">
                     <span>Do you offer support after project launch?</span>
-                    <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px; color: var(--primary);">
+                    <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                   </button>
-                  <div class="faq-content" style="display: none; padding: 0 24px 20px; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                  <div class="faq-content">
                     Yes. Every package includes dedicated post-launch support, from 7 to 14+ days of direct technical help and ongoing monthly management for ad and SEO plans.
                   </div>
                 </div>
@@ -285,9 +330,33 @@
       </section>
     </main>
 
-    <!-- Footer (5-Column Reference Layout with Light & Dark Theme Support) -->
+    <!-- Footer (Integrated Top CTA Banner + 5-Column Navigation) -->
     <footer class="site-footer">
       <div class="container">
+        
+        <!-- Top Integrated CTA Banner -->
+        <div class="footer-cta-container">
+          <div class="cta-ref-banner-card reveal reveal-up">
+            
+            <!-- Left Side: Content & Actions -->
+            <div class="cta-ref-content-col">
+              <h2 class="cta-ref-title">Let's Build Digital Experiences <span class="highlight-purple-text">That Convert</span></h2>
+              <p class="cta-ref-subhead">We design, build, and grow high-performing websites, Google Ads funnels, and SEO growth engines that scale your brand online.</p>
+              <div class="cta-ref-action-row">
+                <a href="contact.html" class="btn btn-cta-white">
+                  Start Your Project <span class="cta-arrow">&rarr;</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Side: Full-Bleed Mockup + Glowing Purple Arc -->
+            <div class="cta-ref-visual-col">
+              <div class="cta-ref-arc-glow" aria-hidden="true"></div>
+              <img src="img/cta-img.png" alt="BRIGHTFORGE Digital Experiences Dashboard" class="cta-ref-mockup-img" loading="lazy">
+            </div>
+
+          </div>
+        </div>
         
         <div class="footer-ref-grid">
           
@@ -309,72 +378,79 @@
               </a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-circle" aria-label="Instagram">
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-social-circle" aria-label="X (Twitter)">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              </a>
             </div>
           </div>
 
           <!-- Column 2: Quick Links -->
-          <div class="footer-col-links">
-            <h4 class="footer-ref-title">Quick Links</h4>
+          <div class="footer-col-nav">
+            <h3 class="footer-nav-title">Quick Links</h3>
             <ul class="footer-nav-list">
-              <li><a href="index.html" class="footer-nav-link">Home</a></li>
-              <li><a href="services.html" class="footer-nav-link">Services</a></li>
-              <li><a href="about.html" class="footer-nav-link">About Us</a></li>
-              <li><a href="portfolio.html" class="footer-nav-link">Portfolio</a></li>
-              <li><a href="blog.html" class="footer-nav-link">Blog</a></li>
-              <li><a href="contact.html" class="footer-nav-link">Contact Us</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="blog.html">Blog &amp; Insights</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </div>
 
-          <!-- Column 3: Services -->
-          <div class="footer-col-links">
-            <h4 class="footer-ref-title">Services</h4>
+          <!-- Column 3: Core Services -->
+          <div class="footer-col-nav">
+            <h3 class="footer-nav-title">Core Services</h3>
             <ul class="footer-nav-list">
-              <li><a href="service-web-development.html" class="footer-nav-link">Web Development</a></li>
-              <li><a href="service-google-ads.html" class="footer-nav-link">Google Ads</a></li>
-              <li><a href="service-seo.html" class="footer-nav-link">Search Engine Optimization</a></li>
+              <li><a href="service-web-development.html">Custom Web Development</a></li>
+              <li><a href="service-google-ads.html">Google Ads Management</a></li>
+              <li><a href="service-seo.html">Technical SEO Audits</a></li>
+              <li><a href="services.html">Conversion Optimization (CRO)</a></li>
+              <li><a href="services.html">Full-Stack Digital Growth</a></li>
             </ul>
           </div>
 
-          <!-- Column 4: Company -->
-          <div class="footer-col-links footer-col-contact">
-            <h4 class="footer-ref-title">Company</h4>
-            <div class="footer-contact-details">
-              <div class="footer-contact-row">
-                <span class="footer-contact-icon-circle" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                </span>
-                <span>California, USA</span>
-              </div>
-              <div class="footer-contact-row">
-                <span class="footer-contact-icon-circle" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 1a9 9 0 0 0-9 9v7c0 2.206 1.794 4 4 4h1a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H5v-3a7 7 0 0 1 14 0v3h-3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h1c2.206 0 4-1.794 4-4v-7a9 9 0 0 0-9-9z"/></svg>
-                </span>
-                <a href="tel:+923143110259" class="footer-contact-link">+92 314 3110259</a>
-              </div>
-              <div class="footer-contact-row">
-                <span class="footer-contact-icon-circle" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.064A9.925 9.925 0 0 0 12.012 2zm0 18.304h-.003a8.31 8.31 0 0 1-4.233-1.157l-.304-.18-3.146.745.758-3.066-.198-.315a8.272 8.272 0 0 1-1.267-4.347c.001-4.582 3.731-8.307 8.315-8.307 2.22 0 4.307.865 5.877 2.436a8.27 8.27 0 0 1 2.432 5.874c-.001 4.583-3.732 8.317-8.231 8.317zm4.551-6.216c-.249-.125-1.472-.726-1.7-.809-.228-.083-.394-.125-.56.125-.166.249-.643.809-.788.975-.145.166-.29.187-.539.062-.249-.125-1.052-.388-2.003-1.236-.74-.66-1.24-1.475-1.385-1.724-.145-.249-.015-.384.11-.508.112-.112.249-.29.373-.436.125-.145.166-.249.249-.415.083-.166.042-.311-.021-.436-.062-.125-.56-1.349-.768-1.847-.202-.485-.407-.419-.56-.427l-.477-.008c-.166 0-.436.062-.664.311-.228.249-.871.851-.871 2.075s.892 2.407 1.017 2.573c.125.166 1.756 2.681 4.254 3.759.594.257 1.058.41 1.42.526.597.19 1.14.163 1.57.099.479-.071 1.472-.602 1.68-1.183.207-.581.207-1.079.145-1.183-.062-.104-.228-.166-.477-.291z"/></svg>
-                </span>
-                <a href="https://wa.me/923143110259" target="_blank" rel="noopener noreferrer" class="footer-contact-link">Live WhatsApp Chat</a>
-              </div>
-              <div class="footer-contact-row">
-                <span class="footer-contact-icon-circle" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 5.333-8-5.333V6h16zM4 18V9.044l7.445 4.963a1 1 0 0 0 1.11 0L20 9.044 20.002 18H4z"/></svg>
-                </span>
-                <a href="mailto:hello@hywiz.com" class="footer-contact-link">hello@hywiz.com</a>
-              </div>
+          <!-- Column 4: Contact Info -->
+          <div class="footer-col-nav">
+            <h3 class="footer-nav-title">Get In Touch</h3>
+            <ul class="footer-contact-list">
+              <li>
+                <span class="contact-lbl">Email:</span>
+                <a href="mailto:contact@brightforge.agency" class="contact-val">contact@brightforge.agency</a>
+              </li>
+              <li>
+                <span class="contact-lbl">Phone:</span>
+                <a href="tel:+18005550199" class="contact-val">+1 (800) 555-0199</a>
+              </li>
+              <li>
+                <span class="contact-lbl">Headquarters:</span>
+                <span class="contact-val">San Francisco, CA &bull; Global Remote Delivery</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Global Location Map -->
+          <div class="footer-col-map">
+            <h3 class="footer-nav-title">Our Headquarters</h3>
+            <div class="footer-map-box">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.5076402!3d37.757815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="BRIGHTFORGE Headquarters Map">
+              </iframe>
             </div>
           </div>
 
         </div>
 
-        <!-- Centered Bottom Copyright -->
-        <div class="footer-ref-bottom">
-          <p>&copy; 2026 BRIGHTFORGE. All rights reserved.</p>
+        <!-- Bottom Copyright Row -->
+        <div class="footer-bottom-row">
+          <p class="footer-copy-text">&copy; 2026 BRIGHTFORGE Web Agency. All Rights Reserved.</p>
+          <div class="footer-legal-links">
+            <a href="contact.html">Privacy Policy</a>
+            <a href="contact.html">Terms of Service</a>
+            <a href="contact.html">SLA Guarantees</a>
+          </div>
         </div>
 
       </div>
