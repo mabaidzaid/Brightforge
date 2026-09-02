@@ -1733,11 +1733,23 @@
   color: #FFFFFF;
 }
 
-.inspector-cta-area .btn-block {
-  width: 100%;
-  text-align: center;
-  justify-content: center;
-  padding: 14px 20px;
+.inspector-cta-area {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.inspector-cta-area .btn,
+.inspector-cta-area .inspector-btn-compact {
+  display: inline-flex;
+  width: auto;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 22px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  border-radius: 100px;
 }
 
 .inspector-footer-bar {
