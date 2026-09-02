@@ -9,7 +9,7 @@
 .hero-section {
   padding: 64px var(--side-padding) 72px;
   background-color: var(--canvas-bg);
-  border-top-right-radius: 0;
+  border-top-right-radius: 20px;
   position: relative;
   overflow: hidden;
 }

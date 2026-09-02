@@ -395,19 +395,7 @@
    -------------------------------------------------------------------------- */
 .main-content-canvas {
   background-color: var(--canvas-bg);
-  border-top-right-radius: 0;
-  overflow: hidden;
-  position: relative;
-  margin-top: -2px;
-  transition: background-color var(--transition-smooth);
-}
-
-/* --------------------------------------------------------------------------
-   3. Site Footer & Floating Overlap CTA Banner (Matching Reference Design)
-   -------------------------------------------------------------------------- */
-.main-content-canvas {
-  background-color: var(--canvas-bg);
-  border-top-right-radius: 0;
+  border-top-right-radius: 20px;
   overflow: visible;
   position: relative;
   margin-top: -2px;
