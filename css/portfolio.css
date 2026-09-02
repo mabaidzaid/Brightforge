@@ -1256,12 +1256,13 @@
 
 .guarantee-title {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: clamp(1.05rem, 1.2vw, 1.18rem);
   font-weight: 800;
   color: var(--text-primary);
   margin-bottom: 12px;
-  line-height: 1.25;
+  line-height: 1.2;
   letter-spacing: -0.015em;
+  white-space: nowrap;
 }
 
 .guarantee-desc {
