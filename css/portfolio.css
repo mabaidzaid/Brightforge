@@ -1737,7 +1737,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 4px;
+  margin-top: 8px;
 }
 
 .inspector-cta-area .btn,
@@ -1746,10 +1746,31 @@
   width: auto;
   align-items: center;
   justify-content: flex-start;
-  padding: 10px 22px;
+  gap: 10px;
+  padding: 11px 24px;
   font-size: 0.88rem;
   font-weight: 700;
-  border-radius: 100px;
+  border-radius: 100px !important;
+  min-height: auto;
+  background: var(--primary);
+  color: #FFFFFF;
+  box-shadow: 0 4px 18px rgba(176, 40, 230, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.inspector-cta-area .btn:hover,
+.inspector-cta-area .inspector-btn-compact:hover {
+  transform: translateY(-3px) scale(1.02);
+  border-radius: 100px !important;
+  background: #FFFFFF;
+  color: #0A0713;
+  box-shadow: 0 10px 28px rgba(176, 40, 230, 0.5), 0 0 20px rgba(176, 40, 230, 0.35);
+}
+
+.inspector-cta-area .btn:hover .cta-arrow,
+.inspector-cta-area .inspector-btn-compact:hover .cta-arrow {
+  transform: translateX(4px);
+  color: #0A0713;
 }
 
 .inspector-footer-bar {
