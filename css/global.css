@@ -1211,8 +1211,9 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px 12px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  gap: 0;
   margin: 4px 0;
 }
 
