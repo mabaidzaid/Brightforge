@@ -102,42 +102,68 @@
     <main class="main-content-canvas">
 
       <!-- ====================================================================
-           1. Bespoke Hero Section
+           1. Editorial Hero Section (Matching About Page Style)
            ==================================================================== -->
-      <section class="portfolio-hero-section">
-        <div class="portfolio-hero-glow-1" aria-hidden="true"></div>
-        <div class="portfolio-hero-glow-2" aria-hidden="true"></div>
+      <section class="editorial-hero-section portfolio-hero-section">
+        <!-- Atmospheric Spray Paint Mist Backgrounds -->
+        <div class="hero-spray-mist-left" aria-hidden="true"></div>
+        <div class="hero-spray-mist-right" aria-hidden="true"></div>
+        <div class="hero-spray-texture" aria-hidden="true"></div>
+
+        <!-- Floating Minimal Vector Accents -->
+        <div class="hero-floating-bg" aria-hidden="true">
+          <svg class="about-floating-accent about-sparkle-tl" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z"/>
+          </svg>
+          <svg class="about-floating-accent about-ribbon-tr" viewBox="0 0 66 36" fill="none" stroke="rgba(232, 121, 249, 0.6)" stroke-width="3" stroke-linecap="round">
+            <path d="M2 18C12 2 24 34 36 18C48 2 56 30 64 16"/>
+          </svg>
+          <svg class="about-floating-accent about-curl-ml" viewBox="0 0 42 68" fill="none" stroke="rgba(176, 40, 230, 0.5)" stroke-width="3" stroke-linecap="round">
+            <path d="M38 4C10 12 4 36 22 46C38 54 28 66 12 64"/>
+          </svg>
+          <div class="about-floating-accent about-dot-br"></div>
+        </div>
 
         <div class="container">
-          <div class="portfolio-hero-content reveal reveal-up">
+          <div class="hero-center-box reveal reveal-up">
             
-            <div class="portfolio-status-pill">
-              <span class="portfolio-status-pulse" aria-hidden="true"></span>
-              <span>8,000+ Projects Delivered &bull; Verified 98% Retention</span>
-            </div>
+            <!-- Category Tag Pill -->
+            <span class="section-tag-pill">
+              <span class="pill-sparkle">✦</span> PROVEN DIGITAL IMPACT <span class="pill-sparkle">✦</span>
+            </span>
 
-            <h1 class="portfolio-hero-title">
-              We don't showcase concepts. We ship <span class="portfolio-title-highlight">high-yield digital assets</span>.
+            <!-- Editorial Headline with 3 Embedded Inline Tilted Cards -->
+            <h1 class="about-editorial-headline">
+              <span class="about-headline-line">
+                Selected work
+                <span class="hero-inline-card card-billboard" title="High-Speed E-Commerce Showcase">
+                  <img src="img/DigiUpLiftSolutions.jpg" alt="Selected Web Showcase" class="hero-inline-card-img" loading="eager">
+                </span>
+              </span>
+              <span class="about-headline-line">
+                that scales
+                <span class="hero-inline-card card-laptop" title="Enterprise SaaS Platform Mockup">
+                  <img src="img/about_hero_laptop.jpg" alt="Enterprise Platform Architecture" class="hero-inline-card-img" loading="eager">
+                </span>
+                real
+              </span>
+              <span class="about-headline-line">
+                <span class="hero-inline-card card-portrait" title="Fintech & Brand Craft">
+                  <img src="img/about_hero_portrait.jpg" alt="Creative Engineering Craft" class="hero-inline-card-img" loading="eager">
+                </span>
+                business growth
+              </span>
             </h1>
 
-            <p class="portfolio-hero-lead">
-              A curated look at high-performance web applications, profitable Google Ads funnels, and algorithmic SEO engines engineered for ambitious brands worldwide.
+            <!-- Lead Copywriting -->
+            <p class="about-hero-sub-text">
+              A curated archive of high-performance websites, high-ROAS Google Ads funnels, and algorithmic SEO engines engineered for ambitious brands worldwide.
             </p>
 
-            <!-- Micro Metrics Bento Strip -->
-            <div class="portfolio-hero-metrics">
-              <div class="portfolio-metric-box">
-                <div class="portfolio-metric-val">3.8<span>x</span></div>
-                <div class="portfolio-metric-lbl">Average Client ROAS</div>
-              </div>
-              <div class="portfolio-metric-box">
-                <div class="portfolio-metric-val">&lt;0.8<span>s</span></div>
-                <div class="portfolio-metric-lbl">Lighthouse Load Speed</div>
-              </div>
-              <div class="portfolio-metric-box">
-                <div class="portfolio-metric-val">+210<span>%</span></div>
-                <div class="portfolio-metric-lbl">Average Conversion Lift</div>
-              </div>
+            <!-- Dual Pill Action Buttons -->
+            <div class="about-hero-btn-group">
+              <a href="#work" class="btn-pill-outline">Explore Case Studies</a>
+              <a href="contact.html" class="btn btn-primary">Start Your Project <span class="cta-arrow">&rarr;</span></a>
             </div>
 
           </div>
