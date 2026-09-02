@@ -663,126 +663,257 @@
 }
 
 /* --------------------------------------------------------------------------
-   3. The Growth & Evolution Roadmap Timeline (2022 to 2026)
+   3. Solutions For Every Scale Bento Grid (Matching 2nd Reference Image)
    -------------------------------------------------------------------------- */
-.timeline-section {
-  padding: 100px var(--side-padding);
-  background-color: var(--card-bg);
+.solutions-bento-section {
+  padding: 110px var(--side-padding);
+  background-color: var(--canvas-bg);
   position: relative;
   border-bottom: 1px solid var(--card-border);
 }
 
-.timeline-container {
-  position: relative;
-  max-width: 980px;
-  margin: 56px auto 0;
-}
-
-.timeline-container::before {
-  content: '';
-  position: absolute;
-  top: 30px;
-  bottom: 30px;
-  left: 50%;
-  width: 3px;
-  background: linear-gradient(180deg, #B028E6 0%, #8F74FB 50%, #C084FC 100%);
-  transform: translateX(-50%);
-  box-shadow: 0 0 16px rgba(176, 40, 230, 0.4);
-  border-radius: 4px;
-}
-
-.timeline-node-row {
+.solutions-bento-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  grid-template-columns: 1.12fr 1.88fr;
+  gap: 24px;
+  margin-top: 56px;
+  align-items: stretch;
+}
+
+/* Left Featured Card (Tall Hero Photo Card) */
+.solutions-featured-card {
   position: relative;
-  margin-bottom: 48px;
-  align-items: center;
-}
-
-.timeline-node-row:last-child {
-  margin-bottom: 0;
-}
-
-.timeline-node-row.reverse {
-  direction: rtl;
-}
-
-.timeline-node-row.reverse .timeline-card {
-  direction: ltr;
-}
-
-.timeline-pin {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: #FFFFFF;
-  border: 4px solid var(--primary);
-  box-shadow: 0 0 18px var(--primary-glow), 0 0 0 4px rgba(176, 40, 230, 0.2);
-  z-index: 3;
-}
-
-[data-theme="dark"] .timeline-pin {
+  border-radius: 28px;
+  overflow: hidden;
+  min-height: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  border: 1.5px solid var(--card-border);
   background: #0D0B12;
 }
 
-.timeline-card {
-  background: var(--canvas-bg);
-  border: 1.5px solid var(--card-border);
-  border-radius: 24px;
-  padding: 36px 32px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-  transition: all var(--transition-smooth);
+.solutions-featured-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.solutions-featured-card:hover .solutions-featured-img {
+  transform: scale(1.03);
+}
+
+.solutions-featured-top {
   position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.timeline-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--primary);
-  box-shadow: 0 20px 45px rgba(176, 40, 230, 0.14);
-}
-
-.timeline-year-chip {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  font-weight: 800;
-  color: #FFFFFF;
-  background: linear-gradient(135deg, #B028E6 0%, #8F74FB 100%);
-  padding: 4px 14px;
-  border-radius: var(--radius-pill);
-  margin-bottom: 12px;
-  letter-spacing: 0.05em;
-  box-shadow: 0 3px 10px rgba(176, 40, 230, 0.35);
-}
-
-.timeline-milestone-title {
-  font-family: var(--font-heading);
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--text-primary);
-  margin-bottom: 10px;
-}
-
-.timeline-milestone-desc {
-  font-size: 0.92rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-.timeline-metric-tag {
+.solutions-featured-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  margin-top: 16px;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(13, 11, 18, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-pill);
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.04em;
+}
+
+.solutions-featured-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #D9F99D;
+  color: #020202;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(217, 249, 157, 0.4);
+  transition: all var(--transition-fast);
+}
+
+.solutions-featured-card:hover .solutions-featured-btn {
+  transform: scale(1.1) rotate(10deg);
+  background: #BEF264;
+}
+
+.solutions-featured-overlay {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+  padding: 24px 20px 8px;
+  background: linear-gradient(180deg, transparent 0%, rgba(2, 2, 2, 0.88) 60%, rgba(2, 2, 2, 0.96) 100%);
+  border-radius: 20px;
+}
+
+.solutions-featured-title {
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.solutions-featured-desc {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.52;
+  margin: 0;
+  max-width: 36ch;
+}
+
+/* Right 4 Grid Cards (2x2 Layout) */
+.solutions-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.solutions-mini-card {
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 24px;
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+  transition: all var(--transition-smooth);
+}
+
+.solutions-mini-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(176, 40, 230, 0.4);
+  box-shadow: 0 16px 36px rgba(176, 40, 230, 0.12);
+}
+
+[data-theme="dark"] .solutions-mini-card {
+  background: rgba(22, 17, 34, 0.65);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.solutions-mini-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: rgba(176, 40, 230, 0.12);
   color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  transition: transform var(--transition-fast);
+}
+
+.solutions-mini-card:hover .solutions-mini-icon-wrap {
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #B028E6 0%, #8F74FB 100%);
+  color: #FFFFFF;
+}
+
+.solutions-mini-icon-wrap svg {
+  width: 22px;
+  height: 22px;
+}
+
+.solutions-mini-title {
+  font-family: var(--font-heading);
+  font-size: 1.22rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+
+.solutions-mini-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+
+.solutions-mini-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.solutions-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px 5px 16px;
+  background: var(--canvas-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.solutions-card-link:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateX(2px);
+}
+
+.solutions-link-arrow {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #D9F99D;
+  color: #020202;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  transition: transform var(--transition-fast);
+}
+
+.solutions-card-link:hover .solutions-link-arrow {
+  transform: rotate(10deg);
+  background: #BEF264;
+}
+
+@media (max-width: 1024px) {
+  .solutions-bento-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .solutions-featured-card {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 640px) {
+  .solutions-cards-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* --------------------------------------------------------------------------
