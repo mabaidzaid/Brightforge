@@ -807,12 +807,12 @@
 }
 
 /* --------------------------------------------------------------------------
-   Floating Action Buttons (WhatsApp & Phone Call)
+   Floating Action Buttons (WhatsApp & Phone Call) - Locked Inside Site Canvas
    -------------------------------------------------------------------------- */
 .floating-whatsapp-btn {
   position: fixed;
   bottom: 32px;
-  left: 32px;
+  left: max(32px, calc(50vw - 700px + 32px));
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -823,7 +823,7 @@
   justify-content: center;
   box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
   text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
   cursor: pointer;
   z-index: 9999;
 }
@@ -843,7 +843,7 @@
 .floating-call-btn {
   position: fixed;
   bottom: 32px;
-  right: 32px;
+  right: max(32px, calc(50vw - 700px + 32px));
   width: 54px;
   height: 54px;
   border-radius: 50%;
@@ -854,7 +854,7 @@
   justify-content: center;
   box-shadow: 0 8px 24px rgba(176, 40, 230, 0.45);
   text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
   cursor: pointer;
   z-index: 9999;
 }
