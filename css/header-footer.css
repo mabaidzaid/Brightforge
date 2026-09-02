@@ -806,11 +806,11 @@
   transform: translateX(4px);
 }
 
-/* Floating WhatsApp Button (Bottom Left) */
+/* Floating WhatsApp Button (Bottom Left - Clamped to Site Width on Zoom Out) */
 .floating-whatsapp-btn {
   position: fixed;
   bottom: 28px;
-  left: 28px;
+  left: max(24px, calc((100vw - var(--site-max-width, 1400px)) / 2 + 24px));
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -838,11 +838,11 @@
   fill: #FFFFFF;
 }
 
-/* Floating Call Button (Bottom Right) */
+/* Floating Call Button (Bottom Right - Clamped to Site Width on Zoom Out) */
 .floating-call-btn {
   position: fixed;
   bottom: 28px;
-  right: 28px;
+  right: max(24px, calc((100vw - var(--site-max-width, 1400px)) / 2 + 24px));
   width: 54px;
   height: 54px;
   border-radius: 50%;
