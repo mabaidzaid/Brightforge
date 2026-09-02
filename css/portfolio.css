@@ -555,7 +555,7 @@
   gap: var(--ag-gap);
   width: 100%;
   max-width: 100%;
-  height: 480px;
+  height: 500px;
   margin-top: 52px;
   perspective: 1400px;
   perspective-origin: 50% 50%;
@@ -640,9 +640,9 @@
 
 .ag-panel__content {
   position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  bottom: 28px;
   z-index: 2;
   pointer-events: none;
   display: flex;
@@ -729,12 +729,14 @@
   max-height: 0;
   opacity: 0;
   overflow: hidden;
+  padding: 4px 0 6px;
   transition: max-height 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.75s ease;
 }
 
 .ag-panel--active .ag-panel__pills {
-  max-height: 50px;
+  max-height: 100px;
   opacity: 1;
+  overflow: visible;
 }
 
 .ag-chip {
@@ -744,10 +746,15 @@
   color: #FFFFFF;
   background: rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 4px 12px;
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  padding: 5px 14px;
   border-radius: 100px;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.25;
 }
 
 @media (max-width: 900px) {
