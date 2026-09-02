@@ -698,100 +698,230 @@
 }
 
 /* --------------------------------------------------------------------------
-   4. 4 Core Engineering & Growth Pillars
+   4. Business Approach & Interactive Discipline Showcase (Matching Reference)
    -------------------------------------------------------------------------- */
-.pillars-section {
-  padding: 100px var(--side-padding);
+.approach-section {
+  padding: 110px var(--side-padding);
   background-color: var(--canvas-bg);
   position: relative;
   border-bottom: 1px solid var(--card-border);
 }
 
-.pillars-grid {
+.approach-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
-  margin-top: 52px;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 72px;
+  align-items: flex-start;
 }
 
-.pillar-card {
-  background: var(--card-bg);
-  border: 1.5px solid var(--card-border);
-  border-radius: 24px;
-  padding: 36px 28px;
+.approach-left-col {
   display: flex;
   flex-direction: column;
-  position: relative;
-  overflow: hidden;
+  align-items: flex-start;
+  position: sticky;
+  top: 120px;
+}
+
+.approach-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 22px;
+}
+
+.approach-tag-icon {
+  font-size: 0.9rem;
+}
+
+.approach-main-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.3rem, 4vw, 54px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.approach-lead-text {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.62;
+  margin-bottom: 32px;
+  max-width: 44ch;
+}
+
+.btn-approach-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, #B028E6 0%, #8F74FB 100%);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 24px var(--primary-glow);
   transition: all var(--transition-smooth);
 }
 
-.pillar-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #B028E6, #8F74FB);
-  opacity: 0;
-  transition: opacity var(--transition-fast);
+.btn-approach-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(176, 40, 230, 0.45);
 }
 
-.pillar-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(176, 40, 230, 0.45);
-  box-shadow: 0 20px 45px rgba(176, 40, 230, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04);
-}
-
-.pillar-card:hover::before {
-  opacity: 1;
-}
-
-.pillar-number {
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 18px;
-  display: block;
-  letter-spacing: 0.08em;
-}
-
-.pillar-icon-box {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, rgba(176, 40, 230, 0.12) 0%, rgba(143, 116, 251, 0.12) 100%);
-  border: 1px solid rgba(176, 40, 230, 0.25);
-  color: var(--primary);
+.btn-approach-arrow-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 22px;
-  transition: all var(--transition-fast);
+  font-size: 0.85rem;
 }
 
-.pillar-card:hover .pillar-icon-box {
-  background: linear-gradient(135deg, #B028E6 0%, #8F74FB 100%);
-  color: #FFFFFF;
-  transform: scale(1.08) rotate(5deg);
-  box-shadow: 0 8px 20px rgba(176, 40, 230, 0.35);
+/* Right Accordion Showcase */
+.approach-accordion {
+  display: flex;
+  flex-direction: column;
 }
 
-.pillar-title {
+.approach-item {
+  border-bottom: 1.5px solid var(--card-border);
+  transition: all var(--transition-smooth);
+}
+
+.approach-item:first-child {
+  border-top: 1.5px solid var(--card-border);
+}
+
+.approach-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 0;
+  cursor: pointer;
+  user-select: none;
+  background: transparent;
+  width: 100%;
+  border: none;
+  text-align: left;
+}
+
+.approach-title {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: clamp(1.6rem, 2.4vw, 36px);
+  font-weight: 800;
   color: var(--text-primary);
-  margin-bottom: 12px;
-  line-height: 1.25;
+  margin: 0;
+  transition: color var(--transition-fast);
+  letter-spacing: -0.02em;
 }
 
-.pillar-desc {
-  font-size: 0.9rem;
+.approach-item.active .approach-title {
+  color: var(--primary);
+}
+
+.approach-chevron {
+  width: 28px;
+  height: 28px;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.approach-item.active .approach-chevron {
+  transform: rotate(180deg);
+  color: var(--primary);
+}
+
+.approach-chevron svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Accordion Expandable Body */
+.approach-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+  opacity: 0;
+}
+
+.approach-item.active .approach-body {
+  max-height: 320px;
+  opacity: 1;
+}
+
+.approach-content-wrap {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 28px;
+  align-items: center;
+  padding-bottom: 32px;
+}
+
+.approach-desc {
+  font-size: 0.98rem;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.approach-visual-card {
+  width: 240px;
+  height: 140px;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.approach-visual-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.approach-badge-pill {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #020202;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="dark"] .approach-badge-pill {
+  background: rgba(2, 2, 2, 0.85);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 /* --------------------------------------------------------------------------

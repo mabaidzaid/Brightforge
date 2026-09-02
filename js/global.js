@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStatsCounter();
   initParallaxAccents();
   initPortfolioShowcase();
+  initApproachAccordion();
 });
 
 /* --------------------------------------------------------------------------
@@ -510,5 +511,36 @@ function initPortfolioShowcase() {
     } else if (e.key === 'ArrowRight') {
       showProject(currentProjectIndex + 1);
     }
+  });
+}
+
+/* --------------------------------------------------------------------------
+   8. Interactive Approach Showcase Accordion
+   -------------------------------------------------------------------------- */
+function initApproachAccordion() {
+  const accordion = document.getElementById('approachAccordion');
+  if (!accordion) return;
+
+  const items = accordion.querySelectorAll('.approach-item');
+  items.forEach(item => {
+    const header = item.querySelector('.approach-header');
+    if (!header) return;
+
+    header.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Close all items
+      items.forEach(otherItem => {
+        otherItem.classList.remove('active');
+        const otherHeader = otherItem.querySelector('.approach-header');
+        if (otherHeader) otherHeader.setAttribute('aria-expanded', 'false');
+      });
+
+      // Toggle current item
+      if (!isActive) {
+        item.classList.add('active');
+        header.setAttribute('aria-expanded', 'true');
+      }
+    });
   });
 }
