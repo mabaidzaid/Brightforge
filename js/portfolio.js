@@ -308,19 +308,15 @@ function initAccordionGallery() {
 
         if (desc && pills) {
           if (isActive) {
-            tl.to([desc, pills], {
+            tl.fromTo([desc, pills], {
+              opacity: 0,
+              y: 8
+            }, {
               opacity: 1,
-              x: 0,
+              y: 0,
               duration: dur,
               ease: ease,
               stagger: prefersReduced ? 0 : stagger
-            }, 0);
-          } else {
-            tl.to([desc, pills], {
-              opacity: 0,
-              x: -14,
-              duration: dur * 0.5,
-              ease: ease
             }, 0);
           }
         }
