@@ -9,7 +9,7 @@
    -------------------------------------------------------------------------- */
 .portfolio-hero-section {
   position: relative;
-  padding: 80px var(--side-padding) 70px;
+  padding: 80px 0 70px;
   background-color: var(--canvas-bg);
   overflow: hidden;
   border-top-right-radius: 20px;
@@ -173,7 +173,7 @@
    2. Interactive Category Filter Bar
    -------------------------------------------------------------------------- */
 .portfolio-gallery-section {
-  padding: 60px var(--side-padding) 90px;
+  padding: 60px 0 90px;
   background-color: var(--canvas-bg);
   position: relative;
   border-bottom: 1px solid var(--card-border);
@@ -401,7 +401,7 @@
    4. The Proof of Engineering: Benchmark Audit Matrix
    -------------------------------------------------------------------------- */
 .benchmark-audit-section {
-  padding: 100px var(--side-padding);
+  padding: 100px 0;
   background-color: var(--card-bg);
   position: relative;
   border-bottom: 1px solid var(--card-border);
@@ -527,7 +527,7 @@
    5. The 4-Phase Delivery & Ship Framework
    -------------------------------------------------------------------------- */
 .delivery-process-section {
-  padding: 100px var(--side-padding);
+  padding: 100px 0;
   background-color: var(--canvas-bg);
   position: relative;
   border-bottom: 1px solid var(--card-border);
@@ -605,7 +605,7 @@
    6. Flagship Case Study Deep Dives
    -------------------------------------------------------------------------- */
 .flagship-spotlight-section {
-  padding: 100px var(--side-padding);
+  padding: 100px 0;
   background-color: var(--card-bg);
   position: relative;
   border-bottom: 1px solid var(--card-border);
@@ -730,7 +730,7 @@
    7. Zero-Risk Engineering SLA & Quality Guarantee
    -------------------------------------------------------------------------- */
 .guarantee-sla-section {
-  padding: 100px var(--side-padding);
+  padding: 100px 0;
   background-color: var(--canvas-bg);
   position: relative;
 }

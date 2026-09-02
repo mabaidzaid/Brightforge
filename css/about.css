@@ -9,7 +9,7 @@
    -------------------------------------------------------------------------- */
 .about-hero-section {
   position: relative;
-  padding: 100px var(--side-padding) 110px;
+  padding: 100px 0 110px;
   background-color: var(--canvas-bg);
   overflow: hidden;
   border-top-right-radius: 20px;
@@ -316,7 +316,7 @@
    2. Central Core Orbital Approach Diagram (Matching Reference Design)
    -------------------------------------------------------------------------- */
 .approach-diagram-section {
-  padding: 110px var(--side-padding);
+  padding: 110px 0;
   background-color: var(--canvas-bg);
   position: relative;
   border-bottom: 1px solid var(--card-border);
@@ -666,7 +666,7 @@
    3. Solutions For Every Scale Bento Grid (Matching 2nd Reference Image)
    -------------------------------------------------------------------------- */
 .solutions-bento-section {
-  padding: 110px var(--side-padding);
+  padding: 110px 0;
   background-color: var(--canvas-bg);
   position: relative;
   border-bottom: 1px solid var(--card-border);
@@ -926,7 +926,7 @@
    4. Business Approach & Interactive Discipline Showcase (Matching Reference)
    -------------------------------------------------------------------------- */
 .approach-section {
-  padding: 110px var(--side-padding);
+  padding: 110px 0;
   background-color: var(--canvas-bg);
   position: relative;
   border-bottom: 1px solid var(--card-border);
@@ -1153,7 +1153,7 @@
    5. Senior Leadership & Engineering Guild Showcase
    -------------------------------------------------------------------------- */
 .guild-section {
-  padding: 100px var(--side-padding);
+  padding: 100px 0;
   background-color: var(--card-bg);
   position: relative;
   border-bottom: 1px solid var(--card-border);
@@ -1273,7 +1273,7 @@
    6. Studio Process & Interactive Showcase (Matching Reference Design)
    -------------------------------------------------------------------------- */
 .culture-section {
-  padding: 110px var(--side-padding);
+  padding: 110px 0;
   background-color: var(--canvas-bg);
   position: relative;
   border-bottom: 1px solid var(--card-border);
