@@ -1,325 +1,204 @@
 /* ==========================================================================
    BRIGHTFORGE: About Us Page Specific Stylesheet
-   Unique Layout, Bespoke Hero, Anti-Agency Comparison, Timeline, Guild & Culture
-   Primary: #B028E6 | Secondary: #8F74FB | Black: #020202 | Background: var(--canvas-bg)
+   Matching Reference Editorial Hero with 3 Inline Tilted Visual Cards & Spray Art
+   Primary: #B028E6 | Secondary: #8F74FB | Black: #020202 | Canvas: var(--canvas-bg)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. Bespoke About Hero Section (Interactive Split Cinematic Layout)
+   1. Editorial Inline-Cards Hero Section (Matching Reference Design)
    -------------------------------------------------------------------------- */
 .about-hero-section {
   position: relative;
-  padding: 80px var(--side-padding) 90px;
+  padding: 100px var(--side-padding) 110px;
   background-color: var(--canvas-bg);
   overflow: hidden;
   border-top-right-radius: 20px;
   border-bottom: 1px solid var(--card-border);
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Background Ambient Glows */
-.about-hero-glow-1 {
+/* Atmospheric Artistic Spray Paint Background Accents (Matching Reference) */
+.about-spray-mist-left {
   position: absolute;
-  top: -100px;
-  left: -100px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(176, 40, 230, 0.14) 0%, rgba(143, 116, 251, 0.05) 50%, transparent 70%);
+  top: -60px;
+  left: -80px;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(232, 121, 249, 0.22) 0%, rgba(176, 40, 230, 0.12) 40%, transparent 70%);
   filter: blur(60px);
   pointer-events: none;
   z-index: 0;
+  opacity: 0.9;
 }
 
-.about-hero-glow-2 {
+.about-spray-mist-right {
   position: absolute;
-  top: 20%;
-  right: -80px;
-  width: 600px;
+  bottom: -90px;
+  right: -60px;
+  width: 650px;
   height: 600px;
-  background: radial-gradient(circle, rgba(143, 116, 251, 0.16) 0%, rgba(176, 40, 230, 0.06) 45%, transparent 70%);
-  filter: blur(70px);
+  background: radial-gradient(circle, rgba(176, 40, 230, 0.32) 0%, rgba(143, 116, 251, 0.18) 35%, rgba(232, 121, 249, 0.08) 60%, transparent 75%);
+  filter: blur(65px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.95;
+}
+
+/* Subtle Organic Spray Grain Layer */
+.about-spray-texture {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(176, 40, 230, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
   pointer-events: none;
   z-index: 0;
 }
 
-[data-theme="dark"] .about-hero-glow-1 {
-  background: radial-gradient(circle, rgba(176, 40, 230, 0.25) 0%, rgba(143, 116, 251, 0.1) 50%, transparent 70%);
+[data-theme="dark"] .about-spray-mist-left {
+  background: radial-gradient(circle, rgba(232, 121, 249, 0.28) 0%, rgba(176, 40, 230, 0.2) 40%, transparent 70%);
+  filter: blur(75px);
 }
 
-[data-theme="dark"] .about-hero-glow-2 {
-  background: radial-gradient(circle, rgba(143, 116, 251, 0.28) 0%, rgba(176, 40, 230, 0.12) 45%, transparent 70%);
+[data-theme="dark"] .about-spray-mist-right {
+  background: radial-gradient(circle, rgba(176, 40, 230, 0.45) 0%, rgba(143, 116, 251, 0.28) 35%, rgba(232, 121, 249, 0.12) 60%, transparent 75%);
+  filter: blur(80px);
 }
 
-.about-hero-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 56px;
-  align-items: center;
+.about-hero-center-box {
   position: relative;
-  z-index: 1;
-}
-
-.about-hero-left {
+  z-index: 2;
+  max-width: 1140px;
+  margin: 0 auto;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  width: 100%;
 }
 
-/* Live Studio Radar Pill */
-.about-status-pill {
+/* Editorial Headline with Embedded Inline Cards */
+.about-editorial-headline {
+  font-family: var(--font-heading);
+  font-size: clamp(2.6rem, 5.4vw, 76px);
+  font-weight: 800;
+  line-height: 1.32;
+  letter-spacing: -0.035em;
+  color: var(--text-primary);
+  margin-bottom: 28px;
+  text-align: center;
+  width: 100%;
+}
+
+.about-headline-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+
+/* 3 Embedded Interactive Tilted Visual Cards */
+.hero-inline-card {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 18px;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius-pill);
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 24px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-}
-
-.about-status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #10B981;
-  position: relative;
-  box-shadow: 0 0 10px #10B981;
-}
-
-.about-status-dot::after {
-  content: '';
-  position: absolute;
-  inset: -4px;
-  border-radius: 50%;
-  border: 1.5px solid #10B981;
-  animation: radarPulse 2s cubic-bezier(0, 0, 0.2, 1) infinite;
-}
-
-@keyframes radarPulse {
-  0% { transform: scale(0.6); opacity: 1; }
-  100% { transform: scale(2.2); opacity: 0; }
-}
-
-.about-hero-title {
-  font-family: var(--font-heading);
-  font-size: clamp(2.4rem, 4.2vw, 56px);
-  font-weight: 800;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
-  color: var(--text-primary);
-  margin-bottom: 22px;
-}
-
-.about-title-highlight {
-  background: linear-gradient(135deg, #B028E6 0%, #8F74FB 60%, #C084FC 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline;
-}
-
-.about-hero-lead {
-  font-size: 1.12rem;
-  color: var(--text-secondary);
-  line-height: 1.68;
-  max-width: 54ch;
-  margin-bottom: 32px;
-}
-
-.about-hero-actions {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
-}
-
-/* Hero Micro Stats Bar */
-.about-hero-stats-row {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  padding-top: 24px;
-  border-top: 1px solid var(--card-border);
-  width: 100%;
-}
-
-.about-micro-stat {
-  display: flex;
-  flex-direction: column;
-}
-
-.about-micro-stat-num {
-  font-family: var(--font-heading);
-  font-size: 1.75rem;
-  font-weight: 800;
-  color: var(--text-primary);
-  line-height: 1.1;
-}
-
-.about-micro-stat-num span {
-  color: var(--primary);
-}
-
-.about-micro-stat-lbl {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* Right Visual Showcase */
-.about-hero-right {
-  position: relative;
-  display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-.about-hero-card-stack {
+  vertical-align: middle;
   position: relative;
-  width: 100%;
-  max-width: 480px;
-}
-
-.about-hero-main-img-wrap {
-  position: relative;
-  border-radius: 28px;
+  width: clamp(96px, 10.5vw, 150px);
+  height: clamp(64px, 7vw, 98px);
+  margin: 0 12px;
+  border-radius: 16px;
   overflow: hidden;
-  border: 2px solid var(--card-border);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12), 0 0 40px rgba(176, 40, 230, 0.15);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18), 0 0 25px rgba(176, 40, 230, 0.22);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  cursor: pointer;
+  flex-shrink: 0;
   background-color: var(--card-bg);
 }
 
-[data-theme="dark"] .about-hero-main-img-wrap {
-  border-color: rgba(176, 40, 230, 0.35);
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6), 0 0 50px rgba(176, 40, 230, 0.25);
+[data-theme="dark"] .hero-inline-card {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.6), 0 0 30px rgba(176, 40, 230, 0.35);
 }
 
-.about-hero-main-img {
+.hero-inline-card-img {
   width: 100%;
-  height: 480px;
+  height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.about-hero-main-img-wrap:hover .about-hero-main-img {
-  transform: scale(1.04);
+/* Tilts matching reference layout */
+.card-billboard {
+  transform: translateY(-4px) rotate(4deg);
 }
 
-.about-hero-img-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(2, 2, 2, 0.85) 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 28px;
-  color: #FFFFFF;
+.card-laptop {
+  transform: translateY(2px) rotate(-3deg);
 }
 
-.about-hero-img-badge {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--secondary-purple);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 6px;
+.card-portrait {
+  transform: translateY(-2px) rotate(-4deg);
 }
 
-.about-hero-img-title {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #FFFFFF;
+/* Hover Interaction: Scale Up, Straighten & Glow */
+.hero-inline-card:hover {
+  transform: scale(1.18) rotate(0deg) !important;
+  z-index: 10;
+  border-color: var(--primary);
+  box-shadow: 0 24px 55px rgba(176, 40, 230, 0.4), 0 0 35px var(--primary-glow);
 }
 
-/* Floating Badges on Hero Image */
-.about-floating-card-1 {
-  position: absolute;
-  top: -20px;
-  left: -24px;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(176, 40, 230, 0.25);
-  border-radius: 18px;
-  padding: 14px 20px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12), 0 0 24px rgba(176, 40, 230, 0.15);
-  z-index: 2;
-  animation: floatSlow 6s ease-in-out infinite alternate;
+.hero-inline-card:hover .hero-inline-card-img {
+  transform: scale(1.08);
 }
 
-[data-theme="dark"] .about-floating-card-1 {
-  background: rgba(22, 17, 34, 0.88);
-  border-color: rgba(176, 40, 230, 0.4);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(176, 40, 230, 0.25);
+.about-hero-sub-text {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.68;
+  max-width: 58ch;
+  margin: 12px auto 36px;
+  text-align: center;
 }
 
-.about-floating-card-2 {
-  position: absolute;
-  bottom: -24px;
-  right: -24px;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(143, 116, 251, 0.3);
-  border-radius: 18px;
-  padding: 14px 22px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12), 0 0 24px rgba(143, 116, 251, 0.15);
-  z-index: 2;
-  animation: floatSlow 7s ease-in-out infinite alternate-reverse;
-}
-
-[data-theme="dark"] .about-floating-card-2 {
-  background: rgba(22, 17, 34, 0.88);
-  border-color: rgba(143, 116, 251, 0.45);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(143, 116, 251, 0.25);
-}
-
-@keyframes floatSlow {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-10px); }
-}
-
-.about-float-icon-box {
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #B028E6 0%, #8F74FB 100%);
-  color: #FFFFFF;
+/* Dual Pill Action Buttons (Matching Reference) */
+.about-hero-btn-group {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
-  flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(176, 40, 230, 0.35);
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
-.about-float-text-main {
-  font-family: var(--font-heading);
-  font-size: 0.92rem;
-  font-weight: 700;
+.btn-pill-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 34px;
+  border-radius: var(--radius-pill);
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
   color: var(--text-primary);
-  line-height: 1.2;
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  font-weight: 700;
+  text-decoration: none;
+  min-height: 50px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
 }
 
-.about-float-text-sub {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  font-weight: 500;
+.btn-pill-outline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--primary-glow);
 }
 
 /* --------------------------------------------------------------------------
@@ -491,7 +370,6 @@
   margin: 56px auto 0;
 }
 
-/* Central Glowing Guide Line */
 .timeline-container::before {
   content: '';
   position: absolute;
@@ -526,7 +404,6 @@
   direction: ltr;
 }
 
-/* Center Pin Point */
 .timeline-pin {
   position: absolute;
   top: 50%;
@@ -903,13 +780,6 @@
 }
 
 @media (max-width: 960px) {
-  .about-hero-grid {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-  .about-hero-right {
-    order: -1;
-  }
   .anti-agency-grid {
     grid-template-columns: 1fr;
   }
@@ -933,6 +803,19 @@
   }
 }
 
+@media (max-width: 768px) {
+  .about-editorial-headline {
+    font-size: 2.2rem;
+    line-height: 1.4;
+  }
+  .hero-inline-card {
+    width: 80px;
+    height: 54px;
+    margin: 0 6px;
+    border-radius: 10px;
+  }
+}
+
 @media (max-width: 640px) {
   .about-hero-section,
   .anti-agency-section,
@@ -942,23 +825,10 @@
   .culture-section {
     padding: 64px 20px;
   }
-  .about-floating-card-1 {
-    left: 10px;
-    top: -12px;
-  }
-  .about-floating-card-2 {
-    right: 10px;
-    bottom: -16px;
-  }
   .pillars-grid {
     grid-template-columns: 1fr;
   }
   .guild-grid {
     grid-template-columns: 1fr;
-  }
-  .about-hero-stats-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
   }
 }
