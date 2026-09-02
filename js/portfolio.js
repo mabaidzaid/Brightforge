@@ -222,8 +222,8 @@ function initAccordionGallery() {
   let active = 0; // Default index
   const expandRatio = 0.52;
   const tilt = 8;
-  const duration = 0.6;
-  const ease = 'power3.out';
+  const duration = 0.85;
+  const ease = 'power2.out';
   const parallax = 0.5;
   const stagger = 0.06;
   const gap = 14;
@@ -269,8 +269,6 @@ function initAccordionGallery() {
       panels.forEach((panel, i) => {
         const isActive = (i === active);
         const media = panel.querySelector('.ag-panel__media');
-        const desc = panel.querySelector('.ag-panel__desc');
-        const pills = panel.querySelector('.ag-panel__pills');
 
         if (isActive) {
           panel.classList.add('ag-panel--active');
@@ -304,21 +302,6 @@ function initAccordionGallery() {
             duration: dur,
             ease: ease
           }, 0);
-        }
-
-        if (desc && pills) {
-          if (isActive) {
-            tl.fromTo([desc, pills], {
-              opacity: 0,
-              y: 8
-            }, {
-              opacity: 1,
-              y: 0,
-              duration: dur,
-              ease: ease,
-              stagger: prefersReduced ? 0 : stagger
-            }, 0);
-          }
         }
       });
 
