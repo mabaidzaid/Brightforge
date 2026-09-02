@@ -9,6 +9,7 @@
   <!-- Modular Stylesheets -->
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/header-footer.css">
+  <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/services.css">
 </head>
 <body>
@@ -157,7 +158,7 @@
 
             <!-- Dual Pill Action Buttons -->
             <div class="about-hero-btn-group">
-              <a href="#flywheel" class="btn-pill-outline">How We Work</a>
+              <a href="#services" class="btn-pill-outline">Our Services</a>
               <a href="contact.html" class="btn btn-primary">Start Your Project <span class="cta-arrow">&rarr;</span></a>
             </div>
 
@@ -166,55 +167,167 @@
       </section>
 
       <!-- ====================================================================
-           2. The Full-Funnel Synergy Flywheel (Interactive Ecosystem)
+           2. Services / What We Do Section (Duplicated from Home Page)
            ==================================================================== -->
-      <section class="synergy-flywheel-section" id="flywheel">
-        <div class="container">
+      <section class="services-section section-spacer" id="services">
+        <!-- Ambient Glowing Background Elements from Reference -->
+        <div class="services-ambient-glow-tl" aria-hidden="true"></div>
+        <div class="services-tech-line-tr" aria-hidden="true">
+          <span class="tech-node-dot"></span>
+        </div>
+        <div class="services-dot-grid-bl" aria-hidden="true"></div>
+
+        <div class="container" style="position: relative; z-index: 2;">
           
-          <div class="section-header section-header-center reveal reveal-up">
-            <span class="section-tag-pill"><span class="pill-sparkle">✦</span> THE REVENUE FLYWHEEL <span class="pill-sparkle">✦</span></span>
-            <h2 class="section-title">How our 3 services work together to crush your CAC</h2>
-            <p class="section-subhead">When web engineering, paid media, and SEO operate in unified synergy, your customer acquisition cost plummets while conversion rates surge.</p>
+          <!-- Centered Section Header -->
+          <div class="services-ref-header reveal reveal-up">
+            <div class="section-tag-pill">
+              <span class="pill-sparkle">✦</span> OUR SERVICES <span class="pill-sparkle">✦</span>
+            </div>
+            <h2 class="services-ref-title">What We Do</h2>
+            <p class="services-ref-subhead">
+              Three core services. One dedicated team.<br>
+              Everything we build is designed to grow your business.
+            </p>
           </div>
 
-          <div class="flywheel-container">
+          <!-- 3 Services Cards Grid (Matching Reference Design) -->
+          <div class="services-ref-grid">
             
-            <!-- Flywheel Stage 1 -->
-            <div class="flywheel-card reveal reveal-left">
-              <span class="flywheel-step-tag">STAGE 01 &bull; CONVERSION FOUNDATION</span>
-              <h3 class="flywheel-title">Sub-Second Web Architecture</h3>
-              <p class="flywheel-desc">
-                Provides a lightning-fast, high-converting foundation with zero friction. Higher page speeds immediately lower ad bounce rates and maximize visitor retention.
-              </p>
-              <div class="flywheel-output-box">
-                <span>✦ Output:</span> 9.4/10 Google Ads Quality Score
+            <!-- Card 1: Web Development -->
+            <div class="service-ref-card reveal reveal-up">
+              <!-- Top App Icon & Service Number -->
+              <div class="service-ref-card-header">
+                <div class="service-ref-icon-app icon-app-web" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                </div>
+                <div class="service-ref-number-col">
+                  <span class="service-ref-num num-blue">01</span>
+                  <span class="service-ref-num-lbl">SERVICE</span>
+                </div>
+              </div>
+
+              <!-- Horizontal Color Accent Bar -->
+              <div class="service-ref-accent-line line-blue" aria-hidden="true"></div>
+
+              <!-- Title & Desc -->
+              <div class="service-ref-body">
+                <h3 class="service-ref-card-title">Web Development</h3>
+                <p class="service-ref-card-desc">Websites built to convert, not just to look good. We design and develop responsive, high-performance websites that turn visitors into customers.</p>
+              </div>
+
+              <!-- Tags Chips -->
+              <div class="service-ref-tag-row">
+                <span class="service-ref-tag tag-blue">#Responsive</span>
+                <span class="service-ref-tag tag-blue">#Conversion Focused</span>
+              </div>
+
+              <!-- Card Footer CTA Link -->
+              <div class="service-ref-footer">
+                <a href="service-web-development.html" class="service-ref-cta-link link-blue">
+                  See Web Development Plans <span class="cta-arrow-slide">&rarr;</span>
+                </a>
               </div>
             </div>
 
-            <!-- Flywheel Stage 2 -->
-            <div class="flywheel-card reveal reveal-up">
-              <span class="flywheel-step-tag">STAGE 02 &bull; IMMEDIATE VELOCITY</span>
-              <h3 class="flywheel-title">Performance Google Ads Funnel</h3>
-              <p class="flywheel-desc">
-                Injects immediate high-intent commercial traffic into the sales funnel while harvesting real-time keyword search data to fuel our organic SEO strategy.
-              </p>
-              <div class="flywheel-output-box">
-                <span>✦ Output:</span> 3.8x Average Return On Ad Spend
+            <!-- Card 2: Google Ads -->
+            <div class="service-ref-card reveal reveal-up" style="transition-delay: 0.1s;">
+              <!-- Top App Icon & Service Number -->
+              <div class="service-ref-card-header">
+                <div class="service-ref-icon-app icon-app-ads" aria-hidden="true">
+                  <span class="google-g-logo">G</span>
+                </div>
+                <div class="service-ref-number-col">
+                  <span class="service-ref-num num-purple">02</span>
+                  <span class="service-ref-num-lbl">SERVICE</span>
+                </div>
+              </div>
+
+              <!-- Horizontal Color Accent Bar -->
+              <div class="service-ref-accent-line line-purple" aria-hidden="true"></div>
+
+              <!-- Title & Desc -->
+              <div class="service-ref-body">
+                <h3 class="service-ref-card-title">Google Ads</h3>
+                <p class="service-ref-card-desc">Ad campaigns that pay for themselves. We plan, launch, and manage Google Ads campaigns built around real ROI, targeting the searches your customers are actually making.</p>
+              </div>
+
+              <!-- Tags Chips -->
+              <div class="service-ref-tag-row">
+                <span class="service-ref-tag tag-purple">#PPC</span>
+                <span class="service-ref-tag tag-purple">#ROI Driven</span>
+              </div>
+
+              <!-- Card Footer CTA Link -->
+              <div class="service-ref-footer">
+                <a href="service-google-ads.html" class="service-ref-cta-link link-purple">
+                  See Google Ads Plans <span class="cta-arrow-slide">&rarr;</span>
+                </a>
               </div>
             </div>
 
-            <!-- Flywheel Stage 3 -->
-            <div class="flywheel-card reveal reveal-right">
-              <span class="flywheel-step-tag">STAGE 03 &bull; COMPOUNDING EQUITY</span>
-              <h3 class="flywheel-title">Algorithmic SEO Authority</h3>
-              <p class="flywheel-desc">
-                Takes proven converting keywords from Google Ads and ranks them organically at the top of Google, creating permanent free traffic that slashes overall acquisition costs.
-              </p>
-              <div class="flywheel-output-box">
-                <span>✦ Output:</span> +185% Free Organic Search Leads
+            <!-- Card 3: SEO -->
+            <div class="service-ref-card reveal reveal-up" style="transition-delay: 0.2s;">
+              <!-- Top App Icon & Service Number -->
+              <div class="service-ref-card-header">
+                <div class="service-ref-icon-app icon-app-seo" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </div>
+                <div class="service-ref-number-col">
+                  <span class="service-ref-num num-green">03</span>
+                  <span class="service-ref-num-lbl">SERVICE</span>
+                </div>
+              </div>
+
+              <!-- Horizontal Color Accent Bar -->
+              <div class="service-ref-accent-line line-green" aria-hidden="true"></div>
+
+              <!-- Title & Desc -->
+              <div class="service-ref-body">
+                <h3 class="service-ref-card-title">Search Engine Optimization</h3>
+                <p class="service-ref-card-desc">Rankings that keep working long after launch. Our SEO team combines technical fixes, content, and link-building to grow your organic traffic month over month, not just for a quarter.</p>
+              </div>
+
+              <!-- Tags Chips -->
+              <div class="service-ref-tag-row">
+                <span class="service-ref-tag tag-green">#Organic</span>
+                <span class="service-ref-tag tag-green">#Rankings</span>
+              </div>
+
+              <!-- Card Footer CTA Link -->
+              <div class="service-ref-footer">
+                <a href="service-seo.html" class="service-ref-cta-link link-green">
+                  See SEO Plans <span class="cta-arrow-slide">&rarr;</span>
+                </a>
               </div>
             </div>
 
+          </div>
+
+          <!-- Bottom Floating Consultation Bar (From Reference Image) -->
+          <div class="services-consultation-bar reveal reveal-up">
+            <div class="consultation-user-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="consultation-text-content">
+              <div class="consultation-title">Not sure which service fits you best?</div>
+              <div class="consultation-subtitle">Let's talk about your goals and find the right solution.</div>
+            </div>
+            <a href="contact.html" class="consultation-cta-btn">
+              Book a Free Consultation <span class="btn-arrow">&rarr;</span>
+            </a>
           </div>
 
         </div>
