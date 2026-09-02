@@ -313,208 +313,352 @@
 }
 
 /* --------------------------------------------------------------------------
-   2. Studio Philosophy & Creative Excellence Bento
+   2. Central Core Orbital Approach Diagram (Matching Reference Design)
    -------------------------------------------------------------------------- */
-.studio-principles-section {
-  padding: 100px var(--side-padding);
+.approach-diagram-section {
+  padding: 110px var(--side-padding);
   background-color: var(--canvas-bg);
   position: relative;
   border-bottom: 1px solid var(--card-border);
+  overflow: hidden;
 }
 
-.studio-bento-grid {
+.approach-diagram-hub {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 28px;
-  margin-top: 52px;
+  grid-template-columns: 1fr 340px 1fr;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  margin: 64px 0 72px;
 }
 
-.studio-bento-card {
-  background: var(--card-bg);
-  border: 1.5px solid var(--card-border);
-  border-radius: 26px;
-  padding: 38px 34px;
+.diagram-col {
   display: flex;
   flex-direction: column;
+  gap: 60px;
   position: relative;
-  overflow: hidden;
+  z-index: 3;
+}
+
+.diagram-feature-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.card-left {
+  text-align: left;
+}
+
+.card-right {
+  text-align: left;
+  flex-direction: row;
+}
+
+/* Icon Badges */
+.diagram-icon-badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 1.5px solid rgba(176, 40, 230, 0.25);
+  box-shadow: 0 8px 24px rgba(176, 40, 230, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
   transition: all var(--transition-smooth);
 }
 
-.studio-bento-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(176, 40, 230, 0.45);
-  box-shadow: 0 20px 45px rgba(176, 40, 230, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04);
+.diagram-icon-badge svg {
+  width: 26px;
+  height: 26px;
 }
 
-/* Flagship Card spans 2 rows on left */
-.bento-card-flagship {
-  grid-column: 1 / 2;
-  grid-row: 1 / 3;
-  background: linear-gradient(155deg, var(--card-bg) 0%, rgba(176, 40, 230, 0.05) 100%);
+.diagram-feature-card:hover .diagram-icon-badge {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #B028E6 0%, #8F74FB 100%);
+  color: #FFFFFF;
+  border-color: transparent;
+  box-shadow: 0 12px 30px var(--primary-glow);
 }
 
-[data-theme="dark"] .bento-card-flagship {
-  background: linear-gradient(155deg, #181128 0%, #120920 100%);
-  border-color: rgba(176, 40, 230, 0.4);
+.diagram-card-text {
+  flex: 1;
 }
 
-.bento-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.bento-index-tag {
+.diagram-step-tag {
   font-family: var(--font-mono);
   font-size: 0.76rem;
   font-weight: 700;
   color: var(--primary);
   letter-spacing: 0.08em;
-  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
 }
 
-.bento-metric-pill {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  background: rgba(176, 40, 230, 0.1);
-  border: 1px solid rgba(176, 40, 230, 0.25);
-  padding: 4px 12px;
-  border-radius: var(--radius-pill);
-}
-
-.bento-title {
+.diagram-step-title {
   font-family: var(--font-heading);
-  font-size: 1.55rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: var(--text-primary);
-  margin-bottom: 14px;
   line-height: 1.25;
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
 }
 
-.bento-card-flagship .bento-title {
-  font-size: 1.85rem;
-}
-
-.bento-desc {
-  font-size: 0.94rem;
+.diagram-step-desc {
+  font-size: 0.92rem;
   color: var(--text-secondary);
-  line-height: 1.62;
-  margin-bottom: 24px;
+  line-height: 1.58;
+  margin: 0;
+  max-width: 32ch;
 }
 
-.bento-chips-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 26px;
-}
-
-.bento-chip {
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  background: var(--canvas-bg);
-  border: 1px solid var(--card-border);
-  padding: 6px 14px;
-  border-radius: var(--radius-pill);
-}
-
-/* Code Inspector Window Preview */
-.bento-preview-box {
-  margin-top: auto;
-  background: #0D0B12;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
-}
-
-.bento-code-header {
+/* Horizontal Connector Lines & Purple Orbit Nodes */
+.diagram-connector {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 10px 16px;
-  background: rgba(255, 255, 255, 0.04);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+  z-index: 1;
 }
 
-.bento-window-dots {
-  display: flex;
-  gap: 6px;
+.connector-left-top,
+.connector-left-bottom {
+  right: -55px;
+  width: 55px;
 }
 
-.bento-dot {
+.connector-right-top,
+.connector-right-bottom {
+  left: -55px;
+  width: 55px;
+}
+
+.diagram-connector-line {
+  flex: 1;
+  height: 1.5px;
+  background: linear-gradient(90deg, rgba(176, 40, 230, 0.2), rgba(176, 40, 230, 0.6));
+}
+
+.connector-right-top .diagram-connector-line,
+.connector-right-bottom .diagram-connector-line {
+  background: linear-gradient(90deg, rgba(176, 40, 230, 0.6), rgba(176, 40, 230, 0.2));
+}
+
+.diagram-connector-node {
   width: 9px;
   height: 9px;
   border-radius: 50%;
+  background: #B028E6;
+  box-shadow: 0 0 10px #B028E6, 0 0 0 3px rgba(176, 40, 230, 0.2);
+  flex-shrink: 0;
 }
 
-.dot-red { background: #EF4444; }
-.dot-yellow { background: #F59E0B; }
-.dot-green { background: #10B981; }
-
-.bento-code-title {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: #8E8A9C;
-}
-
-.bento-code-content {
-  padding: 14px 16px;
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  line-height: 1.5;
-}
-
-.code-purple { color: #C084FC; font-weight: 700; }
-.code-blue { color: #60A5FA; }
-.code-teal { color: #34D399; }
-.code-yellow { color: #FBBF24; }
-
-/* Bento Metric Footer */
-.bento-card-footer-metric {
-  margin-top: auto;
+/* Center Core Hub & Concentric Orbital Rings */
+.diagram-center-hub {
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
+  position: relative;
   display: flex;
-  align-items: baseline;
-  gap: 10px;
-  padding-top: 18px;
-  border-top: 1px solid var(--card-border);
+  align-items: center;
+  justify-content: center;
 }
 
-.metric-num {
-  font-family: var(--font-heading);
-  font-size: 2.2rem;
-  font-weight: 800;
+.diagram-orbit-ring {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.ring-outer {
+  width: 320px;
+  height: 320px;
+  border: 1.5px solid rgba(176, 40, 230, 0.25);
+}
+
+.ring-mid {
+  width: 240px;
+  height: 240px;
+  border: 1.5px dashed rgba(176, 40, 230, 0.35);
+  animation: rotateOrbit 40s linear infinite;
+}
+
+.ring-inner {
+  width: 170px;
+  height: 170px;
+  border: 1px solid rgba(176, 40, 230, 0.2);
+  background: radial-gradient(circle, rgba(176, 40, 230, 0.08) 0%, transparent 70%);
+}
+
+@keyframes rotateOrbit {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.diagram-core-badge {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 2px solid rgba(176, 40, 230, 0.4);
+  box-shadow: 0 12px 36px rgba(176, 40, 230, 0.25), 0 0 20px rgba(176, 40, 230, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  transition: transform var(--transition-smooth);
+}
+
+.diagram-center-hub:hover .diagram-core-badge {
+  transform: scale(1.08);
+}
+
+.diagram-core-svg {
+  width: 44px;
+  height: 44px;
+}
+
+/* Bottom Stats Card Bar */
+.diagram-stats-bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  align-items: center;
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 24px;
+  padding: 28px 40px;
+  gap: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="dark"] .diagram-stats-bar {
+  background: rgba(22, 17, 34, 0.7);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+}
+
+.diagram-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+
+.diagram-stat-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(176, 40, 230, 0.12);
   color: var(--primary);
-  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
 }
 
-.metric-label {
-  font-size: 0.84rem;
+.diagram-stat-item:hover .diagram-stat-icon-wrap {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #B028E6 0%, #8F74FB 100%);
+  color: #FFFFFF;
+}
+
+.diagram-stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.diagram-stat-number {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 2.2vw, 2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.diagram-stat-label {
+  font-size: 0.86rem;
   color: var(--text-secondary);
   font-weight: 600;
+  margin-top: 2px;
+  white-space: nowrap;
 }
 
-/* Responsive Breakpoints */
-@media (max-width: 1024px) {
-  .studio-bento-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-  }
-  .bento-card-flagship {
-    grid-column: 1 / -1;
-    grid-row: auto;
-  }
+.diagram-stat-divider {
+  width: 1.5px;
+  height: 42px;
+  background: var(--card-border);
 }
 
-@media (max-width: 768px) {
-  .studio-bento-grid {
+/* Responsive Media Queries for Diagram Section */
+@media (max-width: 1100px) {
+  .approach-diagram-hub {
     grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .diagram-center-hub {
+    order: -1;
+    margin-bottom: 20px;
+  }
+  .diagram-connector {
+    display: none;
+  }
+  .diagram-col {
+    gap: 32px;
+  }
+  .diagram-step-desc {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 860px) {
+  .diagram-stats-bar {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 24px;
+  }
+  .diagram-stat-divider {
+    display: none;
+  }
+  .diagram-stat-item {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 580px) {
+  .diagram-stats-bar {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .diagram-center-hub {
+    width: 260px;
+    height: 260px;
+  }
+  .ring-outer {
+    width: 260px;
+    height: 260px;
+  }
+  .ring-mid {
+    width: 190px;
+    height: 190px;
+  }
+  .ring-inner {
+    width: 130px;
+    height: 130px;
+  }
+  .diagram-feature-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
   }
 }
 
