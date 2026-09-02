@@ -200,8 +200,8 @@
   font-family: var(--font-heading);
   font-size: clamp(2.6rem, 5.4vw, 76px);
   font-weight: 800;
-  line-height: 1.32;
-  letter-spacing: -0.035em;
+  line-height: 1.35;
+  letter-spacing: -0.03em;
   color: var(--text-primary);
   margin-bottom: 28px;
   text-align: center;
@@ -213,7 +213,8 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  row-gap: 8px;
+  gap: 8px 12px;
+  margin: 4px 0;
 }
 
 /* 3 Embedded Interactive Tilted Visual Cards */
@@ -225,7 +226,7 @@
   position: relative;
   width: clamp(115px, 11.5vw, 165px);
   height: clamp(75px, 7.5vw, 108px);
-  margin: 0 12px;
+  margin: 0 14px;
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2), 0 0 25px rgba(176, 40, 230, 0.25);
