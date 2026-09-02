@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | BRIGHTFORGE Web Agency</title>
-  <meta name="description"
-    content="Projects we've shipped, not just mockups we've pitched. A look at the websites, Google Ads campaigns, and SEO projects we've delivered.">
+  <title>Portfolio | BRIGHTFORGE Digital Agency</title>
+  <meta name="description" content="Projects we've shipped, not just mockups we've pitched. A look at the websites, Google Ads campaigns, and SEO projects we've delivered.">
 
   <!-- Modular Stylesheets -->
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/header-footer.css">
-  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/portfolio.css">
 </head>
-
 <body>
 
   <!-- Main Boxed Outer Wrapper -->
@@ -38,10 +35,7 @@
         <nav class="nav-desktop" aria-label="Main Navigation">
           <a href="index.html" class="nav-link">Home</a>
           <div class="nav-item-dropdown">
-            <a href="services.html" class="nav-link">Services <svg class="nav-dropdown-arrow" viewBox="0 0 24 24"
-                width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg></a>
+            <a href="services.html" class="nav-link">Services <svg class="nav-dropdown-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
             <div class="nav-dropdown-menu">
               <a href="service-web-development.html" class="nav-dropdown-item">Web Development</a>
               <a href="service-google-ads.html" class="nav-dropdown-item">Google Ads</a>
@@ -55,10 +49,8 @@
         </nav>
 
         <div class="header-actions">
-          <button class="theme-toggle-btn" id="theme-toggle" aria-label="Switch to dark theme"
-            title="Switch to dark mode">
-            <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
+          <button class="theme-toggle-btn" id="theme-toggle" aria-label="Switch to dark theme" title="Switch to dark mode">
+            <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="5"></circle>
               <line x1="12" y1="1" x2="12" y2="3"></line>
               <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -69,8 +61,7 @@
               <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
               <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
             </svg>
-            <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
+            <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
           </button>
@@ -109,24 +100,62 @@
     </div>
 
     <main class="main-content-canvas">
-      <!-- Hero -->
-      <section class="section-spacer" style="padding-bottom: 32px;">
+
+      <!-- ====================================================================
+           1. Bespoke Hero Section
+           ==================================================================== -->
+      <section class="portfolio-hero-section">
+        <div class="portfolio-hero-glow-1" aria-hidden="true"></div>
+        <div class="portfolio-hero-glow-2" aria-hidden="true"></div>
+
         <div class="container">
-          <h1 class="section-title">Projects we've shipped, not just mockups we've pitched</h1>
-          <p class="section-subhead">A look at the websites, Google Ads campaigns, and SEO projects we've delivered for
-            real clients across industries.</p>
+          <div class="portfolio-hero-content reveal reveal-up">
+            
+            <div class="portfolio-status-pill">
+              <span class="portfolio-status-pulse" aria-hidden="true"></span>
+              <span>8,000+ Projects Delivered &bull; Verified 98% Retention</span>
+            </div>
+
+            <h1 class="portfolio-hero-title">
+              We don't showcase concepts. We ship <span class="portfolio-title-highlight">high-yield digital assets</span>.
+            </h1>
+
+            <p class="portfolio-hero-lead">
+              A curated look at high-performance web applications, profitable Google Ads funnels, and algorithmic SEO engines engineered for ambitious brands worldwide.
+            </p>
+
+            <!-- Micro Metrics Bento Strip -->
+            <div class="portfolio-hero-metrics">
+              <div class="portfolio-metric-box">
+                <div class="portfolio-metric-val">3.8<span>x</span></div>
+                <div class="portfolio-metric-lbl">Average Client ROAS</div>
+              </div>
+              <div class="portfolio-metric-box">
+                <div class="portfolio-metric-val">&lt;0.8<span>s</span></div>
+                <div class="portfolio-metric-lbl">Lighthouse Load Speed</div>
+              </div>
+              <div class="portfolio-metric-box">
+                <div class="portfolio-metric-val">+210<span>%</span></div>
+                <div class="portfolio-metric-lbl">Average Conversion Lift</div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
-      <!-- Portfolio Section -->
-      <section class="portfolio-section section-spacer" id="work" style="padding-top: 0;">
+      <!-- ====================================================================
+           2. Interactive Category Filter & 9 Showcase Cards Grid
+           ==================================================================== -->
+      <section class="portfolio-gallery-section" id="work">
         <div class="container">
-          <!-- Portfolio Tab Filters -->
+          
+          <!-- Category Filter Bar -->
           <div class="portfolio-filter-bar reveal reveal-up">
             <button class="filter-pill-btn active" data-filter="all">All Projects (9)</button>
-            <button class="filter-pill-btn" data-filter="web-design">Web Development</button>
-            <button class="filter-pill-btn" data-filter="google-ads">Google Ads</button>
-            <button class="filter-pill-btn" data-filter="seo">SEO &amp; Growth</button>
+            <button class="filter-pill-btn" data-filter="web-design">Web Development (5)</button>
+            <button class="filter-pill-btn" data-filter="google-ads">Google Ads &amp; PPC (2)</button>
+            <button class="filter-pill-btn" data-filter="seo">SEO &amp; Growth (2)</button>
           </div>
 
           <!-- 9 Showcase Cards Grid -->
@@ -138,19 +167,13 @@
               data-desc="Technical SEO restructuring, keyword mapping, and Core Web Vitals optimization."
               data-metric="+185% Traffic Growth" data-img="img/DigiUpLiftSolutions.jpg">
               <div class="portfolio-media-box">
-                <img src="img/DigiUpLiftSolutions.jpg" alt="DigiUpLift Solutions SEO &amp; Web Project" loading="lazy"
-                  class="portfolio-thumb-img">
+                <img src="img/DigiUpLiftSolutions.jpg" alt="DigiUpLift Solutions SEO &amp; Web Project" loading="lazy" class="portfolio-thumb-img">
                 <div class="portfolio-media-overlay">
                   <span class="portfolio-zoom-btn" aria-label="Expand Image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <polyline points="9 21 3 21 3 15"></polyline>
-                      <line x1="21" y1="3" x2="14" y2="10"></line>
-                      <line x1="3" y1="21" x2="10" y2="14"></line>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
                   </span>
                 </div>
-                <span class="portfolio-metric-chip">+185% Organic Growth</span>
+                <span class="portfolio-metric-chip">+185% Traffic Growth</span>
               </div>
               <div class="portfolio-card-info">
                 <div class="portfolio-meta-row">
@@ -158,28 +181,25 @@
                   <span class="portfolio-num-tag">01</span>
                 </div>
                 <h3 class="portfolio-card-title">DigiUpLift Solutions</h3>
-                <p class="portfolio-card-desc">High-authority search engine optimization and scalable technical
-                  architecture.</p>
+                <p class="portfolio-card-desc">High-authority search engine optimization and scalable technical architecture.</p>
+                <div class="portfolio-tech-row">
+                  <span class="portfolio-tech-tag">Algorithmic SEO</span>
+                  <span class="portfolio-tech-tag">Schema Markup</span>
+                  <span class="portfolio-tech-tag">CWV 99+</span>
+                </div>
               </div>
             </div>
 
-            <!-- Card 02: PitchBob (Web Application) -->
-            <div class="portfolio-showcase-card reveal reveal-up" style="transition-delay: 0.1s;"
-              data-category="web-design" data-title="PitchBob AI Platform"
+            <!-- Card 02: PitchBob AI (Web Development) -->
+            <div class="portfolio-showcase-card reveal reveal-up reveal-delay-1" data-category="web-design" data-title="PitchBob AI Platform"
               data-category-name="Web Application &amp; UI/UX Architecture"
               data-desc="High-conversion pitch deck SaaS platform with interactive AI onboarding."
               data-metric="2.4x User Signups" data-img="img/PitchBob.jpg">
               <div class="portfolio-media-box">
-                <img src="img/PitchBob.jpg" alt="PitchBob AI Web App Showcase" loading="lazy"
-                  class="portfolio-thumb-img">
+                <img src="img/PitchBob.jpg" alt="PitchBob AI Web App Showcase" loading="lazy" class="portfolio-thumb-img">
                 <div class="portfolio-media-overlay">
                   <span class="portfolio-zoom-btn" aria-label="Expand Image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <polyline points="9 21 3 21 3 15"></polyline>
-                      <line x1="21" y1="3" x2="14" y2="10"></line>
-                      <line x1="3" y1="21" x2="10" y2="14"></line>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
                   </span>
                 </div>
                 <span class="portfolio-metric-chip">2.4x User Signups</span>
@@ -190,28 +210,25 @@
                   <span class="portfolio-num-tag">02</span>
                 </div>
                 <h3 class="portfolio-card-title">PitchBob AI Platform</h3>
-                <p class="portfolio-card-desc">Interactive AI SaaS web application with high-converting onboarding and
-                  responsive design.</p>
+                <p class="portfolio-card-desc">Interactive AI SaaS web application with high-converting onboarding and responsive design.</p>
+                <div class="portfolio-tech-row">
+                  <span class="portfolio-tech-tag">SaaS UI/UX</span>
+                  <span class="portfolio-tech-tag">Modern JS</span>
+                  <span class="portfolio-tech-tag">Cloud Scale</span>
+                </div>
               </div>
             </div>
 
-            <!-- Card 03: BabySleepBot (Product Design) -->
-            <div class="portfolio-showcase-card reveal reveal-up" style="transition-delay: 0.2s;"
-              data-category="web-design" data-title="BabySleepBot AI"
+            <!-- Card 03: BabySleepBot (Web Development) -->
+            <div class="portfolio-showcase-card reveal reveal-up reveal-delay-2" data-category="web-design" data-title="BabySleepBot AI"
               data-category-name="AI Product &amp; Landing Page Design"
               data-desc="Modern AI assistant landing page engineered for parental engagement."
               data-metric="&lt;0.6s Speed Score" data-img="img/babysleepbot.jpg">
               <div class="portfolio-media-box">
-                <img src="img/babysleepbot.jpg" alt="BabySleepBot AI Platform Showcase" loading="lazy"
-                  class="portfolio-thumb-img">
+                <img src="img/babysleepbot.jpg" alt="BabySleepBot AI Platform Showcase" loading="lazy" class="portfolio-thumb-img">
                 <div class="portfolio-media-overlay">
                   <span class="portfolio-zoom-btn" aria-label="Expand Image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <polyline points="9 21 3 21 3 15"></polyline>
-                      <line x1="21" y1="3" x2="14" y2="10"></line>
-                      <line x1="3" y1="21" x2="10" y2="14"></line>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
                   </span>
                 </div>
                 <span class="portfolio-metric-chip">&lt;0.6s Load Speed</span>
@@ -222,27 +239,25 @@
                   <span class="portfolio-num-tag">03</span>
                 </div>
                 <h3 class="portfolio-card-title">BabySleepBot AI</h3>
-                <p class="portfolio-card-desc">Ultra-clean, modern product landing page engineered for parental
-                  engagement and trust.</p>
+                <p class="portfolio-card-desc">Ultra-clean, modern product landing page engineered for parental engagement and trust.</p>
+                <div class="portfolio-tech-row">
+                  <span class="portfolio-tech-tag">CRO Funnel</span>
+                  <span class="portfolio-tech-tag">Micro Animations</span>
+                  <span class="portfolio-tech-tag">Mobile First</span>
+                </div>
               </div>
             </div>
 
-            <!-- Card 04: Best UAE Directory (SEO & Portal) -->
+            <!-- Card 04: Best UAE Directory (SEO) -->
             <div class="portfolio-showcase-card reveal reveal-up" data-category="seo" data-title="Best UAE Directory"
               data-category-name="Directory Portal &amp; SEO Domination"
               data-desc="Programmatic regional directory optimized for top-tier search rankings."
               data-metric="#1 Regional Rankings" data-img="img/bestuae.jpg">
               <div class="portfolio-media-box">
-                <img src="img/bestuae.jpg" alt="Best UAE Directory SEO Project" loading="lazy"
-                  class="portfolio-thumb-img">
+                <img src="img/bestuae.jpg" alt="Best UAE Directory SEO Project" loading="lazy" class="portfolio-thumb-img">
                 <div class="portfolio-media-overlay">
                   <span class="portfolio-zoom-btn" aria-label="Expand Image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <polyline points="9 21 3 21 3 15"></polyline>
-                      <line x1="21" y1="3" x2="14" y2="10"></line>
-                      <line x1="3" y1="21" x2="10" y2="14"></line>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
                   </span>
                 </div>
                 <span class="portfolio-metric-chip">#1 Regional Rank</span>
@@ -253,28 +268,25 @@
                   <span class="portfolio-num-tag">04</span>
                 </div>
                 <h3 class="portfolio-card-title">Best UAE Directory</h3>
-                <p class="portfolio-card-desc">Comprehensive regional portal built with programmatic SEO and high-volume
-                  organic capture.</p>
+                <p class="portfolio-card-desc">Comprehensive regional portal built with programmatic SEO and high-volume organic capture.</p>
+                <div class="portfolio-tech-row">
+                  <span class="portfolio-tech-tag">Programmatic SEO</span>
+                  <span class="portfolio-tech-tag">Entity Indexing</span>
+                  <span class="portfolio-tech-tag">Fast Search</span>
+                </div>
               </div>
             </div>
 
             <!-- Card 05: Budget Web LV (Web Development) -->
-            <div class="portfolio-showcase-card reveal reveal-up" style="transition-delay: 0.1s;"
-              data-category="web-design" data-title="Budget Web LV"
+            <div class="portfolio-showcase-card reveal reveal-up reveal-delay-1" data-category="web-design" data-title="Budget Web LV"
               data-category-name="Corporate Web &amp; Service Platform"
               data-desc="Corporate web platform with automated client intake and sub-second speed."
               data-metric="3.8x Lead Rate" data-img="img/budgetweblv-1.jpg">
               <div class="portfolio-media-box">
-                <img src="img/budgetweblv-1.jpg" alt="Budget Web LV Agency Showcase" loading="lazy"
-                  class="portfolio-thumb-img">
+                <img src="img/budgetweblv-1.jpg" alt="Budget Web LV Agency Showcase" loading="lazy" class="portfolio-thumb-img">
                 <div class="portfolio-media-overlay">
                   <span class="portfolio-zoom-btn" aria-label="Expand Image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <polyline points="9 21 3 21 3 15"></polyline>
-                      <line x1="21" y1="3" x2="14" y2="10"></line>
-                      <line x1="3" y1="21" x2="10" y2="14"></line>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
                   </span>
                 </div>
                 <span class="portfolio-metric-chip">3.8x Lead Rate</span>
@@ -285,28 +297,25 @@
                   <span class="portfolio-num-tag">05</span>
                 </div>
                 <h3 class="portfolio-card-title">Budget Web LV</h3>
-                <p class="portfolio-card-desc">Sleek corporate web architecture with automated client onboarding and
-                  speed tuning.</p>
+                <p class="portfolio-card-desc">Sleek corporate web architecture with automated client onboarding and speed tuning.</p>
+                <div class="portfolio-tech-row">
+                  <span class="portfolio-tech-tag">Lead Automation</span>
+                  <span class="portfolio-tech-tag">Speed Tuning</span>
+                  <span class="portfolio-tech-tag">Vanilla CSS</span>
+                </div>
               </div>
             </div>
 
-            <!-- Card 06: Modge Lifestyle (E-Commerce & Ads) -->
-            <div class="portfolio-showcase-card reveal reveal-up" style="transition-delay: 0.2s;"
-              data-category="google-ads" data-title="Modge Lifestyle"
+            <!-- Card 06: Modge Lifestyle (Google Ads) -->
+            <div class="portfolio-showcase-card reveal reveal-up reveal-delay-2" data-category="google-ads" data-title="Modge Lifestyle"
               data-category-name="E-Commerce &amp; Google Shopping Ads"
               data-desc="Full-funnel Google Shopping and Performance Max ad campaigns." data-metric="5.2x Avg ROAS"
               data-img="img/modgelifestyle.jpg">
               <div class="portfolio-media-box">
-                <img src="img/modgelifestyle.jpg" alt="Modge Lifestyle E-Commerce Google Ads Showcase" loading="lazy"
-                  class="portfolio-thumb-img">
+                <img src="img/modgelifestyle.jpg" alt="Modge Lifestyle E-Commerce Google Ads Showcase" loading="lazy" class="portfolio-thumb-img">
                 <div class="portfolio-media-overlay">
                   <span class="portfolio-zoom-btn" aria-label="Expand Image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <polyline points="9 21 3 21 3 15"></polyline>
-                      <line x1="21" y1="3" x2="14" y2="10"></line>
-                      <line x1="3" y1="21" x2="10" y2="14"></line>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
                   </span>
                 </div>
                 <span class="portfolio-metric-chip">5.2x Avg ROAS</span>
@@ -317,27 +326,25 @@
                   <span class="portfolio-num-tag">06</span>
                 </div>
                 <h3 class="portfolio-card-title">Modge Lifestyle</h3>
-                <p class="portfolio-card-desc">E-commerce brand scale-up using targeted Google Ads, remarketing, and
-                  cart recovery.</p>
+                <p class="portfolio-card-desc">E-commerce brand scale-up using targeted Google Ads, remarketing, and cart recovery.</p>
+                <div class="portfolio-tech-row">
+                  <span class="portfolio-tech-tag">PMax Campaigns</span>
+                  <span class="portfolio-tech-tag">Shopping Ads</span>
+                  <span class="portfolio-tech-tag">High ROAS</span>
+                </div>
               </div>
             </div>
 
-            <!-- Card 07: MT Telecom & IT (Enterprise Web) -->
+            <!-- Card 07: MT Telecom & IT (Web Development) -->
             <div class="portfolio-showcase-card reveal reveal-up" data-category="web-design"
               data-title="MT Telecom &amp; IT" data-category-name="Enterprise Infrastructure &amp; Web Platform"
               data-desc="Enterprise IT &amp; telecom portal with responsive solutions catalog."
               data-metric="99/100 PageSpeed" data-img="img/mtrecomit.com_.jpg">
               <div class="portfolio-media-box">
-                <img src="img/mtrecomit.com_.jpg" alt="MT Telecom &amp; IT Enterprise Web Showcase" loading="lazy"
-                  class="portfolio-thumb-img">
+                <img src="img/mtrecomit.com_.jpg" alt="MT Telecom &amp; IT Enterprise Web Showcase" loading="lazy" class="portfolio-thumb-img">
                 <div class="portfolio-media-overlay">
                   <span class="portfolio-zoom-btn" aria-label="Expand Image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <polyline points="9 21 3 21 3 15"></polyline>
-                      <line x1="21" y1="3" x2="14" y2="10"></line>
-                      <line x1="3" y1="21" x2="10" y2="14"></line>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
                   </span>
                 </div>
                 <span class="portfolio-metric-chip">99/100 PageSpeed</span>
@@ -348,28 +355,25 @@
                   <span class="portfolio-num-tag">07</span>
                 </div>
                 <h3 class="portfolio-card-title">MT Telecom &amp; IT</h3>
-                <p class="portfolio-card-desc">Robust enterprise IT &amp; telecom platform engineered with clean code
-                  and sub-second speed.</p>
+                <p class="portfolio-card-desc">Robust enterprise IT &amp; telecom platform engineered with clean code and sub-second speed.</p>
+                <div class="portfolio-tech-row">
+                  <span class="portfolio-tech-tag">Enterprise Architecture</span>
+                  <span class="portfolio-tech-tag">Catalog Engine</span>
+                  <span class="portfolio-tech-tag">Security Hardened</span>
+                </div>
               </div>
             </div>
 
-            <!-- Card 08: W2 Tecno Solutions (Google Ads & PPC) -->
-            <div class="portfolio-showcase-card reveal reveal-up" style="transition-delay: 0.1s;"
-              data-category="google-ads" data-title="W2 Tecno Solutions"
+            <!-- Card 08: W2 Tecno Solutions (Google Ads) -->
+            <div class="portfolio-showcase-card reveal reveal-up reveal-delay-1" data-category="google-ads" data-title="W2 Tecno Solutions"
               data-category-name="B2B Tech Google Ads &amp; Lead Generation"
               data-desc="B2B Google Ads lead generation with optimized acquisition costs."
               data-metric="+210% Conversions" data-img="img/w2tecno.jpg">
               <div class="portfolio-media-box">
-                <img src="img/w2tecno.jpg" alt="W2 Tecno Solutions Google Ads Showcase" loading="lazy"
-                  class="portfolio-thumb-img">
+                <img src="img/w2tecno.jpg" alt="W2 Tecno Solutions Google Ads Showcase" loading="lazy" class="portfolio-thumb-img">
                 <div class="portfolio-media-overlay">
                   <span class="portfolio-zoom-btn" aria-label="Expand Image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <polyline points="9 21 3 21 3 15"></polyline>
-                      <line x1="21" y1="3" x2="14" y2="10"></line>
-                      <line x1="3" y1="21" x2="10" y2="14"></line>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
                   </span>
                 </div>
                 <span class="portfolio-metric-chip">+210% Conversions</span>
@@ -380,28 +384,25 @@
                   <span class="portfolio-num-tag">08</span>
                 </div>
                 <h3 class="portfolio-card-title">W2 Tecno Solutions</h3>
-                <p class="portfolio-card-desc">B2B tech lead generation with optimized quality scores and
-                  cost-per-acquisition reductions.</p>
+                <p class="portfolio-card-desc">B2B tech lead generation with optimized quality scores and cost-per-acquisition reductions.</p>
+                <div class="portfolio-tech-row">
+                  <span class="portfolio-tech-tag">B2B Funnels</span>
+                  <span class="portfolio-tech-tag">Search Intent</span>
+                  <span class="portfolio-tech-tag">Target CPA</span>
+                </div>
               </div>
             </div>
 
-            <!-- Card 09: LetHub PropTech (Web & UI/UX) -->
-            <div class="portfolio-showcase-card reveal reveal-up" style="transition-delay: 0.2s;"
-              data-category="web-design" data-title="LetHub PropTech"
+            <!-- Card 09: LetHub PropTech (Web Development) -->
+            <div class="portfolio-showcase-card reveal reveal-up reveal-delay-2" data-category="web-design" data-title="LetHub PropTech"
               data-category-name="PropTech Real Estate &amp; Leasing Platform"
               data-desc="Next-generation leasing automation platform with intuitive UI/UX."
               data-metric="4.6x Engagement" data-img="img/www.lethub.jpg">
               <div class="portfolio-media-box">
-                <img src="img/www.lethub.jpg" alt="LetHub PropTech Web Portal Showcase" loading="lazy"
-                  class="portfolio-thumb-img">
+                <img src="img/www.lethub.jpg" alt="LetHub PropTech Web Portal Showcase" loading="lazy" class="portfolio-thumb-img">
                 <div class="portfolio-media-overlay">
                   <span class="portfolio-zoom-btn" aria-label="Expand Image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <polyline points="9 21 3 21 3 15"></polyline>
-                      <line x1="21" y1="3" x2="14" y2="10"></line>
-                      <line x1="3" y1="21" x2="10" y2="14"></line>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
                   </span>
                 </div>
                 <span class="portfolio-metric-chip">4.6x Engagement</span>
@@ -412,8 +413,12 @@
                   <span class="portfolio-num-tag">09</span>
                 </div>
                 <h3 class="portfolio-card-title">LetHub PropTech</h3>
-                <p class="portfolio-card-desc">Next-generation leasing automation platform with intuitive UX and
-                  lightning load times.</p>
+                <p class="portfolio-card-desc">Next-generation leasing automation platform with intuitive UX and lightning load times.</p>
+                <div class="portfolio-tech-row">
+                  <span class="portfolio-tech-tag">PropTech UX</span>
+                  <span class="portfolio-tech-tag">Fast API</span>
+                  <span class="portfolio-tech-tag">Modern Stack</span>
+                </div>
               </div>
             </div>
 
@@ -421,12 +426,328 @@
         </div>
       </section>
 
-      <!-- Next-Gen Portfolio Showcase Lightbox Modal -->
-      <div id="portfolioLightboxModal" class="portfolio-lightbox-modal" aria-hidden="true" role="dialog"
-        aria-modal="true">
+      <!-- ====================================================================
+           3. The Proof of Engineering: Benchmark Audit Matrix
+           ==================================================================== -->
+      <section class="benchmark-audit-section">
+        <div class="container">
+          
+          <div class="section-header section-header-center reveal reveal-up">
+            <span class="section-tag-pill"><span class="pill-sparkle">✦</span> TECHNICAL BENCHMARKS <span class="pill-sparkle">✦</span></span>
+            <h2 class="section-title">The architectural proof behind our results</h2>
+            <p class="section-subhead">How BRIGHTFORGE clean engineering stacks up against bloated traditional agency code.</p>
+          </div>
+
+          <div class="benchmark-audit-grid">
+            
+            <!-- Audit 1: Traditional Agency -->
+            <div class="benchmark-card reveal reveal-left">
+              <span class="benchmark-card-badge badge-red">Legacy Agency Build</span>
+              <h3 class="benchmark-title">Bloated Frameworks</h3>
+              <p class="benchmark-desc">Heavy page builders, 40+ unoptimized plugins, and uncompressed assets dragging down performance.</p>
+              
+              <div class="benchmark-stats-list">
+                <div class="benchmark-stat-item">
+                  <span class="benchmark-stat-lbl">Average Page Load:</span>
+                  <span class="benchmark-stat-score score-bad">4.2s (Slow)</span>
+                </div>
+                <div class="benchmark-stat-item">
+                  <span class="benchmark-stat-lbl">Google Lighthouse:</span>
+                  <span class="benchmark-stat-score score-bad">42 / 100</span>
+                </div>
+                <div class="benchmark-stat-item">
+                  <span class="benchmark-stat-lbl">Avg. Conversion Rate:</span>
+                  <span class="benchmark-stat-score score-bad">1.2%</span>
+                </div>
+                <div class="benchmark-stat-item">
+                  <span class="benchmark-stat-lbl">Mobile Bounce Rate:</span>
+                  <span class="benchmark-stat-score score-bad">68%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Audit 2: BRIGHTFORGE (Featured Glow) -->
+            <div class="benchmark-card benchmark-card-featured reveal reveal-up">
+              <span class="benchmark-card-badge badge-purple">The BRIGHTFORGE Standard</span>
+              <h3 class="benchmark-title">Sub-Second Architecture</h3>
+              <p class="benchmark-desc">Handcrafted clean semantic HTML, modular Vanilla CSS, and lightweight JS for instant response times.</p>
+              
+              <div class="benchmark-stats-list">
+                <div class="benchmark-stat-item">
+                  <span class="benchmark-stat-lbl">Average Page Load:</span>
+                  <span class="benchmark-stat-score score-good">&lt; 0.8s (Instant)</span>
+                </div>
+                <div class="benchmark-stat-item">
+                  <span class="benchmark-stat-lbl">Google Lighthouse:</span>
+                  <span class="benchmark-stat-score score-good">99 / 100</span>
+                </div>
+                <div class="benchmark-stat-item">
+                  <span class="benchmark-stat-lbl">Avg. Conversion Rate:</span>
+                  <span class="benchmark-stat-score score-good">4.8%</span>
+                </div>
+                <div class="benchmark-stat-item">
+                  <span class="benchmark-stat-lbl">Mobile Bounce Rate:</span>
+                  <span class="benchmark-stat-score score-good">22%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Audit 3: Business Economic Impact -->
+            <div class="benchmark-card reveal reveal-right">
+              <span class="benchmark-card-badge badge-green">Economic Impact</span>
+              <h3 class="benchmark-title">Client ROI Advantage</h3>
+              <p class="benchmark-desc">Direct revenue outcomes unlocked when technical friction is eliminated from your sales funnels.</p>
+              
+              <div class="benchmark-stats-list">
+                <div class="benchmark-stat-item">
+                  <span class="benchmark-stat-lbl">Cost Per Lead (CPA):</span>
+                  <span class="benchmark-stat-score score-impact">-35% Reduction</span>
+                </div>
+                <div class="benchmark-stat-item">
+                  <span class="benchmark-stat-lbl">Google Ads Quality Score:</span>
+                  <span class="benchmark-stat-score score-impact">9.4 / 10 Avg</span>
+                </div>
+                <div class="benchmark-stat-item">
+                  <span class="benchmark-stat-lbl">Organic Search Growth:</span>
+                  <span class="benchmark-stat-score score-impact">+185% Traffic</span>
+                </div>
+                <div class="benchmark-stat-item">
+                  <span class="benchmark-stat-lbl">Visitor Retention Lift:</span>
+                  <span class="benchmark-stat-score score-impact">+4.6x Higher</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           4. The 4-Phase Delivery & Ship Framework
+           ==================================================================== -->
+      <section class="delivery-process-section">
+        <div class="container">
+          
+          <div class="section-header section-header-center reveal reveal-up">
+            <span class="section-tag-pill"><span class="pill-sparkle">✦</span> SHIP METHODOLOGY <span class="pill-sparkle">✦</span></span>
+            <h2 class="section-title">From architecture to revenue scale in 4 disciplined phases</h2>
+            <p class="section-subhead">How we turn project requirements into lightning-fast, high-converting digital realities.</p>
+          </div>
+
+          <div class="delivery-process-grid">
+            
+            <!-- Step 1 -->
+            <div class="delivery-step-card reveal reveal-up reveal-delay-1">
+              <span class="delivery-step-num">PHASE 01</span>
+              <h3 class="delivery-step-title">Discovery &amp; Conversion Architecture</h3>
+              <p class="delivery-step-desc">
+                We audit your customer journey, map high-intent keyword targets, and design conversion wireframes that maximize sales velocity.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="delivery-step-card reveal reveal-up reveal-delay-2">
+              <span class="delivery-step-num">PHASE 02</span>
+              <h3 class="delivery-step-title">High-Performance Engineering</h3>
+              <p class="delivery-step-desc">
+                Senior developers build custom, lightweight codebases with zero framework bloat and sub-second asset optimization.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="delivery-step-card reveal reveal-up reveal-delay-3">
+              <span class="delivery-step-num">PHASE 03</span>
+              <h3 class="delivery-step-title">Multi-Device QA &amp; Speed Hardening</h3>
+              <p class="delivery-step-desc">
+                Rigorous testing across 20+ screen sizes, verifying Core Web Vitals, and fine-tuning Google Lighthouse 99+ scores.
+              </p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="delivery-step-card reveal reveal-up reveal-delay-4">
+              <span class="delivery-step-num">PHASE 04</span>
+              <h3 class="delivery-step-title">Launch &amp; Continuous Scaling</h3>
+              <p class="delivery-step-desc">
+                Live deployment with real-time conversion tracking, paid traffic funnels, and continuous A/B testing for ongoing growth.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           5. Flagship Case Study Deep Dives
+           ==================================================================== -->
+      <section class="flagship-spotlight-section">
+        <div class="container">
+          
+          <div class="section-header section-header-center reveal reveal-up">
+            <span class="section-tag-pill"><span class="pill-sparkle">✦</span> FLAGSHIP SPOTLIGHT <span class="pill-sparkle">✦</span></span>
+            <h2 class="section-title">Three transformative client growth stories</h2>
+            <p class="section-subhead">A deeper look at the strategy, execution, and verified ROI behind our flagship projects.</p>
+          </div>
+
+          <div class="flagship-grid">
+            
+            <!-- Story 1: PitchBob AI -->
+            <div class="flagship-card reveal reveal-up">
+              <div class="flagship-media">
+                <img src="img/PitchBob.jpg" alt="PitchBob AI SaaS Platform Case Study" class="flagship-img" loading="lazy">
+              </div>
+              <div class="flagship-content">
+                <span class="flagship-tag">WEB APPLICATION &bull; SAAS SCALE</span>
+                <h3 class="flagship-title">PitchBob: Scaling an AI Pitch Platform from Zero to 15K Users</h3>
+                <p class="flagship-desc">
+                  We engineered an interactive, friction-free onboarding flow combined with a modern dark-mode UI that unlocked a 2.4x surge in user activations within the first 60 days of launch.
+                </p>
+                <div class="flagship-results-row">
+                  <div class="flagship-stat">
+                    <span class="flagship-stat-num">2.4x</span>
+                    <span class="flagship-stat-lbl">Signup Conversion Lift</span>
+                  </div>
+                  <div class="flagship-stat">
+                    <span class="flagship-stat-num">&lt;0.7s</span>
+                    <span class="flagship-stat-lbl">Global Load Speed</span>
+                  </div>
+                  <div class="flagship-stat">
+                    <span class="flagship-stat-num">15K+</span>
+                    <span class="flagship-stat-lbl">Active Founders</span>
+                  </div>
+                </div>
+                <div>
+                  <a href="contact.html" class="btn btn-primary">Build Something Similar &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Story 2: Modge Lifestyle -->
+            <div class="flagship-card reverse reveal reveal-up">
+              <div class="flagship-media">
+                <img src="img/modgelifestyle.jpg" alt="Modge Lifestyle E-Commerce Google Ads Case Study" class="flagship-img" loading="lazy">
+              </div>
+              <div class="flagship-content">
+                <span class="flagship-tag">GOOGLE ADS &bull; E-COMMERCE SCALE</span>
+                <h3 class="flagship-title">Modge Lifestyle: Unlocking 5.2x ROAS on Google Shopping</h3>
+                <p class="flagship-desc">
+                  By restructuring product feed segmentation, deploying Smart Bidding targets, and building custom high-speed landing pages, we scaled monthly revenue by 320% while lowering customer acquisition costs.
+                </p>
+                <div class="flagship-results-row">
+                  <div class="flagship-stat">
+                    <span class="flagship-stat-num">5.2x</span>
+                    <span class="flagship-stat-lbl">Average Google Ads ROAS</span>
+                  </div>
+                  <div class="flagship-stat">
+                    <span class="flagship-stat-num">+320%</span>
+                    <span class="flagship-stat-lbl">Monthly Revenue Growth</span>
+                  </div>
+                  <div class="flagship-stat">
+                    <span class="flagship-stat-num">-42%</span>
+                    <span class="flagship-stat-lbl">Cost Per Purchase</span>
+                  </div>
+                </div>
+                <div>
+                  <a href="contact.html" class="btn btn-primary">Scale Your Ad Campaigns &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Story 3: DigiUpLift Solutions -->
+            <div class="flagship-card reveal reveal-up">
+              <div class="flagship-media">
+                <img src="img/DigiUpLiftSolutions.jpg" alt="DigiUpLift Solutions SEO Case Study" class="flagship-img" loading="lazy">
+              </div>
+              <div class="flagship-content">
+                <span class="flagship-tag">TECHNICAL SEO &bull; ORGANIC DOMINATION</span>
+                <h3 class="flagship-title">DigiUpLift Solutions: +185% Organic Search Surge via Technical SEO</h3>
+                <p class="flagship-desc">
+                  We executed an in-depth Core Web Vitals audit, resolved schema crawl errors, and mapped high-intent commercial keywords to capture top search rankings across highly competitive verticals.
+                </p>
+                <div class="flagship-results-row">
+                  <div class="flagship-stat">
+                    <span class="flagship-stat-num">+185%</span>
+                    <span class="flagship-stat-lbl">Organic Traffic Surge</span>
+                  </div>
+                  <div class="flagship-stat">
+                    <span class="flagship-stat-num">#1</span>
+                    <span class="flagship-stat-lbl">Commercial Rankings</span>
+                  </div>
+                  <div class="flagship-stat">
+                    <span class="flagship-stat-num">99/100</span>
+                    <span class="flagship-stat-lbl">Core Web Vitals</span>
+                  </div>
+                </div>
+                <div>
+                  <a href="contact.html" class="btn btn-primary">Dominate Organic Search &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           6. Zero-Risk Engineering SLA & Quality Guarantee
+           ==================================================================== -->
+      <section class="guarantee-sla-section">
+        <div class="container">
+          
+          <div class="section-header section-header-center reveal reveal-up">
+            <span class="section-tag-pill"><span class="pill-sparkle">✦</span> ZERO-RISK GUARANTEE <span class="pill-sparkle">✦</span></span>
+            <h2 class="section-title">Our engineering commitments &amp; SLA</h2>
+            <p class="section-subhead">Every deliverable comes backed by our strict quality benchmarks and clear ownership guarantees.</p>
+          </div>
+
+          <div class="guarantee-grid">
+            
+            <div class="guarantee-card reveal reveal-up reveal-delay-1">
+              <div class="guarantee-icon-circle" aria-hidden="true">&#10003;</div>
+              <h3 class="guarantee-title">100% Code &amp; IP Ownership</h3>
+              <p class="guarantee-desc">
+                You own 100% of all source code, design assets, and ad accounts from day one. Zero vendor lock-in.
+              </p>
+            </div>
+
+            <div class="guarantee-card reveal reveal-up reveal-delay-2">
+              <div class="guarantee-icon-circle" aria-hidden="true">&#9889;</div>
+              <h3 class="guarantee-title">99+ Lighthouse Speed Score</h3>
+              <p class="guarantee-desc">
+                We guarantee sub-second load times and elite Core Web Vitals scores on every web build we deploy.
+              </p>
+            </div>
+
+            <div class="guarantee-card reveal reveal-up reveal-delay-3">
+              <div class="guarantee-icon-circle" aria-hidden="true">&#128176;</div>
+              <h3 class="guarantee-title">Fixed Milestone Pricing</h3>
+              <p class="guarantee-desc">
+                Clear, transparent project milestones with zero surprise invoices, hidden markups, or scope creep fees.
+              </p>
+            </div>
+
+            <div class="guarantee-card reveal reveal-up reveal-delay-4">
+              <div class="guarantee-icon-circle" aria-hidden="true">&#128737;</div>
+              <h3 class="guarantee-title">30-Day Dedicated Warranty</h3>
+              <p class="guarantee-desc">
+                Comprehensive post-launch warranty with proactive bug fixes and speed monitoring included at zero extra cost.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           7. Next-Gen Portfolio Showcase Lightbox Modal
+           ==================================================================== -->
+      <div id="portfolioLightboxModal" class="portfolio-lightbox-modal" aria-hidden="true" role="dialog" aria-modal="true">
         <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
 
-        <!-- Top Global Bar with Counter & Action Buttons -->
+        <!-- Top Global Bar with Counter & Actions -->
         <div class="lightbox-top-bar">
           <div class="lightbox-counter-badge">
             <span id="lightboxCurrentIdx">1</span> / <span id="lightboxTotalCount">9</span>
@@ -436,44 +757,33 @@
             <!-- Zoom Toggle -->
             <button class="lightbox-action-btn" id="lightboxZoomToggleBtn" aria-label="Toggle Zoom" title="Toggle Zoom">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="11" cy="11" r="8" />
-                <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                <line x1="11" y1="8" x2="11" y2="14" />
-                <line x1="8" y1="11" x2="14" y2="11" />
+                <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /><line x1="11" y1="8" x2="11" y2="14" /><line x1="8" y1="11" x2="14" y2="11" />
               </svg>
             </button>
             <!-- Fullscreen Toggle -->
-            <button class="lightbox-action-btn" id="lightboxFullscreenBtn" aria-label="Toggle Fullscreen"
-              title="Toggle Fullscreen">
+            <button class="lightbox-action-btn" id="lightboxFullscreenBtn" aria-label="Toggle Fullscreen" title="Toggle Fullscreen">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path
-                  d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
               </svg>
             </button>
             <!-- Close Button -->
-            <button class="lightbox-action-btn lightbox-close-action-btn" id="lightboxCloseBtn" aria-label="Close modal"
-              title="Close (Esc)">
+            <button class="lightbox-action-btn" id="lightboxCloseBtn" aria-label="Close modal" title="Close (Esc)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
+                <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </button>
           </div>
         </div>
 
-        <!-- Stage Area with Carousel Arrows & Central Interactive Device Stage -->
+        <!-- Stage Area with Carousel Arrows & Central Showcase Window -->
         <div class="lightbox-stage-container">
           <!-- Prev Arrow Button -->
-          <button class="lightbox-nav-arrow lightbox-arrow-prev" id="lightboxPrevBtn" aria-label="Previous Project"
-            title="Previous (Left Arrow)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <polyline points="15 18 9 12 15 6" />
-            </svg>
+          <button class="lightbox-nav-arrow" id="lightboxPrevBtn" aria-label="Previous Project" title="Previous (Left Arrow)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6" /></svg>
           </button>
 
-          <!-- Central Showcase Window with Browser Chrome Header & Smooth Scrollable Full Web View -->
+          <!-- Central Showcase Window with Browser Chrome Header -->
           <div class="lightbox-showcase-window" id="lightboxShowcaseWindow">
-            <!-- Browser Top Mock Header -->
             <div class="lightbox-browser-header">
               <div class="browser-header-dots">
                 <span class="dot-red"></span>
@@ -482,17 +792,16 @@
               </div>
               <div class="browser-url-pill">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="url-lock-icon">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" />
                 </svg>
                 <span id="lightboxUrlText" class="browser-url-domain">brightforge.agency/case-study</span>
               </div>
               <div class="browser-header-status">
-                <span class="live-dot"></span> Live Showcase
+                <span class="live-dot"></span> Verified Deliverable
               </div>
             </div>
 
-            <!-- Main Image Viewport with Smooth Scrollable Long Web Page View -->
+            <!-- Main Image Viewport -->
             <div class="lightbox-img-viewport" id="lightboxImgViewport">
               <img src="" alt="" id="lightboxModalImg" class="lightbox-full-img">
             </div>
@@ -509,428 +818,14 @@
           </div>
 
           <!-- Next Arrow Button -->
-          <button class="lightbox-nav-arrow lightbox-arrow-next" id="lightboxNextBtn" aria-label="Next Project"
-            title="Next (Right Arrow)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
+          <button class="lightbox-nav-arrow" id="lightboxNextBtn" aria-label="Next Project" title="Next (Right Arrow)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6" /></svg>
           </button>
         </div>
 
         <!-- Bottom Thumbnail Navigation Strip -->
         <div class="lightbox-thumbs-strip" id="lightboxThumbsStrip"></div>
       </div>
-
-      <!-- Stats Bar Section -->
-      <section class="stats-bar-section">
-        <div class="container">
-          <div class="stats-header-bar">
-            <div class="stats-title-group">
-              <span class="section-tag-pill"><span class="pill-sparkle">✦</span> THE NUMBERS SO FAR <span
-                  class="pill-sparkle">✦</span></span>
-              <h2 class="stats-heading-text">Results that speak for themselves</h2>
-            </div>
-          </div>
-
-          <div class="stats-bento-grid">
-            <div class="stat-bento-item">
-              <div class="stat-item-top">
-                <span class="stat-category-chip">#Experience</span>
-                <span class="stat-icon-micro">&#x25C6;</span>
-              </div>
-              <div class="stat-number-display stat-number-purple">4+</div>
-              <div>
-                <div class="stat-label-title">Years in Business</div>
-                <div class="stat-label-desc">Web, ads, and SEO</div>
-              </div>
-            </div>
-
-            <div class="stat-bento-item">
-              <div class="stat-item-top">
-                <span class="stat-category-chip">#Projects</span>
-                <span class="stat-icon-micro">&#x25C6;</span>
-              </div>
-              <div class="stat-number-display">8,000+</div>
-              <div>
-                <div class="stat-label-title">Projects Delivered</div>
-                <div class="stat-label-desc">Across all services</div>
-              </div>
-            </div>
-
-            <div class="stat-bento-item">
-              <div class="stat-item-top">
-                <span class="stat-category-chip">#Satisfaction</span>
-                <span class="stat-icon-micro">&#x25C6;</span>
-              </div>
-              <div class="stat-number-display stat-number-periwinkle">98%</div>
-              <div>
-                <div class="stat-label-title">Client Satisfaction</div>
-                <div class="stat-label-desc">Verified feedback</div>
-              </div>
-            </div>
-
-            <div class="stat-bento-item">
-              <div class="stat-item-top">
-                <span class="stat-category-chip">#Team</span>
-                <span class="stat-icon-micro">&#x25C6;</span>
-              </div>
-              <div class="stat-number-display">15+</div>
-              <div>
-                <div class="stat-label-title">Team Members</div>
-                <div class="stat-label-desc">Senior professionals</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Testimonials & Client Feedback Section (1-Row Infinite Loop Carousel) -->
-      <section class="testimonials-section section-spacer" id="testimonials">
-        <div class="container">
-
-          <!-- Section Header -->
-          <div class="section-header section-header-center reveal reveal-up">
-            <span class="section-tag-pill"><span class="pill-sparkle">✦</span> CLIENT STORIES <span
-                class="pill-sparkle">✦</span></span>
-            <h2 class="section-title">What Our Clients Say</h2>
-            <p class="section-subhead">Real feedback and verified growth metrics from ambitious businesses scaling with
-              Brightforge.</p>
-          </div>
-
-        </div>
-
-        <!-- 1-Row Smooth Infinite Loop Carousel Slider -->
-        <div class="testimonials-loop-container">
-          <div class="testimonials-loop-track">
-
-            <!-- Set 1 of 6 Cards -->
-            <!-- Card 1: Rachel Kim -->
-            <div class="testimonial-card">
-              <div class="testimonial-card-top">
-                <div class="testimonial-stars">
-                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-              </div>
-              <p class="testimonial-quote">
-                "Our new site paid for itself within the first two months. The team didn't just design it, they built it
-                to actually sell."
-              </p>
-              <div class="testimonial-author-row">
-                <div class="testimonial-avatar">
-                  <img src="img/clients/rachel-kim.jpg" alt="Rachel Kim" loading="lazy" class="testimonial-avatar-img">
-                </div>
-                <div class="testimonial-author-meta">
-                  <div class="testimonial-author-name">Rachel Kim <span class="verified-badge"
-                      title="Verified Client">✓</span></div>
-                  <div class="testimonial-author-role">Ecommerce Founder</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 2: Daniel Okafor -->
-            <div class="testimonial-card">
-              <div class="testimonial-card-top">
-                <div class="testimonial-stars">
-                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-              </div>
-              <p class="testimonial-quote">
-                "Working with this team on our Google Ads was the first time an agency actually explained what they were
-                doing and why."
-              </p>
-              <div class="testimonial-author-row">
-                <div class="testimonial-avatar">
-                  <img src="img/clients/daniel-okafor.jpg" alt="Daniel Okafor" loading="lazy"
-                    class="testimonial-avatar-img">
-                </div>
-                <div class="testimonial-author-meta">
-                  <div class="testimonial-author-name">Daniel Okafor <span class="verified-badge"
-                      title="Verified Client">✓</span></div>
-                  <div class="testimonial-author-role">Marketing Lead</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 3: Priya Sharma -->
-            <div class="testimonial-card">
-              <div class="testimonial-card-top">
-                <div class="testimonial-stars">
-                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-              </div>
-              <p class="testimonial-quote">
-                "Six months into their SEO plan and we're finally ranking for the keywords that actually bring in
-                high-paying customers."
-              </p>
-              <div class="testimonial-author-row">
-                <div class="testimonial-avatar">
-                  <img src="img/clients/priya-sharma.jpg" alt="Priya Sharma" loading="lazy"
-                    class="testimonial-avatar-img">
-                </div>
-                <div class="testimonial-author-meta">
-                  <div class="testimonial-author-name">Priya Sharma <span class="verified-badge"
-                      title="Verified Client">✓</span></div>
-                  <div class="testimonial-author-role">Clinic Owner</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 4: Marcus Bell -->
-            <div class="testimonial-card">
-              <div class="testimonial-card-top">
-                <div class="testimonial-stars">
-                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-              </div>
-              <p class="testimonial-quote">
-                "Fast communication, clear pricing, and a site that loads instantly. Everything we hoped for and didn't
-                get from our last agency."
-              </p>
-              <div class="testimonial-author-row">
-                <div class="testimonial-avatar">
-                  <img src="img/clients/marcus-bell.jpg" alt="Marcus Bell" loading="lazy"
-                    class="testimonial-avatar-img">
-                </div>
-                <div class="testimonial-author-meta">
-                  <div class="testimonial-author-name">Marcus Bell <span class="verified-badge"
-                      title="Verified Client">✓</span></div>
-                  <div class="testimonial-author-role">Operations Lead</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 5: Elena Rossi (Featured Hero Card) -->
-            <div class="testimonial-card testimonial-card-featured">
-              <div class="featured-impact-badge">★ MOST IMPACTFUL</div>
-              <div class="testimonial-card-top">
-                <div class="testimonial-stars">
-                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-              </div>
-              <p class="testimonial-quote">
-                "They rebuilt our site in three weeks and it looks and runs better than the one our last developer took
-                three months on."
-              </p>
-              <div class="testimonial-author-row">
-                <div class="testimonial-avatar">
-                  <img src="img/clients/elena-rossi.jpg" alt="Elena Rossi" loading="lazy"
-                    class="testimonial-avatar-img">
-                </div>
-                <div class="testimonial-author-meta">
-                  <div class="testimonial-author-name">Elena Rossi <span class="verified-badge"
-                      title="Verified Client">✓</span></div>
-                  <div class="testimonial-author-role">Co Founder</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 6: Tariq Hussain -->
-            <div class="testimonial-card">
-              <div class="testimonial-card-top">
-                <div class="testimonial-stars">
-                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-              </div>
-              <p class="testimonial-quote">
-                "Our support tickets actually get answered in minutes. That proactive communication alone made switching
-                agencies worth it."
-              </p>
-              <div class="testimonial-author-row">
-                <div class="testimonial-avatar">
-                  <img src="img/clients/tariq-hussain.jpg" alt="Tariq Hussain" loading="lazy"
-                    class="testimonial-avatar-img">
-                </div>
-                <div class="testimonial-author-meta">
-                  <div class="testimonial-author-name">Tariq Hussain <span class="verified-badge"
-                      title="Verified Client">✓</span></div>
-                  <div class="testimonial-author-role">IT Director</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Set 2 (Duplicate for Seamless Continuous Loop) -->
-            <!-- Duplicate Card 1: Rachel Kim -->
-            <div class="testimonial-card" aria-hidden="true">
-              <div class="testimonial-card-top">
-                <div class="testimonial-stars">
-                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-              </div>
-              <p class="testimonial-quote">
-                "Our new site paid for itself within the first two months. The team didn't just design it, they built it
-                to actually sell."
-              </p>
-              <div class="testimonial-author-row">
-                <div class="testimonial-avatar">
-                  <img src="img/clients/rachel-kim.jpg" alt="Rachel Kim" loading="lazy" class="testimonial-avatar-img">
-                </div>
-                <div class="testimonial-author-meta">
-                  <div class="testimonial-author-name">Rachel Kim <span class="verified-badge">✓</span></div>
-                  <div class="testimonial-author-role">Ecommerce Founder</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Duplicate Card 2: Daniel Okafor -->
-            <div class="testimonial-card" aria-hidden="true">
-              <div class="testimonial-card-top">
-                <div class="testimonial-stars">
-                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-              </div>
-              <p class="testimonial-quote">
-                "Working with this team on our Google Ads was the first time an agency actually explained what they were
-                doing and why."
-              </p>
-              <div class="testimonial-author-row">
-                <div class="testimonial-avatar">
-                  <img src="img/clients/daniel-okafor.jpg" alt="Daniel Okafor" loading="lazy"
-                    class="testimonial-avatar-img">
-                </div>
-                <div class="testimonial-author-meta">
-                  <div class="testimonial-author-name">Daniel Okafor <span class="verified-badge">✓</span></div>
-                  <div class="testimonial-author-role">Marketing Lead</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Duplicate Card 3: Priya Sharma -->
-            <div class="testimonial-card" aria-hidden="true">
-              <div class="testimonial-card-top">
-                <div class="testimonial-stars">
-                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-              </div>
-              <p class="testimonial-quote">
-                "Six months into their SEO plan and we're finally ranking for the keywords that actually bring in
-                high-paying customers."
-              </p>
-              <div class="testimonial-author-row">
-                <div class="testimonial-avatar">
-                  <img src="img/clients/priya-sharma.jpg" alt="Priya Sharma" loading="lazy"
-                    class="testimonial-avatar-img">
-                </div>
-                <div class="testimonial-author-meta">
-                  <div class="testimonial-author-name">Priya Sharma <span class="verified-badge">✓</span></div>
-                  <div class="testimonial-author-role">Clinic Owner</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Duplicate Card 4: Marcus Bell -->
-            <div class="testimonial-card" aria-hidden="true">
-              <div class="testimonial-card-top">
-                <div class="testimonial-stars">
-                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-              </div>
-              <p class="testimonial-quote">
-                "Fast communication, clear pricing, and a site that loads instantly. Everything we hoped for and didn't
-                get from our last agency."
-              </p>
-              <div class="testimonial-author-row">
-                <div class="testimonial-avatar">
-                  <img src="img/clients/marcus-bell.jpg" alt="Marcus Bell" loading="lazy"
-                    class="testimonial-avatar-img">
-                </div>
-                <div class="testimonial-author-meta">
-                  <div class="testimonial-author-name">Marcus Bell <span class="verified-badge">✓</span></div>
-                  <div class="testimonial-author-role">Operations Lead</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Duplicate Card 5: Elena Rossi -->
-            <div class="testimonial-card testimonial-card-featured" aria-hidden="true">
-              <div class="featured-impact-badge">★ MOST IMPACTFUL</div>
-              <div class="testimonial-card-top">
-                <div class="testimonial-stars">
-                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-              </div>
-              <p class="testimonial-quote">
-                "They rebuilt our site in three weeks and it looks and runs better than the one our last developer took
-                three months on."
-              </p>
-              <div class="testimonial-author-row">
-                <div class="testimonial-avatar">
-                  <img src="img/clients/elena-rossi.jpg" alt="Elena Rossi" loading="lazy"
-                    class="testimonial-avatar-img">
-                </div>
-                <div class="testimonial-author-meta">
-                  <div class="testimonial-author-name">Elena Rossi <span class="verified-badge">✓</span></div>
-                  <div class="testimonial-author-role">Co Founder</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Duplicate Card 6: Tariq Hussain -->
-            <div class="testimonial-card" aria-hidden="true">
-              <div class="testimonial-card-top">
-                <div class="testimonial-stars">
-                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-              </div>
-              <p class="testimonial-quote">
-                "Our support tickets actually get answered in minutes. That proactive communication alone made switching
-                agencies worth it."
-              </p>
-              <div class="testimonial-author-row">
-                <div class="testimonial-avatar">
-                  <img src="img/clients/tariq-hussain.jpg" alt="Tariq Hussain" loading="lazy"
-                    class="testimonial-avatar-img">
-                </div>
-                <div class="testimonial-author-meta">
-                  <div class="testimonial-author-name">Tariq Hussain <span class="verified-badge">✓</span></div>
-                  <div class="testimonial-author-role">IT Director</div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="container" style="margin-top: 48px;">
-          <!-- Bottom Trust Ticker Strip -->
-          <div class="testimonials-bottom-trust reveal reveal-up">
-            
-            <div class="trust-stat-box">
-              <div class="trust-stat-icon-wrap" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              </div>
-              <div class="trust-stat-text">
-                <span class="trust-stat-num">100+</span>
-                <span class="trust-stat-label">5-Star Client Reviews</span>
-              </div>
-            </div>
-
-            <div class="trust-stat-divider" aria-hidden="true"></div>
-
-            <div class="trust-stat-box">
-              <div class="trust-stat-icon-wrap" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
-              </div>
-              <div class="trust-stat-text">
-                <span class="trust-stat-num">99.2%</span>
-                <span class="trust-stat-label">Client Satisfaction Rate</span>
-              </div>
-            </div>
-
-            <div class="trust-stat-divider" aria-hidden="true"></div>
-
-            <div class="trust-stat-box">
-              <div class="trust-stat-icon-wrap" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
-              </div>
-              <div class="trust-stat-text">
-                <span class="trust-stat-num">3.8x</span>
-                <span class="trust-stat-label">Average Client ROI</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
 
     </main>
 
@@ -944,10 +839,8 @@
 
             <!-- Left Side: Content & Actions -->
             <div class="cta-ref-content-col">
-              <h2 class="cta-ref-title">Let's Build Digital Experiences <span class="highlight-purple-text">That
-                  Convert</span></h2>
-              <p class="cta-ref-subhead">We design, build, and grow high-performing websites, Google Ads funnels, and
-                SEO growth engines that scale your brand online.</p>
+              <h2 class="cta-ref-title">Let's Build Digital Experiences <span class="highlight-purple-text">That Convert</span></h2>
+              <p class="cta-ref-subhead">We design, build, and grow high-performing websites, Google Ads funnels, and SEO growth engines that scale your brand online.</p>
               <div class="cta-ref-action-row">
                 <a href="contact.html" class="btn btn-cta-white">
                   Start Your Project <span class="cta-arrow">&rarr;</span>
@@ -958,8 +851,7 @@
             <!-- Right Side: Full-Bleed Mockup + Glowing Purple Arc -->
             <div class="cta-ref-visual-col">
               <div class="cta-ref-arc-glow" aria-hidden="true"></div>
-              <img src="img/cta-img.png" alt="BRIGHTFORGE Digital Experiences Dashboard"
-                class="cta-ref-mockup-img" loading="lazy">
+              <img src="img/cta-img.png" alt="BRIGHTFORGE Digital Experiences Dashboard" class="cta-ref-mockup-img" loading="lazy">
             </div>
 
           </div>
@@ -1070,7 +962,6 @@
   </div>
 
   <script src="js/global.js"></script>
-  <script src="js/home.js"></script>
+  <script src="js/portfolio.js"></script>
 </body>
-
 </html>
