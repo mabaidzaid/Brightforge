@@ -200,10 +200,10 @@
   font-family: var(--font-heading);
   font-size: clamp(2.6rem, 5.4vw, 76px);
   font-weight: 800;
-  line-height: 1.35;
+  line-height: 1.46;
   letter-spacing: -0.03em;
   color: var(--text-primary);
-  margin-bottom: 28px;
+  margin-bottom: 30px;
   text-align: center;
   width: 100%;
 }
@@ -215,7 +215,7 @@
   flex-wrap: nowrap;
   white-space: nowrap;
   gap: 0;
-  margin: 4px 0;
+  margin: 8px 0;
 }
 
 /* 3 Embedded Interactive Tilted Visual Cards */
@@ -225,12 +225,12 @@
   justify-content: center;
   vertical-align: middle;
   position: relative;
-  width: clamp(115px, 11.5vw, 165px);
-  height: clamp(75px, 7.5vw, 108px);
+  width: clamp(115px, 11vw, 160px);
+  height: clamp(66px, 6.4vw, 92px);
   margin: 0 14px;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2), 0 0 25px rgba(176, 40, 230, 0.25);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2), 0 0 22px rgba(176, 40, 230, 0.22);
   border: 2.5px solid rgba(255, 255, 255, 0.85);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
   cursor: pointer;
@@ -258,15 +258,15 @@
 
 /* Tilts matching reference layout */
 .card-billboard {
-  transform: translateY(-4px) rotate(4deg);
+  transform: translateY(-3px) rotate(3deg);
 }
 
 .card-laptop {
-  transform: translateY(2px) rotate(-3deg);
+  transform: translateY(-3px) rotate(-2.5deg);
 }
 
 .card-portrait {
-  transform: translateY(-2px) rotate(-4deg);
+  transform: translateY(3px) rotate(2.5deg);
 }
 
 /* Hover Interaction: Scale Up, Straighten & Glow */
