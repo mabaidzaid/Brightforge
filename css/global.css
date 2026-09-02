@@ -165,10 +165,12 @@ h1 {
   line-height: 1.05;
 }
 
-h2 {
+h2,
+.section-title {
   font-size: clamp(2.4rem, 4.2vw, 65px);
   font-weight: 700;
   line-height: 1.1;
+  letter-spacing: -0.025em;
 }
 
 h3 {
