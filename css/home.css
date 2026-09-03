@@ -1121,6 +1121,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .stats-bar-section {
+    padding: 80px 0;
+  }
+}
+
 @media (max-width: 640px) {
   .stats-staircase-flex {
     flex-direction: column;
@@ -3571,39 +3577,29 @@
 
 @media (max-width: 768px) {
   .about-showcase-section {
-    padding: 50px 0 60px;
+    padding: 80px 0;
     overflow: hidden;
   }
 
   .about-showcase-container {
-    gap: 36px;
+    gap: 40px;
   }
 
   .about-visual-cluster {
     position: relative;
     min-height: auto;
     width: 100%;
-    max-width: 380px;
+    max-width: 400px;
     margin: 0 auto;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
   }
 
-  .about-ambient-aura {
-    width: 260px;
-    height: 260px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    filter: blur(45px);
-  }
-
+  .about-ambient-aura,
   .about-orbital-ring {
-    width: 310px;
-    height: 310px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.35;
+    display: none;
   }
 
   .about-main-frame {
@@ -3613,84 +3609,94 @@
     border-radius: 22px;
     position: relative;
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+    order: 1;
   }
 
   .about-story-badge {
     top: 10px;
     right: 10px;
-    width: 68px;
-    height: 68px;
+    width: 64px;
+    height: 64px;
   }
 
   .story-play-btn {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
   }
 
   .story-rotating-svg text {
     font-size: 9px;
   }
 
-  /* Floating Card 1: 4+ Years Experience */
+  /* Card 1: 4+ Years Experience */
   .about-card-exp {
-    position: absolute;
-    top: -14px;
-    left: 8px;
-    z-index: 5;
-    padding: 10px 14px;
-    border-radius: 14px;
-    gap: 10px;
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: auto;
+    left: auto;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 14px 20px;
+    border-radius: 16px;
+    gap: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    order: 2;
   }
 
   .about-card-exp-icon {
-    width: 34px;
-    height: 34px;
-    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    flex-shrink: 0;
   }
 
   .about-card-exp-icon svg {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
   }
 
   .about-card-exp-text .exp-num {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
   }
 
   .about-card-exp-text .exp-label {
-    font-size: 0.68rem;
+    font-size: 0.8rem;
   }
 
-  /* Floating Card 2: What We Do List */
+  /* Card 2: What We Do List */
   .about-card-services {
-    position: absolute;
-    bottom: -18px;
-    right: 8px;
-    z-index: 5;
-    padding: 10px 14px;
-    border-radius: 14px;
-    min-width: 145px;
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+    position: relative;
+    bottom: auto;
+    right: auto;
+    z-index: 2;
+    width: 100%;
+    padding: 18px 20px;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    order: 3;
   }
 
   .services-card-title {
-    font-size: 0.8rem;
-    margin-bottom: 6px;
+    font-size: 0.92rem;
+    margin-bottom: 10px;
   }
 
   .services-checklist {
-    gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 14px;
   }
 
   .services-checklist li {
-    font-size: 0.74rem;
+    font-size: 0.8rem;
     gap: 6px;
   }
 
   .services-checklist li svg {
-    width: 11px;
-    height: 11px;
+    width: 12px;
+    height: 12px;
   }
 
   /* Content area */
@@ -3776,36 +3782,17 @@
 
 @media (max-width: 480px) {
   .about-visual-cluster {
-    max-width: 330px;
+    max-width: 100%;
   }
 
-  .about-orbital-ring {
-    width: 270px;
-    height: 270px;
-  }
-
-  .about-ambient-aura {
-    width: 230px;
-    height: 230px;
-  }
-
-  .about-card-exp {
-    top: -12px;
-    left: 4px;
-    padding: 8px 12px;
-  }
-
-  .about-card-services {
-    bottom: -16px;
-    right: 4px;
-    padding: 9px 12px;
-    min-width: 135px;
+  .services-checklist {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 24px var(--side-padding) 40px;
+    padding: 28px var(--side-padding) 80px;
     overflow: hidden;
   }
 

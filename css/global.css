@@ -1325,7 +1325,18 @@ button, input, select, textarea {
 @media (max-width: 768px) {
   :root {
     --side-padding: 20px;
-    --section-rhythm: 56px;
+    --section-rhythm: 84px;
+  }
+
+  /* Ensure ample vertical gap so no section attaches to another */
+  .section-spacer {
+    padding-top: 84px !important;
+    padding-bottom: 84px !important;
+  }
+
+  /* User Directive: Remove all <br> tags across the entire site in mobile view */
+  br {
+    display: none !important;
   }
 
   /* ========================================================================
