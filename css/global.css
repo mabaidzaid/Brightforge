@@ -1371,7 +1371,7 @@ button, input, select, textarea {
 
 @media (max-width: 768px) {
   :root {
-    --side-padding: 20px;
+    --side-padding: 16px;
     --section-rhythm: 84px;
   }
 
