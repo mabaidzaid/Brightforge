@@ -845,3 +845,234 @@
   }
 }
 
+/* ==========================================================================
+   8. Why Choose Us Sticky Section (Redesigned Checklist 2)
+   Matching 2nd Reference Image with Sticky Left Column and Icon Boxes
+   ========================================================================== */
+.why-choose-section {
+  position: relative;
+  padding: 100px 0 110px;
+  background-color: var(--canvas-bg, #FFFFFF);
+  border-bottom: 1px solid var(--card-border, #E8E8EC);
+}
+
+.why-choose-layout {
+  display: grid;
+  grid-template-columns: 0.95fr 1.25fr;
+  gap: 72px;
+  align-items: flex-start;
+}
+
+/* Left Column: Sticky */
+.why-sticky-col {
+  position: sticky;
+  top: 110px;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.why-tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  background: var(--card-bg, #F7F7F9);
+  border: 1px solid var(--card-border, #E8E8EC);
+  border-radius: var(--radius-pill, 9999px);
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-secondary, #555861);
+  letter-spacing: 0.03em;
+  margin-bottom: 22px;
+}
+
+.why-sticky-title {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--text-primary, #020202);
+  margin-bottom: 22px;
+}
+
+.why-brand-highlight {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(176, 40, 230, 0.15) 0%, rgba(143, 116, 251, 0.12) 100%);
+  color: var(--primary, #B028E6);
+  padding: 2px 14px;
+  border-radius: 12px;
+}
+
+[data-theme="dark"] .why-brand-highlight {
+  background: linear-gradient(135deg, rgba(176, 40, 230, 0.28) 0%, rgba(143, 116, 251, 0.2) 100%);
+  color: #FFFFFF;
+}
+
+.why-sticky-desc {
+  font-family: var(--font-body, 'Manrope', sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.68;
+  color: var(--text-secondary, #555861);
+  max-width: 440px;
+  margin-bottom: 36px;
+}
+
+.why-sticky-btn-wrap {
+  display: flex;
+  align-items: center;
+}
+
+/* Right Column: List of items with number badge and icon */
+.why-items-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.why-item-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  padding: 38px 0;
+  border-bottom: 1px solid var(--card-border, #E8E8EC);
+  transition: transform 0.25s ease;
+}
+
+.why-item-row:first-child {
+  padding-top: 0;
+}
+
+.why-item-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.why-item-row:hover {
+  transform: translateX(4px);
+}
+
+/* Icon unit with overlapping number badge */
+.why-icon-unit {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.why-number-badge {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #020202;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.75rem;
+  font-weight: 800;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+[data-theme="dark"] .why-number-badge {
+  background: var(--primary, #B028E6);
+  box-shadow: 0 3px 10px rgba(176, 40, 230, 0.4);
+}
+
+.why-icon-box {
+  width: 68px;
+  height: 68px;
+  border-radius: 20px;
+  background: rgba(176, 40, 230, 0.08);
+  border: 1.5px solid rgba(176, 40, 230, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary, #B028E6);
+  box-shadow: 0 6px 18px rgba(176, 40, 230, 0.06);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .why-icon-box {
+  background: rgba(176, 40, 230, 0.15);
+  border-color: rgba(176, 40, 230, 0.35);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.why-item-row:hover .why-icon-box {
+  background: var(--primary, #B028E6);
+  color: #FFFFFF;
+  border-color: var(--primary, #B028E6);
+  box-shadow: 0 8px 24px var(--primary-glow);
+}
+
+/* Content */
+.why-item-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.why-item-title {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary, #020202);
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.why-item-desc {
+  font-family: var(--font-body, 'Manrope', sans-serif);
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: var(--text-secondary, #555861);
+  max-width: 580px;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .why-choose-section {
+    padding: 70px 0 80px;
+  }
+  .why-choose-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .why-sticky-col {
+    position: static;
+    align-items: center;
+    text-align: center;
+  }
+  .why-sticky-desc {
+    max-width: 600px;
+  }
+  .why-item-row:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .why-item-row {
+    gap: 18px;
+    padding: 28px 0;
+  }
+  .why-icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+  }
+  .why-item-title {
+    font-size: 1.15rem;
+  }
+  .why-item-desc {
+    font-size: 0.9rem;
+  }
+}
+
+
