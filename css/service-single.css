@@ -1905,12 +1905,12 @@
    Staircase Flex, Ascending Heights, Editorial Title, Distributed Accents
    ========================================================================== */
 .stats-bar-section {
-  padding: 110px 0 130px;
+  padding: 110px 0 280px;
   background-color: var(--canvas-bg, #FFFFFF);
   position: relative;
   overflow: hidden;
   border-top: 1px solid var(--card-border, #E8E8EC);
-  border-bottom: 1px solid var(--card-border, #E8E8EC);
+  border-bottom: none;
 }
 
 [data-theme="dark"] .stats-bar-section {
@@ -2018,7 +2018,7 @@
 
 /* Zone 4: Bottom-Left Badge */
 .stats-badge-bl {
-  bottom: 40px;
+  bottom: 180px;
   left: 5%;
   font-family: var(--font-mono, monospace);
   font-size: 0.72rem;
@@ -2038,7 +2038,7 @@
 
 /* Zone 5: Bottom-Right */
 .stats-sparkle-br {
-  bottom: 50px;
+  bottom: 190px;
   right: 4%;
   width: 22px;
   height: 22px;
@@ -2239,6 +2239,18 @@
 
 /* Tablet & Mobile Responsiveness */
 @media (max-width: 1024px) {
+  .stats-bar-section {
+    padding-bottom: 200px;
+  }
+
+  .stats-badge-bl {
+    bottom: 130px;
+  }
+
+  .stats-sparkle-br {
+    bottom: 140px;
+  }
+
   .stats-staircase-flex {
     flex-wrap: wrap;
     gap: 40px;
@@ -2262,6 +2274,18 @@
 }
 
 @media (max-width: 640px) {
+  .stats-bar-section {
+    padding-bottom: 150px;
+  }
+
+  .stats-badge-bl {
+    bottom: 95px;
+  }
+
+  .stats-sparkle-br {
+    bottom: 105px;
+  }
+
   .stats-staircase-flex {
     flex-direction: column;
     gap: 32px;
