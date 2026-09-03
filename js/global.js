@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPortfolioShowcase();
   initApproachAccordion();
   initCultureSlider();
+  initFaqTabsAndAccordion();
 });
 
 /* --------------------------------------------------------------------------
@@ -634,5 +635,79 @@ function initCultureSlider() {
 
   prevBtn.addEventListener('click', () => updateSlides(currentIndex - 1));
   nextBtn.addEventListener('click', () => updateSlides(currentIndex + 1));
+}
+
+/* --------------------------------------------------------------------------
+   10. Frequently Asked Questions (Accordion & Category Tabs)
+   -------------------------------------------------------------------------- */
+function initFaqTabsAndAccordion() {
+  const faqSections = document.querySelectorAll('.faq-section');
+  if (!faqSections.length) return;
+
+  faqSections.forEach(section => {
+    const items = section.querySelectorAll('.faq-item');
+    const tabs = section.querySelectorAll('.faq-tab-pill');
+
+    // Accordion toggle handler
+    items.forEach(item => {
+      const btn = item.querySelector('.faq-header-btn');
+      if (!btn) return;
+
+      btn.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+
+        // Close siblings within the same section
+        items.forEach(other => {
+          if (other !== item) {
+            other.classList.remove('open');
+            const otherBtn = other.querySelector('.faq-header-btn');
+            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        if (isOpen) {
+          item.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        } else {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Category Tabs filter handler
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const selectedCat = tab.getAttribute('data-category');
+        let firstMatch = null;
+
+        items.forEach(item => {
+          const itemCat = item.getAttribute('data-category');
+          if (!selectedCat || itemCat === selectedCat) {
+            item.style.display = 'block';
+            item.classList.remove('open');
+            const hBtn = item.querySelector('.faq-header-btn');
+            if (hBtn) hBtn.setAttribute('aria-expanded', 'false');
+            if (!firstMatch) firstMatch = item;
+          } else {
+            item.style.display = 'none';
+            item.classList.remove('open');
+            const hBtn = item.querySelector('.faq-header-btn');
+            if (hBtn) hBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        // Expand the first item of the active tab for that polished look
+        if (firstMatch) {
+          firstMatch.classList.add('open');
+          const firstBtn = firstMatch.querySelector('.faq-header-btn');
+          if (firstBtn) firstBtn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  });
 }
 
