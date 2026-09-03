@@ -471,8 +471,8 @@
 /* --- Bottom Row: 3 Bento Cards --- */
 .hero-bottom-row {
   display: grid;
-  grid-template-columns: 0.9fr 1fr 1.35fr;
-  gap: 50px;
+  grid-template-columns: 0.95fr 1fr 1.35fr;
+  gap: 36px;
   align-items: stretch;
 }
 
@@ -521,12 +521,13 @@
 }
 
 .bento-primary-title {
-  font-size: 1.38rem;
+  font-family: var(--font-heading);
+  font-size: 1.52rem;
   font-weight: 800;
   line-height: 1.2;
   color: var(--white);
-  margin-bottom: 12px;
-  white-space: nowrap;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
 }
 
 .bento-primary-highlights {
@@ -629,11 +630,12 @@
 
 .bento-grey-title {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.25;
   color: var(--text-primary);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
 }
 
 .bento-grey-desc {
@@ -761,11 +763,12 @@
 
 .stats-tech-text {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.22rem;
   font-weight: 700;
   line-height: 1.35;
   color: var(--text-primary);
   max-width: 18ch;
+  letter-spacing: -0.015em;
 }
 
 /* Purple #8F74FB Tutorial/Showreel Pill Bar */
