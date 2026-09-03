@@ -3595,11 +3595,130 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 32px var(--side-padding) 48px;
+    padding: 24px var(--side-padding) 40px;
+    overflow: hidden;
+  }
+
+  .hero-bento-grid {
+    gap: 32px;
+  }
+
+  .hero-top-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hero-headline-col {
+    align-items: flex-start;
+  }
+
+  .hero-main-title {
+    font-size: clamp(2rem, 7.8vw, 2.45rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    max-width: 100%;
+    margin-bottom: 14px;
+    text-wrap: initial;
+  }
+
+  .hero-title-highlight {
+    display: inline;
+    padding: 2px 8px;
+    border-radius: 6px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    border-left: 3px solid var(--primary);
+  }
+
+  .hero-headline-col p {
+    font-size: 0.96rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 20px !important;
+    max-width: 100% !important;
+  }
+
+  .hero-inline-cta-wrap {
+    margin-top: 0;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+
+  .hero-inline-cta-wrap .btn {
+    padding: 13px 26px;
+    font-size: 0.95rem;
+  }
+
+  /* Decorative floating elements on mobile */
+  .hero-bg-floating {
+    overflow: hidden;
+  }
+
+  .floating-ribbon-center {
+    display: none;
+  }
+
+  .floating-sparkle-bottom-left {
+    display: none;
+  }
+
+  .floating-orb-left {
+    display: none;
+  }
+
+  .floating-orb-center {
+    display: none;
+  }
+
+  .floating-ribbon-top-right {
+    width: 44px;
+    height: 24px;
+    top: 8px;
+    right: 2%;
+  }
+
+  .floating-sparkle-top-left {
+    width: 18px;
+    height: 18px;
+    top: 8px;
+    left: 2px;
+  }
+
+  .hero-radial-arc {
+    width: 280px;
+    height: 280px;
+    top: 10px;
+    right: -50px;
+    opacity: 0.4;
+  }
+
+  .hero-showcase-card {
+    border-radius: 20px;
+    aspect-ratio: 16 / 11;
+  }
+
+  .showcase-overlay-info {
+    bottom: 14px;
+    left: 14px;
+    gap: 12px;
+  }
+
+  .glass-arrow-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.05rem;
+  }
+
+  .showcase-title {
+    font-size: 0.92rem;
+  }
+
+  .showcase-subtext {
+    font-size: 0.78rem;
   }
 
   .hero-bottom-row {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .bento-card-stats {
@@ -3617,6 +3736,25 @@
 
   .process-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 20px var(--side-padding) 36px;
+  }
+
+  .hero-main-title {
+    font-size: 1.88rem;
+    line-height: 1.18;
+  }
+
+  .hero-headline-col p {
+    font-size: 0.92rem !important;
+  }
+
+  .hero-showcase-card {
+    border-radius: 18px;
   }
 }
 

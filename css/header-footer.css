@@ -1008,6 +1008,42 @@
 @media (max-width: 768px) {
   .site-header {
     border-radius: 0;
+    height: 70px;
+    padding-right: 14px;
+  }
+  .brand-tab-unit {
+    height: 58px;
+    margin-top: 12px;
+    margin-bottom: -2px;
+  }
+  .brand-tab-body {
+    padding: 0 10px 0 14px;
+    border-top-left-radius: 14px;
+  }
+  .brand-logo {
+    font-size: 1.15rem;
+    gap: 8px;
+  }
+  .brand-tab-slope {
+    width: 48px;
+    height: 58px;
+  }
+  .header-actions {
+    gap: 10px;
+    margin-left: auto;
+  }
+  .btn-header-cta {
+    display: none !important;
+  }
+  .theme-toggle-btn {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+  }
+  .hamburger-btn {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
   }
   .site-footer {
     border-radius: 0;
@@ -1021,6 +1057,30 @@
   }
   .footer-col-brand {
     grid-column: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding-right: 10px;
+  }
+  .brand-tab-body {
+    padding: 0 6px 0 10px;
+  }
+  .brand-logo {
+    font-size: 1.04rem;
+    gap: 6px;
+  }
+  .brand-tab-slope {
+    width: 40px;
+  }
+  .header-actions {
+    gap: 8px;
+  }
+  .theme-toggle-btn,
+  .hamburger-btn {
+    width: 36px;
+    height: 36px;
   }
 }
 
