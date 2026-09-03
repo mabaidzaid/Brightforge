@@ -619,3 +619,229 @@
     font-size: 2.2rem;
   }
 }
+
+/* ==========================================================================
+   7. Single Service Showcase Section (Redesigned Solutions Section)
+   Matching 1st Reference Image with Concave Cutout Card & 2x2 Features Grid
+   ========================================================================== */
+.service-showcase-section {
+  position: relative;
+  padding: 96px 0 104px;
+  background-color: var(--canvas-bg, #FFFFFF);
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+  overflow: hidden;
+  border-top: 1px solid var(--card-border, #E8E8EC);
+  border-bottom: 1px solid var(--card-border, #E8E8EC);
+}
+
+[data-theme="dark"] .service-showcase-section {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+}
+
+.service-showcase-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  gap: 64px;
+  align-items: center;
+}
+
+/* Left Column */
+.service-showcase-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.showcase-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  background: var(--card-bg, #F7F7F9);
+  border: 1px solid var(--card-border, #E8E8EC);
+  border-radius: var(--radius-pill, 9999px);
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-secondary, #555861);
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
+}
+
+.showcase-title {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(2.2rem, 3.8vw, 3.35rem);
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+  color: var(--text-primary, #020202);
+  margin-bottom: 18px;
+}
+
+.showcase-subtitle {
+  font-family: var(--font-body, 'Manrope', sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-secondary, #555861);
+  max-width: 530px;
+  margin-bottom: 36px;
+}
+
+/* 2x2 Feature Grid */
+.showcase-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 28px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.showcase-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.showcase-feature-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--card-bg, #F7F7F9);
+  border: 1px solid var(--card-border, #E8E8EC);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary, #B028E6);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+[data-theme="dark"] .showcase-feature-icon {
+  background: #191820;
+  border-color: #282736;
+}
+
+.showcase-feature-item:hover .showcase-feature-icon {
+  transform: translateY(-2px);
+  border-color: var(--primary, #B028E6);
+}
+
+.showcase-feature-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.showcase-feature-title {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text-primary, #020202);
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.showcase-feature-desc {
+  font-family: var(--font-body, 'Manrope', sans-serif);
+  font-size: 0.88rem;
+  color: var(--text-secondary, #555861);
+  line-height: 1.5;
+}
+
+/* Right Column (Curved Cutout Image Card) */
+.service-showcase-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showcase-card-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 490px;
+}
+
+.showcase-curved-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 22px 50px rgba(0, 0, 0, 0.12));
+}
+
+[data-theme="dark"] .showcase-curved-svg {
+  filter: drop-shadow(0 22px 50px rgba(0, 0, 0, 0.45));
+}
+
+.showcase-svg-circle-btn {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.showcase-svg-circle-btn circle {
+  transition: fill 0.3s ease;
+}
+
+.showcase-svg-circle-btn:hover circle {
+  fill: var(--primary, #B028E6);
+}
+
+[data-theme="dark"] .showcase-svg-circle-btn circle {
+  fill: #0B0A10;
+  stroke: rgba(255, 255, 255, 0.18);
+  stroke-width: 1.5px;
+}
+
+[data-theme="dark"] .showcase-svg-circle-btn:hover circle {
+  fill: var(--primary, #B028E6);
+  stroke: transparent;
+}
+
+[data-theme="dark"] .showcase-svg-pill rect {
+  fill: #0B0A10;
+  stroke: rgba(255, 255, 255, 0.18);
+  stroke-width: 1.5px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .service-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 54px;
+  }
+  .service-showcase-left {
+    align-items: center;
+    text-align: center;
+  }
+  .showcase-subtitle {
+    max-width: 620px;
+  }
+  .showcase-features-grid {
+    max-width: 650px;
+    text-align: left;
+  }
+  .showcase-card-wrapper {
+    max-width: 440px;
+  }
+}
+
+@media (max-width: 640px) {
+  .service-showcase-section {
+    padding: 60px 0 70px;
+  }
+  .showcase-features-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .showcase-title {
+    font-size: 2.1rem;
+  }
+}
+
