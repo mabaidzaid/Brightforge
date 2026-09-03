@@ -132,59 +132,11 @@
   margin-bottom: 34px;
 }
 
-/* Primary CTA Pill Button */
-.service-hero-cta-btn {
-  display: inline-flex;
+/* Hero Button Wrapper */
+.service-hero-actions {
+  display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 15px 30px 15px 32px;
-  background: linear-gradient(135deg, #B028E6 0%, #8F74FB 100%);
-  color: #FFFFFF !important;
-  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
-  font-size: 1rem;
-  font-weight: 700;
-  text-decoration: none;
-  border-radius: var(--radius-pill, 9999px);
-  box-shadow: 0 10px 28px rgba(176, 40, 230, 0.35);
-  transition: all var(--transition-smooth, 0.35s ease);
-  position: relative;
-  overflow: hidden;
-}
-
-.service-hero-cta-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
-  transition: left 0.6s ease;
-}
-
-.service-hero-cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 34px rgba(176, 40, 230, 0.45);
-}
-
-.service-hero-cta-btn:hover::before {
-  left: 100%;
-}
-
-.service-cta-icon-circle {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.25s ease;
-}
-
-.service-hero-cta-btn:hover .service-cta-icon-circle {
-  transform: translateX(2px);
-  background: rgba(255, 255, 255, 0.3);
+  gap: 16px;
 }
 
 /* Trust bullet points */
@@ -370,66 +322,87 @@
   display: block;
 }
 
-/* Floating Dark Metric Card with Mini Bar Chart (Middle Left) */
+/* Floating Metric Card with Mini Bar Chart (Middle Left)
+   Light in Light Theme, Dark in Dark Theme */
 .service-card-metric {
   position: absolute;
-  top: 172px;
-  left: -14px;
+  top: 165px;
+  left: -16px;
   z-index: 9;
-  width: 195px;
+  width: 215px;
+  background: var(--card-bg, #FFFFFF);
+  border: 1px solid var(--card-border, #E8E8EC);
+  border-radius: 26px;
+  padding: 24px 20px 22px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.09);
+  color: var(--text-primary, #020202);
+  animation: floatSubtle 8s ease-in-out infinite 1s;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme="dark"] .service-card-metric {
   background: #0B0A10;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 24px;
-  padding: 22px 18px 20px;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.38);
   color: #FFFFFF;
-  animation: floatSubtle 8s ease-in-out infinite 1s;
 }
 
 .service-metric-number {
   font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
-  font-size: 2.25rem;
+  font-size: 2.35rem;
   font-weight: 800;
   line-height: 1;
-  color: #FFFFFF;
+  color: var(--text-primary, #020202);
   letter-spacing: -0.03em;
+}
+
+[data-theme="dark"] .service-metric-number {
+  color: #FFFFFF;
 }
 
 .service-metric-label {
   font-family: var(--font-body, 'Manrope', sans-serif);
-  font-size: 0.75rem;
-  color: #9A98A8;
-  line-height: 1.38;
+  font-size: 0.78rem;
+  color: var(--text-secondary, #555861);
+  line-height: 1.4;
   margin-top: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
-/* Mini Bar Chart inside dark metric card */
+[data-theme="dark"] .service-metric-label {
+  color: #9A98A8;
+}
+
+/* Mini Bar Chart inside metric card - Enlarged prominent pill lines */
 .service-mini-chart {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  height: 52px;
-  gap: 6px;
+  height: 68px; /* Prominent taller height */
+  gap: 8px;    /* Wider spacing */
   padding-top: 4px;
 }
 
 .service-chart-bar-track {
   flex: 1;
   height: 100%;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
+  background: #EBEBF2; /* Soft grey track for light theme */
+  border-radius: 16px; /* Bigger pill contour */
   display: flex;
   align-items: flex-end;
   overflow: hidden;
   position: relative;
 }
 
+[data-theme="dark"] .service-chart-bar-track {
+  background: rgba(255, 255, 255, 0.1); /* Dark track for dark theme */
+}
+
 .service-chart-bar-fill {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 16px;
   background: linear-gradient(180deg, #8F74FB 0%, #B028E6 100%);
-  box-shadow: 0 0 10px rgba(176, 40, 230, 0.5);
+  box-shadow: 0 0 12px rgba(176, 40, 230, 0.45);
   transition: height 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -544,7 +517,7 @@
     min-height: 480px;
   }
   .service-card-metric {
-    width: 180px;
+    width: 195px;
     left: -10px;
     top: 150px;
   }
@@ -567,6 +540,9 @@
   }
   .service-hero-desc {
     max-width: 620px;
+  }
+  .service-hero-actions {
+    justify-content: center;
   }
   .service-hero-trust-row {
     justify-content: center;
@@ -609,17 +585,18 @@
     border-radius: 16px;
   }
   .service-card-metric {
-    width: 160px;
+    width: 175px;
     left: -5px;
     top: 130px;
-    padding: 16px 14px;
-    border-radius: 18px;
+    padding: 18px 14px;
+    border-radius: 20px;
   }
   .service-metric-number {
-    font-size: 1.8rem;
+    font-size: 1.85rem;
   }
   .service-mini-chart {
-    height: 40px;
+    height: 52px;
+    gap: 6px;
   }
   .service-card-quality {
     bottom: 10px;
