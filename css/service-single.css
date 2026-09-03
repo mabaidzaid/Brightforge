@@ -1510,25 +1510,29 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: rgba(239, 68, 68, 0.12);
-  color: #EF4444;
+  background: #EF4444;
+  color: #FFFFFF;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 900;
+  line-height: 1;
   flex-shrink: 0;
   margin-top: 1px;
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.35);
 }
 
 [data-theme="dark"] .pricing-cross-icon {
-  background: rgba(239, 68, 68, 0.2);
-  color: #F87171;
+  background: #EF4444;
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.45);
 }
 
 .pricing-capsule-card.popular-tier .pricing-cross-icon {
-  background: rgba(255, 255, 255, 0.22);
-  color: #FF5555;
+  background: #EF4444;
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 /* Bottom Pill Button */
