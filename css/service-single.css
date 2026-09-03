@@ -1075,4 +1075,288 @@
   }
 }
 
+/* ==========================================================================
+   9. Modern Capsule Pricing Cards (Matching 2nd Reference Image)
+   ========================================================================== */
+.pricing-section .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  align-items: stretch;
+  margin-top: 48px;
+}
+
+.pricing-capsule-card {
+  position: relative;
+  background-color: var(--card-bg-soft, #FAF8F5);
+  border-radius: 36px;
+  padding: 16px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  border: 1px solid var(--card-border, #EAE8E4);
+}
+
+[data-theme="dark"] .pricing-capsule-card {
+  background-color: #121118;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.pricing-capsule-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+/* Featured / Popular Middle Tier (Purple Outer Card) */
+.pricing-capsule-card.popular-tier {
+  background: #8F74FB;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 16px 45px rgba(143, 116, 251, 0.28);
+}
+
+[data-theme="dark"] .pricing-capsule-card.popular-tier {
+  background: #8F74FB;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 55px rgba(143, 116, 251, 0.4);
+}
+
+.pricing-capsule-card.popular-tier:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(143, 116, 251, 0.45);
+}
+
+/* Top Inner Capsule Header Box */
+.pricing-capsule-header {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 26px 22px 22px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="dark"] .pricing-capsule-card:not(.popular-tier) .pricing-capsule-header {
+  background: #1B1A24;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* On popular card, the header is ALWAYS pure white with dark text matching image 2 */
+.pricing-capsule-card.popular-tier .pricing-capsule-header {
+  background: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.pricing-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pricing-tier-name {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+}
+
+[data-theme="dark"] .pricing-capsule-card:not(.popular-tier) .pricing-tier-name {
+  color: #FFFFFF;
+}
+
+.pricing-popular-badge {
+  background: #FEE79A;
+  color: #734E00;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 13px;
+  border-radius: var(--radius-pill, 9999px);
+  letter-spacing: 0.02em;
+}
+
+.pricing-amount-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 16px 0 6px;
+}
+
+.pricing-amount {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(2.4rem, 3vw, 2.9rem);
+  font-weight: 800;
+  color: #111111;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+[data-theme="dark"] .pricing-capsule-card:not(.popular-tier) .pricing-amount {
+  color: #FFFFFF;
+}
+
+.pricing-original-price {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #8C8B99;
+  text-decoration: line-through;
+  opacity: 0.85;
+}
+
+.pricing-tagline {
+  font-family: var(--font-body, 'Manrope', sans-serif);
+  font-size: 0.88rem;
+  color: #6E6D7A;
+  line-height: 1.45;
+  margin: 0;
+}
+
+[data-theme="dark"] .pricing-capsule-card:not(.popular-tier) .pricing-tagline {
+  color: #A09FA8;
+}
+
+/* Bullet Points */
+.pricing-features-list {
+  list-style: none;
+  padding: 0 10px 24px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  flex-grow: 1;
+}
+
+.pricing-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: var(--font-body, 'Manrope', sans-serif);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-primary, #1A1921);
+  line-height: 1.4;
+}
+
+.pricing-capsule-card.popular-tier .pricing-feature-item {
+  color: #FFFFFF;
+}
+
+.pricing-feature-item.feature-disabled {
+  opacity: 0.45;
+}
+
+/* Circular checkmark badges */
+.pricing-check-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #FCD667;
+  color: #332100;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 900;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+[data-theme="dark"] .pricing-capsule-card:not(.popular-tier) .pricing-check-icon {
+  background: rgba(252, 214, 103, 0.2);
+  color: #FCD667;
+}
+
+/* On popular purple card, checkmark is pure white circle */
+.pricing-capsule-card.popular-tier .pricing-check-icon {
+  background: #FFFFFF;
+  color: #8F74FB;
+}
+
+.pricing-cross-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  color: #999;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 900;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.pricing-capsule-card.popular-tier .pricing-cross-icon {
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Bottom Pill Button */
+.pricing-btn-wrap {
+  margin-top: auto;
+  padding: 0 6px;
+}
+
+.pricing-action-btn {
+  display: block;
+  width: 100%;
+  padding: 15px 24px;
+  border-radius: var(--radius-pill, 9999px);
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  background: #0E0D13;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+  transition: all var(--transition-smooth, 0.3s ease);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-action-btn:hover {
+  background: var(--primary, #B028E6);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(176, 40, 230, 0.4);
+}
+
+[data-theme="dark"] .pricing-capsule-card:not(.popular-tier) .pricing-action-btn {
+  background: #252332;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .pricing-capsule-card:not(.popular-tier) .pricing-action-btn:hover {
+  background: var(--primary, #B028E6);
+  border-color: transparent;
+}
+
+/* On popular purple card, the button is PURE WHITE with dark text */
+.pricing-capsule-card.popular-tier .pricing-action-btn {
+  background: #FFFFFF;
+  color: #0E0D13;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.pricing-capsule-card.popular-tier .pricing-action-btn:hover {
+  background: #F4F3F8;
+  color: #0E0D13;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pricing-section .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 36px;
+  }
+}
+
+
 
