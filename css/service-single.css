@@ -1,0 +1,644 @@
+/* ==========================================================================
+   BRIGHTFORGE: Single Service Hero Redesign
+   Matching Reference Layout with Floating Cards, Chart, and Brand Palette
+   Primary: #B028E6 | Secondary: #8F74FB | Black: #020202 | White: #FFFFFF
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Hero Container & Background Elements
+   -------------------------------------------------------------------------- */
+.service-single-hero {
+  position: relative;
+  padding: 60px 0 90px;
+  background-color: var(--canvas-bg, #FFFFFF);
+  overflow: hidden;
+}
+
+/* Subtle background glowing ambient orbs */
+.service-hero-ambient-glow-1 {
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(176, 40, 230, 0.12) 0%, rgba(143, 116, 251, 0.04) 55%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.service-hero-ambient-glow-2 {
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(143, 116, 251, 0.14) 0%, rgba(176, 40, 230, 0.04) 55%, transparent 70%);
+  filter: blur(75px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Organic background wavy lines matching screenshot */
+.service-hero-bg-curves {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  opacity: 0.65;
+}
+
+[data-theme="dark"] .service-hero-bg-curves {
+  opacity: 0.25;
+}
+
+/* --------------------------------------------------------------------------
+   2. Main Hero Grid Layout
+   -------------------------------------------------------------------------- */
+.service-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+/* --------------------------------------------------------------------------
+   3. Left Column Content
+   -------------------------------------------------------------------------- */
+.service-hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Pill badge at top */
+.service-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 18px;
+  background: var(--card-bg, #F7F7F9);
+  border: 1px solid var(--card-border, #E8E8EC);
+  border-radius: var(--radius-pill, 9999px);
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-secondary, #555861);
+  letter-spacing: 0.01em;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  transition: transform var(--transition-fast, 0.2s ease);
+}
+
+.service-hero-pill:hover {
+  transform: translateY(-1px);
+  border-color: rgba(176, 40, 230, 0.3);
+}
+
+.service-hero-pill-sparkle {
+  color: var(--primary, #B028E6);
+  font-size: 0.9rem;
+}
+
+/* Hero Title */
+.service-hero-title {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--text-primary, #020202);
+  margin-bottom: 20px;
+}
+
+.service-title-accent {
+  background: linear-gradient(135deg, var(--primary, #B028E6) 0%, var(--secondary-purple, #8F74FB) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hero Description */
+.service-hero-desc {
+  font-family: var(--font-body, 'Manrope', sans-serif);
+  font-size: 1.08rem;
+  line-height: 1.65;
+  color: var(--text-secondary, #555861);
+  max-width: 500px;
+  margin-bottom: 34px;
+}
+
+/* Primary CTA Pill Button */
+.service-hero-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 30px 15px 32px;
+  background: linear-gradient(135deg, #B028E6 0%, #8F74FB 100%);
+  color: #FFFFFF !important;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: var(--radius-pill, 9999px);
+  box-shadow: 0 10px 28px rgba(176, 40, 230, 0.35);
+  transition: all var(--transition-smooth, 0.35s ease);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-hero-cta-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transition: left 0.6s ease;
+}
+
+.service-hero-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(176, 40, 230, 0.45);
+}
+
+.service-hero-cta-btn:hover::before {
+  left: 100%;
+}
+
+.service-cta-icon-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+
+.service-hero-cta-btn:hover .service-cta-icon-circle {
+  transform: translateX(2px);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Trust bullet points */
+.service-hero-trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.service-hero-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted, #8E929E);
+}
+
+.service-hero-trust-icon {
+  color: var(--primary, #B028E6);
+  font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   4. Right Column Art & Collage
+   -------------------------------------------------------------------------- */
+.service-hero-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-hero-art-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 530px;
+  min-height: 520px;
+}
+
+/* Central Featured Photo Card */
+.service-hero-main-card {
+  position: relative;
+  width: 78%;
+  margin-left: auto;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  aspect-ratio: 3 / 4;
+  background: var(--card-bg, #F7F7F9);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="dark"] .service-hero-main-card {
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.service-hero-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.service-hero-main-card:hover .service-hero-main-img {
+  transform: scale(1.02);
+}
+
+/* Top Floating Users / Social Proof Badge */
+.service-badge-users {
+  position: absolute;
+  top: -16px;
+  right: 12px;
+  z-index: 10;
+  background: var(--card-bg, #FFFFFF);
+  border: 1px solid var(--card-border, #E8E8EC);
+  border-radius: var(--radius-pill, 9999px);
+  padding: 8px 18px 8px 10px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  animation: floatSubtle 6s ease-in-out infinite;
+}
+
+[data-theme="dark"] .service-badge-users {
+  background: #191820;
+  border-color: #282736;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.service-avatar-stack {
+  display: flex;
+  align-items: center;
+}
+
+.service-avatar-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  margin-left: -10px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-avatar-img:first-child {
+  margin-left: 0;
+}
+
+[data-theme="dark"] .service-avatar-img {
+  border-color: #191820;
+}
+
+.service-badge-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-badge-number {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--text-primary, #020202);
+  line-height: 1.1;
+}
+
+.service-badge-label {
+  font-family: var(--font-body, 'Manrope', sans-serif);
+  font-size: 0.72rem;
+  color: var(--text-muted, #8E929E);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Curved Arrow Doodle */
+.service-doodle-arrow {
+  position: absolute;
+  top: -36px;
+  right: 215px;
+  z-index: 6;
+  width: 52px;
+  height: 48px;
+  color: #7E7B8A;
+  pointer-events: none;
+}
+
+[data-theme="dark"] .service-doodle-arrow {
+  color: var(--secondary-purple, #8F74FB);
+}
+
+/* Small Floating Thumbnail Box (Top Left of Main Image) */
+.service-thumb-card {
+  position: absolute;
+  top: 72px;
+  left: 64px;
+  z-index: 8;
+  width: 76px;
+  height: 76px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3.5px solid #FFFFFF;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+  background: #020202;
+  animation: floatSubtleReverse 7s ease-in-out infinite;
+}
+
+[data-theme="dark"] .service-thumb-card {
+  border-color: #252430;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+}
+
+.service-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Floating Dark Metric Card with Mini Bar Chart (Middle Left) */
+.service-card-metric {
+  position: absolute;
+  top: 172px;
+  left: -14px;
+  z-index: 9;
+  width: 195px;
+  background: #0B0A10;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 22px 18px 20px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28);
+  color: #FFFFFF;
+  animation: floatSubtle 8s ease-in-out infinite 1s;
+}
+
+.service-metric-number {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #FFFFFF;
+  letter-spacing: -0.03em;
+}
+
+.service-metric-label {
+  font-family: var(--font-body, 'Manrope', sans-serif);
+  font-size: 0.75rem;
+  color: #9A98A8;
+  line-height: 1.38;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+/* Mini Bar Chart inside dark metric card */
+.service-mini-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 52px;
+  gap: 6px;
+  padding-top: 4px;
+}
+
+.service-chart-bar-track {
+  flex: 1;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  position: relative;
+}
+
+.service-chart-bar-fill {
+  width: 100%;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #8F74FB 0%, #B028E6 100%);
+  box-shadow: 0 0 10px rgba(176, 40, 230, 0.5);
+  transition: height 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Floating Bottom Right Quality Card */
+.service-card-quality {
+  position: absolute;
+  bottom: 30px;
+  right: -16px;
+  z-index: 10;
+  background: var(--card-bg, #FFFFFF);
+  border: 1px solid var(--card-border, #E8E8EC);
+  border-radius: 24px;
+  padding: 18px 22px 18px 20px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  min-width: 175px;
+  animation: floatSubtleReverse 7.5s ease-in-out infinite 0.5s;
+}
+
+[data-theme="dark"] .service-card-quality {
+  background: #191820;
+  border-color: #282736;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+}
+
+.service-quality-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.service-quality-idx {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted, #8E929E);
+}
+
+.service-quality-icon-badge {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #0B0A10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+[data-theme="dark"] .service-quality-icon-badge {
+  background: var(--primary, #B028E6);
+  box-shadow: 0 4px 14px rgba(176, 40, 230, 0.4);
+}
+
+.service-quality-title {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary, #020202);
+  line-height: 1.2;
+}
+
+/* Sparkle / Burst Doodle at corner of quality card */
+.service-doodle-sparkle {
+  position: absolute;
+  bottom: 8px;
+  right: 145px;
+  z-index: 6;
+  width: 40px;
+  height: 40px;
+  color: #7E7B8A;
+  pointer-events: none;
+}
+
+[data-theme="dark"] .service-doodle-sparkle {
+  color: var(--secondary-purple, #8F74FB);
+}
+
+/* --------------------------------------------------------------------------
+   5. Keyframe Animations for Floating Collage Elements
+   -------------------------------------------------------------------------- */
+@keyframes floatSubtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes floatSubtleReverse {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. Responsive Layout Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1080px) {
+  .service-hero-grid {
+    gap: 36px;
+  }
+  .service-hero-art-wrapper {
+    max-width: 480px;
+    min-height: 480px;
+  }
+  .service-card-metric {
+    width: 180px;
+    left: -10px;
+    top: 150px;
+  }
+  .service-card-quality {
+    right: -10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .service-single-hero {
+    padding: 40px 0 70px;
+  }
+  .service-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .service-hero-left {
+    align-items: center;
+    text-align: center;
+  }
+  .service-hero-desc {
+    max-width: 620px;
+  }
+  .service-hero-trust-row {
+    justify-content: center;
+  }
+  .service-hero-art-wrapper {
+    max-width: 460px;
+    min-height: 480px;
+  }
+}
+
+@media (max-width: 580px) {
+  .service-hero-art-wrapper {
+    max-width: 100%;
+    min-height: 440px;
+  }
+  .service-hero-main-card {
+    width: 85%;
+    border-radius: 22px;
+  }
+  .service-badge-users {
+    top: -12px;
+    right: 0;
+    padding: 6px 14px 6px 8px;
+  }
+  .service-avatar-img {
+    width: 28px;
+    height: 28px;
+  }
+  .service-badge-number {
+    font-size: 0.88rem;
+  }
+  .service-doodle-arrow {
+    display: none;
+  }
+  .service-thumb-card {
+    width: 60px;
+    height: 60px;
+    top: 50px;
+    left: 10px;
+    border-radius: 16px;
+  }
+  .service-card-metric {
+    width: 160px;
+    left: -5px;
+    top: 130px;
+    padding: 16px 14px;
+    border-radius: 18px;
+  }
+  .service-metric-number {
+    font-size: 1.8rem;
+  }
+  .service-mini-chart {
+    height: 40px;
+  }
+  .service-card-quality {
+    bottom: 10px;
+    right: -5px;
+    padding: 14px 16px;
+    border-radius: 18px;
+    min-width: 150px;
+  }
+  .service-quality-icon-badge {
+    width: 34px;
+    height: 34px;
+  }
+  .service-quality-title {
+    font-size: 1rem;
+  }
+  .service-doodle-sparkle {
+    display: none;
+  }
+  .service-hero-title {
+    font-size: 2.2rem;
+  }
+}

@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/header-footer.css">
   <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/service-single.css">
 </head>
 <body>
 
@@ -70,10 +71,119 @@
 
     <main class="main-content-canvas">
       <!-- Hero -->
-      <section class="section-spacer" style="padding-bottom: 32px;">
+      <section class="service-single-hero">
+        <!-- Background Ambient Glows -->
+        <div class="service-hero-ambient-glow-1" aria-hidden="true"></div>
+        <div class="service-hero-ambient-glow-2" aria-hidden="true"></div>
+
+        <!-- Flowing Wave Curves -->
+        <svg class="service-hero-bg-curves" viewBox="0 0 1400 650" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M-100 450 C 250 200, 500 550, 950 250 C 1200 80, 1450 300, 1600 150" stroke="rgba(176, 40, 230, 0.09)" stroke-width="2.5" />
+          <path d="M-50 520 C 300 280, 600 620, 1050 320 C 1300 150, 1500 360, 1650 220" stroke="rgba(143, 116, 251, 0.08)" stroke-width="1.8" />
+        </svg>
+
         <div class="container">
-          <h1 class="section-title">Ad spend that turns into actual customers</h1>
-          <p class="section-subhead">We plan, launch, and manage Google Ads campaigns built around measurable return, not just clicks.</p>
+          <div class="service-hero-grid">
+            <!-- Left Column: Copy & CTA -->
+            <div class="service-hero-left">
+              <div class="service-hero-pill">
+                <span class="service-hero-pill-sparkle">✦</span>
+                <span>Smart Paid Marketing</span>
+              </div>
+              <h1 class="service-hero-title">
+                Fuel Your Growth With <span class="service-title-accent">High-ROI Google Ads</span>
+              </h1>
+              <p class="service-hero-desc">
+                We plan, launch, and manage high-converting Google Ads campaigns built around measurable return, lower cost-per-acquisition, and scalable customer acquisition.
+              </p>
+              <div class="service-hero-actions">
+                <a href="#pricing" class="service-hero-cta-btn">
+                  <span>Get Started Free</span>
+                  <span class="service-cta-icon-circle" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 8 16 12 12 16"></polyline>
+                      <line x1="8" y1="12" x2="16" y2="12"></line>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <div class="service-hero-trust-row">
+                <span class="service-hero-trust-item"><span class="service-hero-trust-icon">✓</span> Certified Specialists</span>
+                <span class="service-hero-trust-item"><span class="service-hero-trust-icon">⚡</span> Daily Optimization</span>
+                <span class="service-hero-trust-item"><span class="service-hero-trust-icon">✦</span> Transparent Reporting</span>
+              </div>
+            </div>
+
+            <!-- Right Column: Visual Collage with Male Professional -->
+            <div class="service-hero-right">
+              <div class="service-hero-art-wrapper">
+                <!-- Top Social Proof Badge -->
+                <div class="service-badge-users">
+                  <div class="service-avatar-stack">
+                    <img src="img/avatar_male_1.jpg" alt="Client" class="service-avatar-img">
+                    <img src="img/avatar_male_2.jpg" alt="Client" class="service-avatar-img">
+                    <img src="img/avatar_3.jpg" alt="Client" class="service-avatar-img">
+                  </div>
+                  <div class="service-badge-text-group">
+                    <span class="service-badge-number">4.8x</span>
+                    <span class="service-badge-label">Average Client ROAS</span>
+                  </div>
+                </div>
+
+                <!-- Hand-drawn Arrow Doodle pointing to badge -->
+                <svg class="service-doodle-arrow" viewBox="0 0 52 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M 6 34 C 18 10, 34 6, 46 14" />
+                  <path d="M 37 12 L 46 14 L 43 23" />
+                </svg>
+
+                <!-- Floating Mini Thumbnail (Male Marketer) -->
+                <div class="service-thumb-card" title="Optimizing live campaigns">
+                  <img src="img/service_hero_thumb.jpg" alt="Marketing specialist analyzing ad data" class="service-thumb-img">
+                </div>
+
+                <!-- Dark Metric Card with Mini Bar Chart -->
+                <div class="service-card-metric">
+                  <div class="service-metric-number">99%</div>
+                  <div class="service-metric-label">Track and analyze the business reports.</div>
+                  <div class="service-mini-chart" aria-hidden="true">
+                    <div class="service-chart-bar-track"><div class="service-chart-bar-fill" style="height: 45%;"></div></div>
+                    <div class="service-chart-bar-track"><div class="service-chart-bar-fill" style="height: 70%;"></div></div>
+                    <div class="service-chart-bar-track"><div class="service-chart-bar-fill" style="height: 95%;"></div></div>
+                    <div class="service-chart-bar-track"><div class="service-chart-bar-fill" style="height: 60%;"></div></div>
+                    <div class="service-chart-bar-track"><div class="service-chart-bar-fill" style="height: 85%;"></div></div>
+                  </div>
+                </div>
+
+                <!-- Central Main Photo Card (Male PPC Specialist) -->
+                <div class="service-hero-main-card">
+                  <img src="img/service_hero_ads.jpg" alt="Male Performance Marketing Specialist" class="service-hero-main-img">
+                </div>
+
+                <!-- Floating Quality Card -->
+                <div class="service-card-quality">
+                  <div class="service-quality-top">
+                    <span class="service-quality-idx">01</span>
+                    <div class="service-quality-icon-badge" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="service-quality-title">Decided<br>Quality</div>
+                </div>
+
+                <!-- Sparkle / Burst Doodle at corner of quality card -->
+                <svg class="service-doodle-sparkle" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                  <line x1="28" y1="20" x2="38" y2="20"></line>
+                  <line x1="25" y1="26" x2="34" y2="34"></line>
+                  <line x1="20" y1="28" x2="20" y2="38"></line>
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
