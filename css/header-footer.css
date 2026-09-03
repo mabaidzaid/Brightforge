@@ -476,6 +476,7 @@
   line-height: 1.16;
   letter-spacing: -0.025em;
   margin-bottom: 16px;
+  max-width: 14ch;
 }
 
 .cta-ref-title .highlight-purple-text {

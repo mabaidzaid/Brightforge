@@ -799,12 +799,13 @@ button, input, select, textarea {
 
 .cta-ref-title {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 3.2vw, 44px);
+  font-size: 65px;
   font-weight: 700;
   color: #FFFFFF !important;
   line-height: 1.16;
   letter-spacing: -0.025em;
   margin-bottom: 16px;
+  max-width: 14ch;
 }
 
 .cta-ref-title .highlight-purple-text {
