@@ -610,16 +610,102 @@
         </div>
       </section>
 
-      <!-- Stats Bar -->
-      <section class="stats-bar-section">
-        <div class="container">
-          <div class="stats-header-bar"><div class="stats-title-group"><span class="section-tag-pill"><span class="pill-sparkle">✦</span> THE NUMBERS SO FAR <span class="pill-sparkle">✦</span></span><h2 class="stats-heading-text">Results that speak for themselves</h2></div></div>
-          <div class="stats-bento-grid">
-            <div class="stat-bento-item"><div class="stat-item-top"><span class="stat-category-chip">#Experience</span><span class="stat-icon-micro">&#x25C6;</span></div><div class="stat-number-display stat-number-purple">4+</div><div><div class="stat-label-title">Years in Business</div><div class="stat-label-desc">Web, ads, and SEO</div></div></div>
-            <div class="stat-bento-item"><div class="stat-item-top"><span class="stat-category-chip">#Projects</span><span class="stat-icon-micro">&#x25C6;</span></div><div class="stat-number-display">8,000+</div><div><div class="stat-label-title">Projects Delivered</div><div class="stat-label-desc">Across all services</div></div></div>
-            <div class="stat-bento-item"><div class="stat-item-top"><span class="stat-category-chip">#Satisfaction</span><span class="stat-icon-micro">&#x25C6;</span></div><div class="stat-number-display stat-number-periwinkle">98%</div><div><div class="stat-label-title">Client Satisfaction</div><div class="stat-label-desc">Verified feedback</div></div></div>
-            <div class="stat-bento-item"><div class="stat-item-top"><span class="stat-category-chip">#Team</span><span class="stat-icon-micro">&#x25C6;</span></div><div class="stat-number-display">15+</div><div><div class="stat-label-title">Team Members</div><div class="stat-label-desc">Senior professionals</div></div></div>
+      <!-- Stats / Figures Section (Duplicate from Home Page) -->
+      <section class="stats-bar-section" id="stats">
+        <!-- Ambient Glowing Orbs -->
+        <div class="stats-ambient-orb stats-orb-tr" aria-hidden="true"></div>
+        <div class="stats-ambient-orb stats-orb-bl" aria-hidden="true"></div>
+
+        <!-- Distributed Web Agency Decorative Elements -->
+        <!-- Zone 1: Top-Left -->
+        <div class="stats-decor-element stats-decor-tag-tl" aria-hidden="true">&lt;/&gt; METRICS ENGINE</div>
+        <svg class="stats-decor-element stats-sparkle-tl" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" fill="var(--primary)"/>
+        </svg>
+
+        <!-- Zone 2: Top-Right -->
+        <div class="stats-decor-element stats-radar-tr" aria-hidden="true">
+          <span class="radar-dot"></span>
+        </div>
+
+        <!-- Zone 3: Center-Gap -->
+        <svg class="stats-decor-element stats-squiggle-center" viewBox="0 0 100 40" aria-hidden="true">
+          <path d="M0 20 Q25 0 50 20 T100 20" fill="none" stroke="var(--primary)" stroke-width="2" stroke-dasharray="4 4"/>
+        </svg>
+        <span class="stats-decor-element stats-cross-center" aria-hidden="true">+</span>
+
+        <!-- Zone 4: Bottom-Left -->
+        <div class="stats-decor-element stats-badge-bl" aria-hidden="true">✦ PROVEN RESULTS</div>
+
+        <!-- Zone 5: Bottom-Right -->
+        <svg class="stats-decor-element stats-sparkle-br" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" fill="var(--secondary-purple)"/>
+        </svg>
+
+        <div class="container" style="position: relative; z-index: 2;">
+          <div class="stats-staircase-wrapper">
+            
+            <!-- Top Tag & Clean Editorial Headline (Matching Home Page Layout) -->
+            <div class="stats-ref-header reveal reveal-up">
+              <h2 class="stats-ref-hero-title">
+                <span class="stats-headline-row-1">
+                  <span class="stats-ref-tag">WHY US</span>
+                  <span class="stats-headline-word">FIGURES THAT</span>
+                </span>
+                <span class="stats-headline-row-2">
+                  <span class="stats-headline-word">DEFINE US</span>
+                </span>
+              </h2>
+            </div>
+
+            <!-- Staggered Ascending 4 Steps -->
+            <div class="stats-staircase-flex">
+              
+              <!-- Step 1: 4+ Years (Lowest) -->
+              <div class="stat-step-card stat-pos-1 reveal reveal-up">
+                <div class="stat-step-line" aria-hidden="true"></div>
+                <div class="stat-step-body">
+                  <div class="stat-step-num stats-count">4+</div>
+                  <p class="stat-step-desc">Years in business crafting high-converting web experiences</p>
+                </div>
+              </div>
+
+              <!-- Step 2: 8,000+ Projects (Step 2) -->
+              <div class="stat-step-card stat-pos-2 reveal reveal-up" style="transition-delay: 0.1s;">
+                <div class="stat-step-line" aria-hidden="true"></div>
+                <div class="stat-step-body">
+                  <div class="stat-step-num stats-count">8,000+</div>
+                  <p class="stat-step-desc">Projects delivered across web development, Google Ads, and SEO</p>
+                </div>
+              </div>
+
+              <!-- Step 3: 98% Satisfaction (Step 3) -->
+              <div class="stat-step-card stat-pos-3 reveal reveal-up" style="transition-delay: 0.2s;">
+                <div class="stat-step-line" aria-hidden="true"></div>
+                <div class="stat-step-body">
+                  <div class="stat-step-num stats-count">98%</div>
+                  <p class="stat-step-desc">Customer satisfaction rate backed by verified feedback</p>
+                </div>
+              </div>
+
+              <!-- Step 4: 15+ Team & Right Manifesto (Highest) -->
+              <div class="stat-step-card stat-pos-4 reveal reveal-up" style="transition-delay: 0.3s;">
+                <div class="stat-step-line" aria-hidden="true"></div>
+                <div class="stat-step-body">
+                  <div class="stat-step-num stats-count">15+</div>
+                  <p class="stat-step-desc">Dedicated senior designers, developers, and growth strategists</p>
+                  
+                  <!-- Bottom-Right Manifesto Text matching Reference Image -->
+                  <div class="stat-bottom-manifesto">
+                    <p>With over 4 years of proven expertise, we build bold brands and impactful digital experiences that drive results.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
           </div>
+
         </div>
       </section>
     </main>
