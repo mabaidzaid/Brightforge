@@ -198,7 +198,7 @@
 /* Editorial Headline with Embedded Inline Cards */
 .about-editorial-headline {
   font-family: var(--font-heading);
-  font-size: clamp(2.6rem, 5.4vw, 76px);
+  font-size: 76px;
   font-weight: 800;
   line-height: 1.46;
   letter-spacing: -0.03em;
@@ -1347,8 +1347,8 @@
 
 .culture-main-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.4rem, 4.2vw, 56px);
-  font-weight: 800;
+  font-size: 65px;
+  font-weight: 700;
   line-height: 1.12;
   letter-spacing: -0.03em;
   color: var(--text-primary);

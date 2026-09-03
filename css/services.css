@@ -587,8 +587,8 @@
 
 .blueprint-split-title {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 3.6vw, 46px);
-  font-weight: 800;
+  font-size: 65px;
+  font-weight: 700;
   color: var(--text-primary);
   line-height: 1.18;
   letter-spacing: -0.02em;

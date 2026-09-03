@@ -108,7 +108,7 @@
 /* Hero Title */
 .service-hero-title {
   font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
-  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+  font-size: 76px;
   font-weight: 800;
   line-height: 1.12;
   letter-spacing: -0.03em;
@@ -1073,8 +1073,8 @@
 
 .why-sticky-title {
   font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
-  font-size: clamp(2.4rem, 4vw, 3.6rem);
-  font-weight: 800;
+  font-size: 65px;
+  font-weight: 700;
   line-height: 1.12;
   letter-spacing: -0.03em;
   color: var(--text-primary, #020202);
@@ -1676,8 +1676,8 @@
 
 .service-process-title {
   font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
-  font-size: clamp(2.4rem, 4vw, 3.6rem);
-  font-weight: 800;
+  font-size: 65px;
+  font-weight: 700;
   line-height: 1.12;
   letter-spacing: -0.03em;
   color: var(--text-primary, #020202);
@@ -2859,8 +2859,8 @@
 
 .faq-main-title {
   font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
-  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
-  font-weight: 800;
+  font-size: 65px;
+  font-weight: 700;
   color: #0F0E17;
   letter-spacing: -0.03em;
   margin: 16px 0 14px;

@@ -160,14 +160,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(2.8rem, 5vw, 70px);
+  font-size: 76px;
   font-weight: 800;
   line-height: 1.05;
 }
 
 h2,
 .section-title {
-  font-size: clamp(2.4rem, 4.2vw, 65px);
+  font-size: 65px;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.025em;
@@ -1199,7 +1199,7 @@ button, input, select, textarea {
 .editorial-headline,
 .about-editorial-headline {
   font-family: var(--font-heading);
-  font-size: clamp(2.6rem, 5.4vw, 76px);
+  font-size: 76px;
   font-weight: 800;
   line-height: 1.46;
   letter-spacing: -0.03em;
@@ -1319,6 +1319,53 @@ button, input, select, textarea {
   :root {
     --side-padding: 32px;
     --section-rhythm: 72px;
+  }
+}
+
+/* ==========================================================================
+   Desktop Typography Standards (User Directives)
+   - Hero H1: 76px (Preserving existing line-heights on other pages)
+   - All Section H2s: 65px with font-weight: 700 (equal across entire site)
+   ========================================================================== */
+@media (min-width: 769px) {
+  h1,
+  .hero-main-title,
+  .about-editorial-headline,
+  .editorial-headline,
+  .service-hero-title,
+  .portfolio-hero-title,
+  .blog-hero-title,
+  .contact-hero-title,
+  .editorial-hero-section h1,
+  .service-hero-section h1 {
+    font-size: 76px !important;
+  }
+
+  h2,
+  .section-title,
+  .bento-primary-title,
+  .about-ref-title,
+  .services-ref-title,
+  .pricing-ref-title,
+  .pricing-header-title,
+  .faq-ref-title,
+  .faq-main-title,
+  .cta-ref-title,
+  .solutions-ref-title,
+  .process-ref-title,
+  .contact-form-title,
+  .contact-sheet-title,
+  .blueprint-split-title,
+  .blueprint-title,
+  .delivery-title,
+  .culture-main-title,
+  .why-sticky-title,
+  .service-process-title,
+  .stats-headline {
+    font-size: 65px !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.025em;
   }
 }
 

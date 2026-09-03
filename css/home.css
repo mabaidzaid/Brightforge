@@ -300,7 +300,7 @@
 
 .hero-main-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.8rem, 5vw, 70px);
+  font-size: 76px;
   font-weight: 800;
   line-height: 1.05;
   color: var(--text-primary);
@@ -3461,7 +3461,7 @@
 
 .about-ref-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.4rem, 4.2vw, 65px);
+  font-size: 65px;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.035em;
