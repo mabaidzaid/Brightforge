@@ -3622,26 +3622,159 @@
 
 /* ==========================================================================
    13. Frequently Asked Questions (FAQ Section)
-   Matching Reference Design: Centered Heading, Tabs, Overlapping Bento & Media
+   Clean Ambient Canvas with Floating Elements (No Grid)
    ========================================================================== */
 .faq-section {
   position: relative;
   overflow: hidden;
   padding: 110px 0 240px;
   background-color: var(--canvas-bg, #FFFFFF);
-  background-image: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
-  background-size: 56px 56px;
+  background-image: none;
   border-top: 1px solid var(--card-border, #E8E8EC);
 }
 
 [data-theme="dark"] .faq-section {
   background-color: #08070F;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-image: none;
   border-color: rgba(255, 255, 255, 0.07);
+}
+
+/* Ambient Glow Orbs */
+.faq-ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+  z-index: 1;
+}
+
+.faq-orb-tl {
+  top: -60px;
+  left: -80px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(176, 40, 230, 0.12) 0%, rgba(143, 116, 251, 0.04) 55%, transparent 75%);
+  animation: pulseGlow 9s ease-in-out infinite alternate;
+}
+
+.faq-orb-br {
+  bottom: 80px;
+  right: -80px;
+  width: 540px;
+  height: 540px;
+  background: radial-gradient(circle, rgba(143, 116, 251, 0.14) 0%, rgba(176, 40, 230, 0.04) 55%, transparent 75%);
+  animation: pulseGlow 11s ease-in-out infinite alternate-reverse;
+}
+
+/* Floating Decorative Elements */
+.faq-decor-element {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Zone 1: Top-Left Mono Tag */
+.faq-tag-tl {
+  top: 48px;
+  left: 6%;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--primary, #B028E6);
+  background: rgba(176, 40, 230, 0.08);
+  border: 1px solid rgba(176, 40, 230, 0.22);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill, 9999px);
+  letter-spacing: 0.08em;
+}
+
+[data-theme="dark"] .faq-tag-tl {
+  background: rgba(176, 40, 230, 0.14);
+  border-color: rgba(176, 40, 230, 0.35);
+  color: #C084FC;
+}
+
+.faq-sparkle-tl {
+  top: 95px;
+  left: 3.5%;
+  width: 20px;
+  height: 20px;
+  opacity: 0.8;
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+/* Zone 2: Top-Right Radar & Squiggle */
+.faq-radar-tr {
+  top: 45px;
+  right: 6%;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px dashed rgba(176, 40, 230, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spinSlow 18s linear infinite;
+}
+
+.faq-radar-tr .radar-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary, #B028E6);
+  box-shadow: 0 0 12px var(--primary, #B028E6);
+}
+
+.faq-squiggle-tr {
+  top: 110px;
+  right: 4%;
+  width: 90px;
+  height: 34px;
+  opacity: 0.75;
+  animation: arcFloat 7s ease-in-out infinite alternate;
+}
+
+/* Zone 3: Left Accent Cross */
+.faq-cross-left {
+  top: 42%;
+  left: 3%;
+  font-family: var(--font-mono, monospace);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--secondary-purple, #8F74FB);
+  opacity: 0.4;
+  animation: floatGentle 6s ease-in-out infinite alternate-reverse;
+}
+
+/* Zone 4: Bottom-Left Badge */
+.faq-badge-bl {
+  bottom: 220px;
+  left: 5%;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-secondary, #555861);
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--card-border, #E8E8EC);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill, 9999px);
+  letter-spacing: 0.06em;
+}
+
+[data-theme="dark"] .faq-badge-bl {
+  background: rgba(255, 255, 255, 0.06);
+  color: #9694A6;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Zone 5: Bottom-Right Sparkle */
+.faq-sparkle-br {
+  bottom: 230px;
+  right: 4.5%;
+  width: 22px;
+  height: 22px;
+  opacity: 0.75;
+  animation: floatGentle 6s ease-in-out infinite alternate;
 }
 
 .faq-header-center {
@@ -3918,6 +4051,15 @@
 
 /* Responsive Media Queries */
 @media (max-width: 1024px) {
+  .faq-tag-tl,
+  .faq-radar-tr,
+  .faq-squiggle-tr,
+  .faq-cross-left,
+  .faq-badge-bl,
+  .faq-sparkle-br {
+    display: none;
+  }
+
   .faq-section {
     padding: 90px 0 200px;
   }
