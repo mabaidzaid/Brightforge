@@ -1510,8 +1510,8 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.06);
-  color: #999;
+  background: rgba(239, 68, 68, 0.12);
+  color: #EF4444;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1521,9 +1521,14 @@
   margin-top: 1px;
 }
 
+[data-theme="dark"] .pricing-cross-icon {
+  background: rgba(239, 68, 68, 0.2);
+  color: #F87171;
+}
+
 .pricing-capsule-card.popular-tier .pricing-cross-icon {
-  background: rgba(255, 255, 255, 0.15);
-  color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.22);
+  color: #FF5555;
 }
 
 /* Bottom Pill Button */
