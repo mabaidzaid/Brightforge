@@ -2019,7 +2019,7 @@
   .pillars-section,
   .guild-section,
   .culture-section {
-    padding: 64px 16px;
+    padding: 64px 0;
   }
 
   .pillars-grid {

@@ -1382,6 +1382,34 @@ button, input, select, textarea {
     padding-bottom: 84px !important;
   }
 
+  /* Eliminate extra horizontal padding on sections wrapping .container (only .container's 16px applies) */
+  .about-hero-section,
+  .services-hero-section,
+  .portfolio-hero-section,
+  .service-hero-section,
+  .anti-agency-section,
+  .timeline-section,
+  .pillars-section,
+  .guild-section,
+  .culture-section,
+  .blueprint-section,
+  .disciplines-section,
+  .synergy-flywheel-section,
+  .pricing-matrix-section,
+  .services-faq-section,
+  .portfolio-gallery-section,
+  .benchmark-audit-section,
+  .delivery-process-section,
+  .flagship-spotlight-section,
+  .guarantee-sla-section,
+  .approach-diagram-section,
+  .solutions-bento-section,
+  .approach-section,
+  .related-articles-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
   /* User Directive: Remove all <br> tags across the entire site in mobile view */
   br {
     display: none !important;

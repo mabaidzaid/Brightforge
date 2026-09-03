@@ -799,10 +799,10 @@
 @media (max-width: 640px) {
   .services-hero-section,
   .blueprint-section {
-    padding: 60px 16px;
+    padding: 60px 0;
   }
   .services-faq-section {
-    padding: 60px 16px 140px;
+    padding: 60px 0 140px;
   }
   .blueprint-grid-4col {
     grid-template-columns: 1fr;
