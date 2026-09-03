@@ -3701,7 +3701,7 @@
   }
 
   .about-ref-title {
-    font-size: clamp(1.85rem, 6.8vw, 2.3rem);
+    font-size: 40px !important;
     line-height: 1.15;
     letter-spacing: -0.025em;
     max-width: 100%;
@@ -3801,10 +3801,6 @@
     padding: 9px 12px;
     min-width: 135px;
   }
-
-  .about-ref-title {
-    font-size: 1.8rem;
-  }
 }
 
 @media (max-width: 768px) {
@@ -3827,8 +3823,8 @@
   }
 
   .hero-main-title {
-    font-size: clamp(2rem, 7.8vw, 2.45rem);
-    line-height: 1.15;
+    font-size: 45px !important;
+    line-height: 1.15 !important;
     letter-spacing: -0.025em;
     max-width: 100%;
     margin-bottom: 14px;
@@ -3956,11 +3952,6 @@
 @media (max-width: 480px) {
   .hero-section {
     padding: 20px var(--side-padding) 36px;
-  }
-
-  .hero-main-title {
-    font-size: 1.88rem;
-    line-height: 1.18;
   }
 
   .hero-headline-col p {

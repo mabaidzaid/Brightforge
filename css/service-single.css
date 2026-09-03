@@ -551,6 +551,18 @@
     max-width: 460px;
     min-height: 480px;
   }
+@media (max-width: 768px) {
+  .service-hero-title {
+    font-size: 45px !important;
+    line-height: 1.15 !important;
+  }
+  h2,
+  .pricing-header-title,
+  .section-title,
+  .faq-main-title {
+    font-size: 40px !important;
+    line-height: 1.18 !important;
+  }
 }
 
 @media (max-width: 580px) {

@@ -1327,6 +1327,63 @@ button, input, select, textarea {
     --side-padding: 20px;
     --section-rhythm: 56px;
   }
+
+  /* ========================================================================
+     User Directive: Mobile View Hero H1 = 45px & Section H2 = 40px (Site-wide)
+     ======================================================================== */
+  h1,
+  .hero-main-title,
+  .about-editorial-headline,
+  .editorial-headline,
+  .service-hero-title,
+  .portfolio-hero-title,
+  .blog-hero-title,
+  .contact-hero-title,
+  .hero-headline-col h1,
+  .editorial-hero-section h1,
+  .service-hero-section h1 {
+    font-size: 45px !important;
+    line-height: 1.15 !important;
+  }
+
+  .about-headline-line {
+    flex-wrap: wrap;
+    white-space: normal;
+    gap: 4px;
+    margin: 4px 0;
+  }
+
+  .hero-inline-card {
+    width: 68px;
+    height: 44px;
+    margin: 0 4px;
+    border-radius: 8px;
+  }
+
+  h2,
+  .section-title,
+  .bento-primary-title,
+  .about-ref-title,
+  .services-ref-title,
+  .pricing-ref-title,
+  .pricing-header-title,
+  .faq-ref-title,
+  .faq-main-title,
+  .cta-ref-title,
+  .solutions-ref-title,
+  .process-ref-title,
+  .contact-form-title,
+  .contact-sheet-title,
+  .blueprint-title,
+  .delivery-title,
+  .timeline-heading,
+  .guild-title,
+  .culture-title,
+  .services-detail-title,
+  .tier-card-title {
+    font-size: 40px !important;
+    line-height: 1.18 !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
