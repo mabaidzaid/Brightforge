@@ -1471,12 +1471,32 @@
   line-height: 1.4;
 }
 
+.pricing-features-list,
+.pricing-feature-item,
+.pricing-feature-item span,
+.pricing-check-icon,
+.pricing-cross-icon {
+  text-shadow: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
 .pricing-capsule-card.popular-tier .pricing-feature-item {
   color: #FFFFFF;
 }
 
 .pricing-feature-item.feature-disabled {
-  opacity: 0.45;
+  opacity: 1;
+  color: #555861;
+}
+
+[data-theme="dark"] .pricing-capsule-card:not(.popular-tier) .pricing-feature-item.feature-disabled {
+  color: #9492A0;
+}
+
+.pricing-capsule-card.popular-tier .pricing-feature-item.feature-disabled {
+  opacity: 1;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* Circular checkmark badges */
@@ -1520,19 +1540,16 @@
   line-height: 1;
   flex-shrink: 0;
   margin-top: 1px;
-  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.35);
 }
 
 [data-theme="dark"] .pricing-cross-icon {
   background: #EF4444;
   color: #FFFFFF;
-  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.45);
 }
 
 .pricing-capsule-card.popular-tier .pricing-cross-icon {
   background: #EF4444;
   color: #FFFFFF;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 /* Bottom Pill Button */
